@@ -624,7 +624,7 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
       <button class="fb" type="button" data-day="4" aria-pressed="false">D4</button>
       <button class="fb" type="button" data-day="5" aria-pressed="false">D5</button>
     </div>
-    <p class="map-hint">Google 地圖一次顯示一個地點；整天路線請按下面的按鈕在 App 開啟。</p>
+    <p class="map-hint">Google 在韓國只有大眾運輸路線；逐段怎麼搭請看下面每張卡片的「從上一站搭車」。</p>
   </div>
   <p class="gmroute" id="gmroute" style="--dayc:var(--tarp-ink)"></p>
   <div class="stopchips" id="stopchips" role="group" aria-label="選擇地點"></div>
@@ -634,9 +634,11 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
     <button type="button" class="gmap-veil" id="gmveil"><span>點一下開始操作地圖</span></button>
   </div>
   <div class="gmact">
-    <a class="maplink" id="gmopen" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;origin=Nampo+Station+Busan&amp;waypoints=Jeonpo+Cafe+Street+Busan%7CSCENTICA+Jeonpo+Busan%7CSeomyeon+Underground+Shopping+Center+Busan%7CSeomyeon+Pojangmacha+Street+Busan&amp;destination=Nampo+Station+Busan">
-      <svg fill="currentColor"><use href="#pin"/></svg>在 Google 地圖 App 開啟整天路線（住宿出發）</a>
+    <a class="maplink" id="gmopen" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=transit&amp;origin=35.0983,129.0349&amp;destination=35.1518,129.0625">
+      <svg fill="currentColor"><use href="#pin"/></svg>大眾運輸：住宿 → 今天第一站</a>
     <span class="lmfoot">地圖由 Google 地圖提供。</span>
+  </div>
+    <p class="map-hint">圓點數字＝當天順序，箭頭＝移動方向；點圓點會跳到行程卡片。</p>
   </div>
     <p class="map-hint">圓點數字＝當天順序，箭頭＝移動方向；點圓點會跳到行程卡片。</p>
   </div>
@@ -654,7 +656,7 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
     <div>
       <h2>落地就先<mark>逛小店</mark>，晚上坐進橘色帳篷</h2>
       <p>第一天不趕行程：把行李丟進飯店，走進田浦的老倉庫巷子挑咖啡和香水，再鑽進西面地下街。天黑後就是這趟的第一晚布帳馬車。</p>
-      <div class="day-acts"><a class="dayroute" href="https://www.google.com/maps/dir/?api=1&amp;origin=Nampo+Station+Busan&amp;waypoints=Jeonpo+Cafe+Street+Busan%7CSCENTICA+Jeonpo+Busan%7CSeomyeon+Underground+Shopping+Center+Busan%7CSeomyeon+Pojangmacha+Street+Busan&amp;destination=Nampo+Station+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖看整天路線（住宿出發）</a><a class="dayjump" href="#map" data-day="1">在地圖上看 D1</a></div>
+      <div class="day-acts"><a class="dayroute" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=transit&amp;origin=35.0983,129.0349&amp;destination=35.1518,129.0625" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>大眾運輸：住宿 → 第一站</a><a class="dayjump" href="#map" data-day="1">在地圖上看 D1</a></div>
     </div>
   </div>
   <div class="staybar">
@@ -699,7 +701,8 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
         <dl class="addr"><dt>Addr</dt><dd>釜山鎮區田浦大路209番街一帶</dd><dt>Metro</dt><dd>2號線 田浦站 7 號出口，步行約 3 分</dd></dl>
         <div class="acts">
           <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Jeonpo+Cafe+Street+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖</a>
-        </div>
+        
+          <a class="maplink ghost" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=transit&amp;origin=35.0983,129.0349&amp;destination=35.1518,129.0625" target="_blank" rel="noopener">從住宿搭車</a></div>
       </div>
     </article>
 
@@ -714,7 +717,8 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
         <dl class="addr"><dt>Addr</dt><dd>釜山鎮區田浦大路199番街12號</dd><dt>Metro</dt><dd>2號線 田浦站 7 號出口，步行約 5 分（咖啡街巷內）</dd></dl>
         <div class="acts">
           <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=SCENTICA+Jeonpo+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖</a>
-        </div>
+        
+          <a class="maplink ghost" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=transit&amp;origin=35.1518,129.0625&amp;destination=35.1524,129.0637" target="_blank" rel="noopener">從上一站搭車</a></div>
       </div>
     </article>
 
@@ -729,7 +733,8 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
         <dl class="addr"><dt>Addr</dt><dd>釜山鎮區中央大路地下737號</dd><dt>Metro</dt><dd>1、2 號線 西面站，與車站地下層直接相連</dd></dl>
         <div class="acts">
           <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Seomyeon+Underground+Shopping+Center+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖</a>
-        </div>
+        
+          <a class="maplink ghost" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=transit&amp;origin=35.1524,129.0637&amp;destination=35.1578,129.0596" target="_blank" rel="noopener">從上一站搭車</a></div>
       </div>
     </article>
 
@@ -744,7 +749,8 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
         <dl class="addr"><dt>Addr</dt><dd>釜山鎮區伽倻大路772號，樂天百貨後門一帶</dd><dt>Metro</dt><dd>1、2 號線 西面站，往樂天百貨後門方向步行約 5 分</dd></dl>
         <div class="acts">
           <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Seomyeon+Pojangmacha+Street+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖</a>
-        </div>
+        
+          <a class="maplink ghost" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=transit&amp;origin=35.1578,129.0596&amp;destination=35.1552,129.0570" target="_blank" rel="noopener">從上一站搭車</a></div>
       </div>
     </article>
 
@@ -761,7 +767,7 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
     <div>
       <h2>上午看海，下午<mark>泡到發紅</mark>，晚上吃炭火</h2>
       <p>海雲台的市場和沙灘先走一輪，冷夠了就轉進新世界百貨樓下的 SPA LAND 泡湯烤汗蒸幕。這天的節奏是「冷—熱—吃肉」。</p>
-      <div class="day-acts"><a class="dayroute" href="https://www.google.com/maps/dir/?api=1&amp;origin=Nampo+Station+Busan&amp;waypoints=Haeundae+Traditional+Market+Busan%7CHaeundae+Beach+Busan%7CSPA+LAND+Centum+City+Busan%7CGilchon+Charcoal+Galbi+Seomyeon+Busan&amp;destination=Nampo+Station+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖看整天路線（住宿出發）</a><a class="dayjump" href="#map" data-day="2">在地圖上看 D2</a></div>
+      <div class="day-acts"><a class="dayroute" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=transit&amp;origin=35.0983,129.0349&amp;destination=35.1616,129.1607" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>大眾運輸：住宿 → 第一站</a><a class="dayjump" href="#map" data-day="2">在地圖上看 D2</a></div>
     </div>
   </div>
   <div class="staybar">
@@ -784,7 +790,8 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
         <dl class="addr"><dt>Addr</dt><dd>釜山海雲台區龜南路41番街22-1號</dd><dt>Metro</dt><dd>2號線 海雲台站 3 號出口，步行約 3 分</dd></dl>
         <div class="acts">
           <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Haeundae+Traditional+Market+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖</a>
-        </div>
+        
+          <a class="maplink ghost" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=transit&amp;origin=35.0983,129.0349&amp;destination=35.1616,129.1607" target="_blank" rel="noopener">從住宿搭車</a></div>
       </div>
     </article>
 
@@ -799,7 +806,8 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
         <dl class="addr"><dt>Addr</dt><dd>釜山海雲台區海雲台海邊路264號</dd><dt>Metro</dt><dd>2號線 海雲台站 3、5 號出口，步行約 8 分</dd></dl>
         <div class="acts">
           <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Haeundae+Beach+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖</a>
-        </div>
+        
+          <a class="maplink ghost" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=transit&amp;origin=35.1616,129.1607&amp;destination=35.1587,129.1603" target="_blank" rel="noopener">從上一站搭車</a></div>
       </div>
     </article>
 
@@ -814,7 +822,8 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
         <dl class="addr"><dt>Addr</dt><dd>釜山海雲台區Centum南大路35號，新世界百貨1樓</dd><dt>Metro</dt><dd>2號線 Centum City 站，與新世界百貨地下直通</dd></dl>
         <div class="acts">
           <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=SPA+LAND+Centum+City+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖</a>
-        </div>
+        
+          <a class="maplink ghost" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=transit&amp;origin=35.1587,129.1603&amp;destination=35.1691,129.1295" target="_blank" rel="noopener">從上一站搭車</a></div>
       </div>
     </article>
 
@@ -829,7 +838,8 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
         <dl class="addr"><dt>Addr</dt><dd>釜山鎮區東川路107番街24號</dd><dt>Metro</dt><dd>1、2 號線 西面站，往東川路方向步行約 7 分</dd></dl>
         <div class="acts">
           <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Gilchon+Charcoal+Galbi+Seomyeon+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖</a>
-        </div>
+        
+          <a class="maplink ghost" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=transit&amp;origin=35.1691,129.1295&amp;destination=35.1561,129.0642" target="_blank" rel="noopener">從上一站搭車</a></div>
       </div>
     </article>
 
@@ -846,7 +856,7 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
     <div>
       <h2>從魚市場一路逛到南浦，最後<mark>泡進光影裡</mark></h2>
       <p>今天最滿：早上在札嘎其挑活魚當午餐，下午把舊書街、BIFF、罐頭市場串成一條散步路線，傍晚過橋到影島看沉浸式光影，晚上再坐一次布帳馬車。<b>住宿就在南浦，等於整天都在家門口。</b></p>
-      <div class="day-acts"><a class="dayroute" href="https://www.google.com/maps/dir/?api=1&amp;origin=Nampo+Station+Busan&amp;waypoints=Jagalchi+Market+Busan%7CShindonga+Fish+Market+Busan%7CBosu+Book+Street+Busan%7CBIFF+Square+Busan%7CBupyeong+Kkangtong+Market+Busan%7CArte+Museum+Busan%7CYeongdo+Pojangmacha+Street+Busan&amp;destination=Nampo+Station+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖看整天路線（住宿出發）</a><a class="dayjump" href="#map" data-day="3">在地圖上看 D3</a></div>
+      <div class="day-acts"><a class="dayroute" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=transit&amp;origin=35.0983,129.0349&amp;destination=35.0969,129.0305" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>大眾運輸：住宿 → 第一站</a><a class="dayjump" href="#map" data-day="3">在地圖上看 D3</a></div>
     </div>
   </div>
   <div class="staybar">
@@ -869,7 +879,8 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
         <dl class="addr"><dt>Addr</dt><dd>釜山中區札嘎其海岸路52號</dd><dt>Metro</dt><dd>1號線 札嘎其站 10 號出口，步行約 3 分</dd></dl>
         <div class="acts">
           <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Jagalchi+Market+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖</a>
-        </div>
+        
+          <a class="maplink ghost" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=transit&amp;origin=35.0983,129.0349&amp;destination=35.0969,129.0305" target="_blank" rel="noopener">從住宿搭車</a></div>
       </div>
     </article>
 
@@ -884,7 +895,8 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
         <dl class="addr"><dt>Addr</dt><dd>釜山中區札嘎其路42號</dd><dt>Metro</dt><dd>1號線 札嘎其站 10 號出口，步行約 3 分</dd></dl>
         <div class="acts">
           <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Shindonga+Fish+Market+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖</a>
-        </div>
+        
+          <a class="maplink ghost" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=transit&amp;origin=35.0969,129.0305&amp;destination=35.0977,129.0296" target="_blank" rel="noopener">從上一站搭車</a></div>
       </div>
     </article>
 
@@ -910,7 +922,8 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
         <dl class="addr"><dt>Addr</dt><dd>釜山中區大青路67-1號一帶</dd><dt>Metro</dt><dd>1號線 札嘎其站，往大廳路方向步行約 8 分</dd></dl>
         <div class="acts">
           <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Bosu+Book+Street+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖</a>
-        </div>
+        
+          <a class="maplink ghost" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=transit&amp;origin=35.0977,129.0296&amp;destination=35.1029,129.0250" target="_blank" rel="noopener">從上一站搭車</a></div>
       </div>
     </article>
 
@@ -925,7 +938,8 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
         <dl class="addr"><dt>Addr</dt><dd>釜山中區南浦街4號一帶</dd><dt>Metro</dt><dd>1號線 札嘎其站 7 號出口／南浦站，步行約 3 分</dd></dl>
         <div class="acts">
           <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=BIFF+Square+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖</a>
-        </div>
+        
+          <a class="maplink ghost" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=transit&amp;origin=35.1029,129.0250&amp;destination=35.0987,129.0264" target="_blank" rel="noopener">從上一站搭車</a></div>
       </div>
     </article>
 
@@ -940,7 +954,8 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
         <dl class="addr"><dt>Addr</dt><dd>釜山中區富平1街48號</dd><dt>Metro</dt><dd>1號線 札嘎其站 3 號出口，步行約 5 分</dd></dl>
         <div class="acts">
           <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Bupyeong+Kkangtong+Market+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖</a>
-        </div>
+        
+          <a class="maplink ghost" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=transit&amp;origin=35.0987,129.0264&amp;destination=35.1003,129.0243" target="_blank" rel="noopener">從上一站搭車</a></div>
       </div>
     </article>
 
@@ -955,7 +970,8 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
         <dl class="addr"><dt>Addr</dt><dd>釜山影島區海洋路247番街29號</dd><dt>Bus</dt><dd>影島沒有地鐵：1號線 南浦站轉公車往國立海洋博物館方向約 20 分；四人以上直接叫計程車最省事</dd></dl>
         <div class="acts">
           <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Arte+Museum+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖</a>
-        </div>
+        
+          <a class="maplink ghost" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=transit&amp;origin=35.1003,129.0243&amp;destination=35.0793,129.0757" target="_blank" rel="noopener">從上一站搭車</a></div>
       </div>
     </article>
 
@@ -970,7 +986,8 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
         <dl class="addr"><dt>Addr</dt><dd>釜山影島區蓬萊南路42–79號一帶</dd><dt>Metro</dt><dd>1號線 南浦站 6 號出口，過影島大橋步行約 12 分，或搭一站公車</dd></dl>
         <div class="acts">
           <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Yeongdo+Pojangmacha+Street+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖</a>
-        </div>
+        
+          <a class="maplink ghost" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=transit&amp;origin=35.0793,129.0757&amp;destination=35.0932,129.0398" target="_blank" rel="noopener">從上一站搭車</a></div>
       </div>
     </article>
 
@@ -987,7 +1004,7 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
     <div>
       <h2>湯飯開場、海線往北，<mark>九點準時抬頭</mark></h2>
       <p>用一碗豬肉湯飯醒過來，往北走機張市場和松亭海灘，傍晚繞回民樂看海。這天真正的重點在晚上——廣安里的無人機秀，是整趟行程的收尾大招。</p>
-      <div class="day-acts"><a class="dayroute" href="https://www.google.com/maps/dir/?api=1&amp;origin=Nampo+Station+Busan&amp;waypoints=Subyeon+Choeogo+Dwaeji+Gukbap+Busan%7CGijang+Market+Busan%7CSongjeong+Beach+Busan%7CMillac+the+Market+Busan%7CJobang+Nakji+Daeyeon+Busan%7CGwangalli+Beach+Busan&amp;destination=Nampo+Station+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖看整天路線（住宿出發）</a><a class="dayjump" href="#map" data-day="4">在地圖上看 D4</a></div>
+      <div class="day-acts"><a class="dayroute" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=transit&amp;origin=35.0983,129.0349&amp;destination=35.1524,129.1177" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>大眾運輸：住宿 → 第一站</a><a class="dayjump" href="#map" data-day="4">在地圖上看 D4</a></div>
     </div>
   </div>
   <div class="staybar">
@@ -1010,7 +1027,8 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
         <dl class="addr"><dt>Addr</dt><dd>釜山水營區廣安海邊路370番街9-32號</dd><dt>Metro</dt><dd>2號線 廣安站 3 號出口，往海邊步行約 10 分</dd></dl>
         <div class="acts">
           <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Subyeon+Choeogo+Dwaeji+Gukbap+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖</a>
-        </div>
+        
+          <a class="maplink ghost" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=transit&amp;origin=35.0983,129.0349&amp;destination=35.1524,129.1177" target="_blank" rel="noopener">從住宿搭車</a></div>
       </div>
     </article>
 
@@ -1025,7 +1043,8 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
         <dl class="addr"><dt>Addr</dt><dd>釜山機張郡機張邑大羅里72-3號</dd><dt>Metro</dt><dd>東海線 機張站，步行約 5–8 分</dd></dl>
         <div class="acts">
           <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Gijang+Market+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖</a>
-        </div>
+        
+          <a class="maplink ghost" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=transit&amp;origin=35.1524,129.1177&amp;destination=35.2440,129.2213" target="_blank" rel="noopener">從上一站搭車</a></div>
       </div>
     </article>
 
@@ -1040,7 +1059,8 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
         <dl class="addr"><dt>Addr</dt><dd>釜山海雲台區松亭海邊路62號</dd><dt>Metro</dt><dd>東海線 松亭站（신해운대→송정），往海邊步行約 10–15 分</dd></dl>
         <div class="acts">
           <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Songjeong+Beach+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖</a>
-        </div>
+        
+          <a class="maplink ghost" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=transit&amp;origin=35.2440,129.2213&amp;destination=35.1786,129.1993" target="_blank" rel="noopener">從上一站搭車</a></div>
       </div>
     </article>
 
@@ -1055,7 +1075,8 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
         <dl class="addr"><dt>Addr</dt><dd>釜山水營區民樂水邊路17番街56號</dd><dt>Metro</dt><dd>2號線 民樂站 1 號出口，沿民樂水邊公園步行約 12 分</dd></dl>
         <div class="acts">
           <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Millac+the+Market+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖</a>
-        </div>
+        
+          <a class="maplink ghost" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=transit&amp;origin=35.1786,129.1993&amp;destination=35.1521,129.1289" target="_blank" rel="noopener">從上一站搭車</a></div>
       </div>
     </article>
 
@@ -1070,7 +1091,8 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
         <dl class="addr"><dt>Addr</dt><dd>釜山南區UN和平路7-1號</dd><dt>Metro</dt><dd>2號線 大淵站，步行約 10 分</dd></dl>
         <div class="acts">
           <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Jobang+Nakji+Daeyeon+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖</a>
-        </div>
+        
+          <a class="maplink ghost" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=transit&amp;origin=35.1521,129.1289&amp;destination=35.1313,129.0928" target="_blank" rel="noopener">從上一站搭車</a></div>
       </div>
     </article>
 
@@ -1129,6 +1151,7 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
           <dl class="addr"><dt>Addr</dt><dd>釜山水營區廣安海邊路219號（廣安里海水浴場）</dd><dt>Metro</dt><dd>2號線 廣安站 3、5 號出口或金蓮山站，步行約 10 分</dd></dl>
           <div class="acts">
             <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Gwangalli+Beach+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖</a>
+            <a class="maplink ghost" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=transit&amp;origin=35.1313,129.0928&amp;destination=35.1531,129.1183" target="_blank" rel="noopener">從上一站搭車</a>
           </div>
         </div>
       </div>
@@ -1147,7 +1170,7 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
     <div>
       <h2>最後一輪<mark>把行李箱塞滿</mark>，然後回家</h2>
       <p>留給採買。釜田市場是這趟最好買的地方，水果、泡菜、海苔、零食一次收完，回飯店拿行李直接去機場。</p>
-      <div class="day-acts"><a class="dayroute" href="https://www.google.com/maps/dir/?api=1&amp;origin=Nampo+Station+Busan&amp;waypoints=Bujeon+Market+Busan&amp;destination=Gimhae+International+Airport" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖看整天路線（住宿出發）</a><a class="dayjump" href="#map" data-day="5">在地圖上看 D5</a></div>
+      <div class="day-acts"><a class="dayroute" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=transit&amp;origin=35.0983,129.0349&amp;destination=35.1619,129.0617" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>大眾運輸：住宿 → 第一站</a><a class="dayjump" href="#map" data-day="5">在地圖上看 D5</a></div>
     </div>
   </div>
   <div class="staybar">
@@ -1170,7 +1193,8 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
         <dl class="addr"><dt>Addr</dt><dd>釜山鎮區中央大路783番街23號</dd><dt>Metro</dt><dd>1號線 釜田站／東海線 釜田站，步行約 3 分</dd></dl>
         <div class="acts">
           <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Bujeon+Market+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖</a>
-        </div>
+        
+          <a class="maplink ghost" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=transit&amp;origin=35.0983,129.0349&amp;destination=35.1619,129.0617" target="_blank" rel="noopener">從住宿搭車</a></div>
       </div>
     </article>
 
@@ -1216,6 +1240,10 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
     <div class="tip rv" style="--k:var(--ink-3)">
       <h4><span>Stay</span>住宿在南浦，五天都同一間</h4>
       <p><b>TRIP MADE 南浦（Airbnb #1 房）</b>：2 房 2 衛、4 張 Queen、最多 8 人，整層單團獨用。<b>南浦站步行 3 分</b>，自助入住、24 小時免費寄放行李、有洗衣機與烘衣機、可開伙。<b>沒有電梯也沒有停車場</b>，行李多的人上下樓要留意。</p>
+    </div>
+    <div class="tip rv" style="--k:var(--drone)">
+      <h4><span>Maps</span>Google 在韓國只有大眾運輸路線</h4>
+      <p>韓國法規限制地圖資料輸出，<b>Google 地圖在韓國沒有汽車與步行導航</b>，多點路線也算不出來。所以這裡的路線連結都是<b>一段一段的大眾運輸</b>（每張卡片下方的「從上一站搭車」）。要開車導航或看更細的步行路線，請用韓國本地的 <b>Naver Map</b> 或 <b>KakaoMap</b>。</p>
     </div>
     <div class="tip rv" style="--k:var(--drone)">
       <h4><span>Transit</span>幾乎全程都在地鐵沿線</h4>
@@ -1280,11 +1308,11 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
      所以整天路線改用下面的按鈕在 Google 地圖 App 開啟。 */
   var EMB = "https://maps.google.com/maps?hl=zh-TW&z=16&output=embed&q=";
   var GDAYS = {
-    "1": { t:"D1 · 11/25", c:"var(--tarp-ink)", bg:"var(--tarp)", on:"var(--tarp-on)", link:"https://www.google.com/maps/dir/?api=1&origin=Nampo+Station+Busan&waypoints=Jeonpo+Cafe+Street+Busan%7CSCENTICA+Jeonpo+Busan%7CSeomyeon+Underground+Shopping+Center+Busan%7CSeomyeon+Pojangmacha+Street+Busan&destination=Nampo+Station+Busan", s:[{"n": "住宿 TRIP MADE（南浦站）", "q": "Nampo+Station+Busan", "stay": true}, {"n": "田浦咖啡街", "q": "Jeonpo+Cafe+Street+Busan"}, {"n": "SCENTICA 香水店", "q": "SCENTICA+Jeonpo+Busan"}, {"n": "西面地下街", "q": "Seomyeon+Underground+Shopping+Center+Busan"}, {"n": "西面布帳馬車街", "q": "Seomyeon+Pojangmacha+Street+Busan"}] },
-    "2": { t:"D2 · 11/26", c:"var(--drone-ink)", bg:"var(--drone)", on:"var(--drone-on)", link:"https://www.google.com/maps/dir/?api=1&origin=Nampo+Station+Busan&waypoints=Haeundae+Traditional+Market+Busan%7CHaeundae+Beach+Busan%7CSPA+LAND+Centum+City+Busan%7CGilchon+Charcoal+Galbi+Seomyeon+Busan&destination=Nampo+Station+Busan", s:[{"n": "住宿 TRIP MADE（南浦站）", "q": "Nampo+Station+Busan", "stay": true}, {"n": "海雲台傳統市場", "q": "Haeundae+Traditional+Market+Busan"}, {"n": "海雲台海灘", "q": "Haeundae+Beach+Busan"}, {"n": "SPA LAND", "q": "SPA+LAND+Centum+City+Busan"}, {"n": "길촌숯불갈비", "q": "Gilchon+Charcoal+Galbi+Seomyeon+Busan"}] },
-    "3": { t:"D3 · 11/27", c:"var(--bulb-ink)", bg:"var(--bulb)", on:"var(--bulb-on)", link:"https://www.google.com/maps/dir/?api=1&origin=Nampo+Station+Busan&waypoints=Jagalchi+Market+Busan%7CShindonga+Fish+Market+Busan%7CBosu+Book+Street+Busan%7CBIFF+Square+Busan%7CBupyeong+Kkangtong+Market+Busan%7CArte+Museum+Busan%7CYeongdo+Pojangmacha+Street+Busan&destination=Nampo+Station+Busan", s:[{"n": "住宿 TRIP MADE（南浦站）", "q": "Nampo+Station+Busan", "stay": true}, {"n": "札嘎其市場", "q": "Jagalchi+Market+Busan"}, {"n": "新東亞水產", "q": "Shindonga+Fish+Market+Busan"}, {"n": "寶水洞書街", "q": "Bosu+Book+Street+Busan"}, {"n": "BIFF廣場", "q": "BIFF+Square+Busan"}, {"n": "富平罐頭市場", "q": "Bupyeong+Kkangtong+Market+Busan"}, {"n": "Arte Museum", "q": "Arte+Museum+Busan"}, {"n": "影島布帳馬車街", "q": "Yeongdo+Pojangmacha+Street+Busan"}] },
-    "4": { t:"D4 · 11/28", c:"var(--violet-ink)", bg:"var(--violet)", on:"var(--violet-on)", link:"https://www.google.com/maps/dir/?api=1&origin=Nampo+Station+Busan&waypoints=Subyeon+Choeogo+Dwaeji+Gukbap+Busan%7CGijang+Market+Busan%7CSongjeong+Beach+Busan%7CMillac+the+Market+Busan%7CJobang+Nakji+Daeyeon+Busan%7CGwangalli+Beach+Busan&destination=Nampo+Station+Busan", s:[{"n": "住宿 TRIP MADE（南浦站）", "q": "Nampo+Station+Busan", "stay": true}, {"n": "水邊最高手豬肉湯飯", "q": "Subyeon+Choeogo+Dwaeji+Gukbap+Busan"}, {"n": "機張市場", "q": "Gijang+Market+Busan"}, {"n": "松亭海灘", "q": "Songjeong+Beach+Busan"}, {"n": "Millac the Market", "q": "Millac+the+Market+Busan"}, {"n": "조방낙지 大淵店", "q": "Jobang+Nakji+Daeyeon+Busan"}, {"n": "廣安里海水浴場", "q": "Gwangalli+Beach+Busan"}] },
-    "5": { t:"D5 · 11/29", c:"var(--ink)", bg:"var(--ink)", on:"var(--surface)", link:"https://www.google.com/maps/dir/?api=1&origin=Nampo+Station+Busan&waypoints=Bujeon+Market+Busan&destination=Gimhae+International+Airport", s:[{"n": "住宿 TRIP MADE（南浦站）", "q": "Nampo+Station+Busan", "stay": true}, {"n": "釜田市場", "q": "Bujeon+Market+Busan"}, {"n": "金海機場", "q": "Gimhae+International+Airport"}] }
+    "1": { t:"D1 · 11/25", c:"var(--tarp-ink)", bg:"var(--tarp)", on:"var(--tarp-on)", link:"https://www.google.com/maps/dir/?api=1&travelmode=transit&origin=35.0983,129.0349&destination=35.1518,129.0625", s:[{"n": "住宿 TRIP MADE（南浦站）", "q": "Nampo+Station+Busan", "stay": true}, {"n": "田浦咖啡街", "q": "Jeonpo+Cafe+Street+Busan"}, {"n": "SCENTICA 香水店", "q": "SCENTICA+Jeonpo+Busan"}, {"n": "西面地下街", "q": "Seomyeon+Underground+Shopping+Center+Busan"}, {"n": "西面布帳馬車街", "q": "Seomyeon+Pojangmacha+Street+Busan"}] },
+    "2": { t:"D2 · 11/26", c:"var(--drone-ink)", bg:"var(--drone)", on:"var(--drone-on)", link:"https://www.google.com/maps/dir/?api=1&travelmode=transit&origin=35.0983,129.0349&destination=35.1616,129.1607", s:[{"n": "住宿 TRIP MADE（南浦站）", "q": "Nampo+Station+Busan", "stay": true}, {"n": "海雲台傳統市場", "q": "Haeundae+Traditional+Market+Busan"}, {"n": "海雲台海灘", "q": "Haeundae+Beach+Busan"}, {"n": "SPA LAND", "q": "SPA+LAND+Centum+City+Busan"}, {"n": "길촌숯불갈비", "q": "Gilchon+Charcoal+Galbi+Seomyeon+Busan"}] },
+    "3": { t:"D3 · 11/27", c:"var(--bulb-ink)", bg:"var(--bulb)", on:"var(--bulb-on)", link:"https://www.google.com/maps/dir/?api=1&travelmode=transit&origin=35.0983,129.0349&destination=35.0969,129.0305", s:[{"n": "住宿 TRIP MADE（南浦站）", "q": "Nampo+Station+Busan", "stay": true}, {"n": "札嘎其市場", "q": "Jagalchi+Market+Busan"}, {"n": "新東亞水產", "q": "Shindonga+Fish+Market+Busan"}, {"n": "寶水洞書街", "q": "Bosu+Book+Street+Busan"}, {"n": "BIFF廣場", "q": "BIFF+Square+Busan"}, {"n": "富平罐頭市場", "q": "Bupyeong+Kkangtong+Market+Busan"}, {"n": "Arte Museum", "q": "Arte+Museum+Busan"}, {"n": "影島布帳馬車街", "q": "Yeongdo+Pojangmacha+Street+Busan"}] },
+    "4": { t:"D4 · 11/28", c:"var(--violet-ink)", bg:"var(--violet)", on:"var(--violet-on)", link:"https://www.google.com/maps/dir/?api=1&travelmode=transit&origin=35.0983,129.0349&destination=35.1524,129.1177", s:[{"n": "住宿 TRIP MADE（南浦站）", "q": "Nampo+Station+Busan", "stay": true}, {"n": "水邊最高手豬肉湯飯", "q": "Subyeon+Choeogo+Dwaeji+Gukbap+Busan"}, {"n": "機張市場", "q": "Gijang+Market+Busan"}, {"n": "松亭海灘", "q": "Songjeong+Beach+Busan"}, {"n": "Millac the Market", "q": "Millac+the+Market+Busan"}, {"n": "조방낙지 大淵店", "q": "Jobang+Nakji+Daeyeon+Busan"}, {"n": "廣安里海水浴場", "q": "Gwangalli+Beach+Busan"}] },
+    "5": { t:"D5 · 11/29", c:"var(--ink)", bg:"var(--ink)", on:"var(--surface)", link:"https://www.google.com/maps/dir/?api=1&travelmode=transit&origin=35.0983,129.0349&destination=35.1619,129.0617", s:[{"n": "住宿 TRIP MADE（南浦站）", "q": "Nampo+Station+Busan", "stay": true}, {"n": "釜田市場", "q": "Bujeon+Market+Busan"}, {"n": "金海機場", "q": "Gimhae+International+Airport"}] }
   };
   var gm = document.getElementById("gmap");
   var groute = document.getElementById("gmroute");
