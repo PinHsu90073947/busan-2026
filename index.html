@@ -1,0 +1,1338 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="釜山 5 天 4 夜團隊行程（2026/11/25–11/29）">
+<title>釜山五日手帖｜2026.11.25–11.29</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Sans+TC:wght@400;700;900&display=swap">
+<style>*{margin:0;padding:0}img,svg{max-width:100%}
+/* ─── tokens · light (also the un-stamped default) ─────────────── */
+:root{
+  --tarp:#FF6A2C; --tarp-ink:#C33F0A; --tarp-soft:#FFF1E9; --tarp-on:#3A1200;
+  --drone:#00B3C7; --drone-ink:#00707E; --drone-soft:#E7F7F9; --drone-on:#04222A;
+  --bulb:#FFC02E; --bulb-ink:#8A6100; --bulb-on:#2B1E00;
+  --violet:#6E63E8; --violet-ink:#4C3FD1; --violet-soft:#EEECFD; --violet-on:#FFFFFF;
+  --ground:#F4F7F8; --surface:#FFFFFF; --surface-2:#EAF0F2; --night:#0B2036;
+  --ink:#101C26; --ink-2:#3E5468; --ink-3:#566F80;
+  --line:#D3DEE3; --line-2:#B4C4CC; --tarp-alt:#FFFFFF;
+  --sea:#D9E9F0; --land:#FCFDFD; --coast:#93AFBD; --sea-line:#B2CFDC;
+  --metro:#A9C2D0; --metro-ink:#56788D;
+  --shadow:0 1px 2px rgba(16,28,38,.05), 0 10px 26px -14px rgba(16,28,38,.22);
+  --f-display:"Bricolage Grotesque","Noto Sans TC",system-ui,sans-serif;
+  --f-body:"IBM Plex Sans","Noto Sans TC",system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono","Noto Sans TC",ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --tarp:#FF8348; --tarp-ink:#FFAB84; --tarp-soft:#26160F; --tarp-on:#2A0F00;
+    --drone:#3ED8E8; --drone-ink:#7FE9F4; --drone-soft:#08242B; --drone-on:#04222A;
+    --bulb:#FFCE5C; --bulb-ink:#FFD979; --bulb-on:#2B1E00;
+    --violet:#8B82F5; --violet-ink:#B7B1FA; --violet-soft:#171640; --violet-on:#12103A;
+    --ground:#08151F; --surface:#0E2130; --surface-2:#13293A; --night:#040D15;
+    --ink:#EAF2F5; --ink-2:#A8BECB; --ink-3:#8AA3B2;
+    --line:#223C4E; --line-2:#345066; --tarp-alt:#F6E9DF;
+    --sea:#06202E; --land:#122B3D; --coast:#33607C; --sea-line:#12405A;
+    --metro:#2F5670; --metro-ink:#7FA6BE;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 14px 34px -16px rgba(0,0,0,.75);
+  }
+}
+:root[data-theme="dark"]{
+  --tarp:#FF8348; --tarp-ink:#FFAB84; --tarp-soft:#26160F; --tarp-on:#2A0F00;
+  --drone:#3ED8E8; --drone-ink:#7FE9F4; --drone-soft:#08242B; --drone-on:#04222A;
+  --bulb:#FFCE5C; --bulb-ink:#FFD979; --bulb-on:#2B1E00;
+  --violet:#8B82F5; --violet-ink:#B7B1FA; --violet-soft:#171640; --violet-on:#12103A;
+  --ground:#08151F; --surface:#0E2130; --surface-2:#13293A; --night:#040D15;
+  --ink:#EAF2F5; --ink-2:#A8BECB; --ink-3:#8AA3B2;
+  --line:#223C4E; --line-2:#345066; --tarp-alt:#F6E9DF;
+    --sea:#06202E; --land:#122B3D; --coast:#33607C; --sea-line:#12405A;
+    --metro:#2F5670; --metro-ink:#7FA6BE;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 14px 34px -16px rgba(0,0,0,.75);
+}
+
+/* ─── base ─────────────────────────────────────────────────────── */
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:var(--f-body); font-size:16px; line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{margin:0; text-wrap:balance; line-height:1.24; font-weight:800}
+h1,h2{font-family:var(--f-display)}
+p{margin:0}
+a{color:inherit}
+ul,ol,dl,dd{margin:0; padding:0; list-style:none}
+button{font:inherit; color:inherit}
+:focus-visible{outline:2.5px solid var(--drone); outline-offset:3px; border-radius:4px}
+.wrap{width:min(1120px,91vw); margin-inline:auto}
+.mono{font-family:var(--f-mono); font-variant-numeric:tabular-nums}
+.eyebrow{
+  font-family:var(--f-mono); font-size:.75rem; font-weight:600;
+  letter-spacing:.14em; text-transform:uppercase; color:var(--ink-3);
+}
+
+/* ─── sticky day rail ──────────────────────────────────────────── */
+.topbar{
+  position:sticky; top:0; z-index:40;
+  background:color-mix(in srgb, var(--ground) 88%, transparent);
+  backdrop-filter:blur(10px) saturate(1.3);
+  border-bottom:1px solid var(--line);
+}
+.topbar-in{display:flex; align-items:center; gap:16px; height:56px}
+.brand{
+  display:flex; align-items:baseline; gap:8px; font-weight:800;
+  font-size:.95rem; letter-spacing:.01em; white-space:nowrap;
+}
+.brand em{font-family:var(--f-mono); font-style:normal; font-size:.72rem; font-weight:500; color:var(--ink-3)}
+.daynav{display:flex; gap:6px; margin-left:auto; overflow-x:auto; scrollbar-width:none}
+.daynav::-webkit-scrollbar{display:none}
+.daynav a{
+  flex:0 0 auto; display:flex; align-items:center; gap:7px;
+  padding:6px 11px; border-radius:999px; text-decoration:none;
+  border:1px solid var(--line); background:var(--surface);
+  font-family:var(--f-mono); font-size:.76rem; font-weight:600; color:var(--ink-2);
+  transition:transform .18s ease, border-color .18s ease, color .18s ease;
+}
+.daynav a::before{
+  content:""; width:7px; height:7px; border-radius:50%;
+  background:var(--dot); box-shadow:0 0 0 3px color-mix(in srgb, var(--dot) 22%, transparent);
+}
+.daynav a:hover{transform:translateY(-2px); border-color:var(--line-2)}
+.daynav a[aria-current="true"]{color:var(--ink); border-color:var(--dot); background:color-mix(in srgb, var(--dot) 12%, var(--surface))}
+.daynav a span{display:none}
+@media (min-width:800px){ .daynav a span{display:inline; font-family:var(--f-body); font-weight:500} }
+
+/* ─── hero ─────────────────────────────────────────────────────── */
+.hero{position:relative; padding:22px 0 0; overflow:hidden}
+.bulbs{display:block; width:100%; height:auto; margin-bottom:-14px}
+.bulb-dot{transform-box:fill-box; transform-origin:center; animation:twinkle 3.4s ease-in-out infinite}
+.bulb-glow{animation:glow 3.4s ease-in-out infinite}
+@keyframes twinkle{0%,100%{opacity:.55}50%{opacity:1}}
+@keyframes glow{0%,100%{opacity:.10}50%{opacity:.34}}
+.hero-grid{display:grid; gap:34px; padding:26px 0 40px}
+@media (min-width:940px){ .hero-grid{grid-template-columns:1.35fr .95fr; align-items:end; gap:56px} }
+h1{font-size:clamp(2.9rem,10vw,5.6rem); letter-spacing:-.03em; font-weight:800}
+h1 .t{display:block}
+h1 .t2{color:var(--tarp-ink)}
+.hero-lead{
+  margin-top:20px; max-width:34em; font-size:1.06rem; color:var(--ink-2);
+}
+.hero-lead b{color:var(--ink); font-weight:700}
+.countdown{
+  display:inline-flex; align-items:center; gap:10px; margin-top:22px;
+  padding:8px 16px 8px 12px; border-radius:999px;
+  background:var(--night); color:#F2F7FA; box-shadow:var(--shadow);
+}
+.countdown i{width:8px; height:8px; border-radius:50%; background:var(--bulb); box-shadow:0 0 12px var(--bulb)}
+.countdown span{font-family:var(--f-mono); font-size:.84rem; letter-spacing:.02em}
+.countdown b{font-family:var(--f-display); font-size:1.05rem; font-weight:800; color:var(--bulb); letter-spacing:-.02em}
+.stats{display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:14px; overflow:hidden}
+@media (min-width:560px){ .stats{grid-template-columns:repeat(3,1fr)} }
+.stat{background:var(--surface); padding:16px 16px 14px}
+.stat b{display:block; font-family:var(--f-display); font-size:2rem; font-weight:800; letter-spacing:-.03em; line-height:1}
+.stat small{display:block; margin-top:6px; font-size:.8rem; color:var(--ink-3); font-weight:500}
+.stat:nth-child(1) b{color:var(--tarp-ink)}
+.stat:nth-child(2) b{color:var(--drone-ink)}
+.stat:nth-child(3) b{color:var(--bulb-ink)}
+.stat:nth-child(4) b{color:var(--violet-ink)}
+.stat:nth-child(5) b{color:var(--ink)}
+.tarp{
+  height:15px;
+  background:repeating-linear-gradient(112deg, var(--tarp) 0 20px, var(--tarp-alt) 20px 40px);
+}
+
+/* ─── five-day overview ────────────────────────────────────────── */
+.overview{padding:44px 0 8px}
+.ov-head{display:flex; align-items:baseline; justify-content:space-between; gap:16px; margin-bottom:18px}
+.ov-grid{display:grid; gap:12px}
+@media (min-width:640px){ .ov-grid{grid-template-columns:repeat(2,1fr)} }
+@media (min-width:1000px){ .ov-grid{grid-template-columns:repeat(5,1fr)} }
+.ov{
+  display:flex; flex-direction:column; gap:9px; padding:15px 15px 17px;
+  background:var(--surface); border:1px solid var(--line); border-radius:14px;
+  border-top:3px solid var(--dot); text-decoration:none;
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.ov:hover{transform:translateY(-3px); box-shadow:var(--shadow)}
+.ov-top{display:flex; align-items:center; justify-content:space-between; gap:8px}
+.ov-d{font-family:var(--f-mono); font-size:.72rem; font-weight:600; letter-spacing:.08em; color:var(--ink-3)}
+.ov-n{font-family:var(--f-display); font-size:1.05rem; font-weight:800; color:var(--dot-ink)}
+.ov h3{font-size:1rem; font-weight:700; font-family:var(--f-body)}
+.ov ul{display:flex; flex-wrap:wrap; gap:5px; margin-top:auto}
+.ov li{
+  font-size:.74rem; font-weight:500; color:var(--ink-2);
+  padding:2px 8px; border-radius:6px; background:var(--surface-2);
+}
+
+/* ─── day sections ─────────────────────────────────────────────── */
+.day{padding:52px 0 8px; scroll-margin-top:72px}
+.day-head{
+  display:grid; gap:14px; padding-bottom:26px; margin-bottom:28px;
+  border-bottom:1px solid var(--line);
+}
+@media (min-width:860px){ .day-head{grid-template-columns:150px 1fr; gap:28px; align-items:start} }
+.day-mark{display:flex; align-items:center; gap:10px; flex-wrap:wrap}
+.day-badge{
+  display:grid; place-items:center; width:46px; height:46px; border-radius:13px;
+  background:var(--dot); color:var(--dot-on);
+  font-family:var(--f-display); font-size:1.15rem; font-weight:800; letter-spacing:-.02em;
+}
+.day-when{display:flex; flex-direction:column; line-height:1.3}
+.day-when strong{font-family:var(--f-mono); font-size:1.05rem; font-weight:600; letter-spacing:-.01em}
+.day-when small{font-size:.76rem; color:var(--ink-3); font-family:var(--f-mono); letter-spacing:.06em}
+.day-head h2{font-size:clamp(1.5rem,4.2vw,2.15rem); letter-spacing:-.02em}
+.day-head h2 mark{background:none; color:var(--dot-ink)}
+.day-head p{margin-top:10px; max-width:36em; color:var(--ink-2)}
+
+/* 住宿：每天都要看得到 */
+.staybar{
+  display:flex; flex-wrap:wrap; align-items:center; gap:7px 14px;
+  margin:-8px 0 26px; padding:12px 16px; border-radius:14px;
+  background:var(--surface-2); border:1px solid var(--line);
+  font-size:.88rem; color:var(--ink-2);
+}
+.staybar>svg{width:15px; height:15px; flex:0 0 auto; fill:var(--ink-3)}
+.staybar b{color:var(--ink); font-weight:700}
+.staybar em{font-style:normal; color:var(--ink-3)}
+.staybar a{color:var(--ink-2); font-weight:600; text-decoration:underline; text-underline-offset:3px}
+.staybar a:hover{color:var(--tarp-ink)}
+.stop[data-kind="stay"] .card{background:var(--surface-2); border-color:var(--line-2)}
+.stayfacts{display:grid; gap:6px 14px; margin-top:12px; font-size:.86rem; color:var(--ink-2)}
+@media (min-width:620px){ .stayfacts{grid-template-columns:1fr 1fr} }
+.stayfacts div{display:flex; gap:8px}
+.stayfacts dt{
+  flex:0 0 auto; font-family:var(--f-mono); font-size:.7rem; font-weight:600;
+  letter-spacing:.08em; color:var(--ink-3); padding-top:3px; min-width:44px;
+}
+
+/* timeline */
+.line{display:grid; gap:14px; position:relative}
+@media (min-width:720px){
+  .line::before{
+    content:""; position:absolute; left:107px; top:30px; bottom:26px; width:1.5px;
+    background:linear-gradient(var(--line) 0 86%, transparent);
+  }
+}
+.stop{display:grid; gap:10px}
+@media (min-width:720px){
+  .stop{grid-template-columns:104px 1fr; gap:22px; align-items:start}
+}
+.slot{display:flex; align-items:center; gap:9px; padding-top:14px}
+@media (min-width:720px){
+  .slot{flex-direction:column; align-items:flex-end; gap:6px; padding-top:20px; position:relative}
+  .slot::after{
+    content:""; position:absolute; right:-11.5px; top:26px; z-index:1; width:9px; height:9px;
+    border-radius:50%; background:var(--surface); border:2.5px solid var(--dot);
+  }
+}
+.slot-t{font-family:var(--f-mono); font-size:.82rem; font-weight:600; color:var(--ink); letter-spacing:-.01em; white-space:nowrap}
+.slot-k{font-size:.72rem; color:var(--ink-3); font-weight:500; letter-spacing:.04em}
+.card{
+  position:relative; background:var(--surface); border:1px solid var(--line);
+  border-radius:16px; padding:18px 18px 16px; overflow:hidden;
+  transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.card:hover{transform:translateY(-2px); box-shadow:var(--shadow); border-color:var(--line-2)}
+.card-top{display:flex; align-items:flex-start; gap:12px; flex-wrap:wrap}
+.card h3{font-family:var(--f-body); font-size:1.14rem; font-weight:700; letter-spacing:-.01em}
+.card h3 em{font-style:normal; font-size:.86rem; font-weight:500; color:var(--ink-3); margin-left:7px}
+.tag{
+  flex:0 0 auto; margin-left:auto; display:inline-flex; align-items:center; gap:6px;
+  font-size:.73rem; font-weight:600; color:var(--ink-2);
+  padding:3px 9px; border-radius:7px; background:var(--surface-2);
+}
+.tag::before{content:""; width:6px; height:6px; border-radius:2px; background:var(--tag,var(--ink-3))}
+.card p.note{margin-top:9px; color:var(--ink-2); font-size:.95rem; max-width:44em}
+.card p.note b{color:var(--ink); font-weight:600}
+.addr{
+  display:grid; grid-template-columns:auto 1fr; gap:6px 10px;
+  margin-top:13px; padding-top:13px;
+  border-top:1px dashed var(--line); font-size:.86rem; color:var(--ink-2);
+}
+.addr dt{
+  flex:0 0 auto; font-family:var(--f-mono); font-size:.7rem; font-weight:600;
+  letter-spacing:.1em; color:var(--ink-3); padding-top:3px;
+}
+.acts{display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-top:14px}
+.maplink{
+  display:inline-flex; align-items:center; gap:7px; text-decoration:none;
+  padding:7px 13px; border-radius:9px; font-size:.85rem; font-weight:600;
+  background:var(--night); color:#F2F7FA;
+  transition:transform .16s ease, opacity .16s ease;
+}
+.maplink:hover{transform:translateY(-1px); opacity:.9}
+.maplink.ghost{background:transparent; border:1px solid var(--line-2); color:var(--ink-2)}
+.maplink.ghost:hover{border-color:var(--ink-3); color:var(--ink)}
+.maplink svg{width:13px; height:13px; flex:0 0 auto}
+
+/* meal cards wear a pojangmacha awning */
+.stop[data-kind="meal"] .card{background:var(--tarp-soft); border-color:color-mix(in srgb, var(--tarp) 34%, var(--line))}
+.stop[data-kind="meal"] .card::before{
+  content:""; position:absolute; inset:0 0 auto; height:9px;
+  background:repeating-linear-gradient(112deg, var(--tarp) 0 13px, var(--tarp-alt) 13px 26px);
+}
+.stop[data-kind="meal"] .card{padding-top:24px}
+.stop[data-kind="move"] .card{background:transparent; border-style:dashed; box-shadow:none}
+.stop[data-kind="move"] .card:hover{transform:none}
+
+/* the 11/28 climax: drone show over Gwangan Bridge */
+.stop[data-kind="show"] .card{
+  background:var(--night); border-color:color-mix(in srgb, var(--violet) 45%, var(--night)); padding:0;
+}
+.stop[data-kind="show"] .card:hover{border-color:var(--violet)}
+.stage{position:relative; height:132px; overflow:hidden; background:linear-gradient(180deg,#050C18 0%, #0A1A2E 62%, #0D2740 100%)}
+.stage svg{position:absolute; inset:0; width:100%; height:100%; display:block}
+.stage::after{
+  content:""; position:absolute; inset:0; z-index:1; pointer-events:none;
+  background:linear-gradient(90deg, rgba(4,12,20,.92) 0%, rgba(4,12,20,.45) 42%, rgba(4,12,20,0) 68%);
+}
+.stage .cable,.stage .deck,.stage .tower{fill:none; stroke:#9FC4DA; stroke-width:2; opacity:.75}
+.stage .tower{stroke-width:4}
+.stage .ripple{stroke:#7FD8EA; stroke-width:2; opacity:.22; stroke-linecap:round}
+.drones circle{fill:#CDE9FF; animation:rise 6s ease-in-out infinite}
+@keyframes rise{
+  0%{transform:translateY(26px); opacity:0}
+  22%{opacity:1}
+  70%{opacity:1}
+  100%{transform:translateY(-16px); opacity:0}
+}
+.stage-cap{position:absolute; left:16px; bottom:12px; z-index:2}
+.stage-cap b{display:block; font-family:var(--f-display); font-size:1.5rem; font-weight:800; color:#F4F8FB; letter-spacing:-.02em; line-height:1.1}
+.stage-cap span{font-family:var(--f-mono); font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; color:#8FD9E6}
+.show-body{padding:16px 18px 17px}
+.show-body h3,.show-body .card-top h3{color:#F4F8FB}
+.show-body p.note{color:#BFD6E2}
+.show-body p.note b{color:#FFFFFF}
+.show-body .addr{color:#BFD6E2; border-top-color:rgba(159,196,218,.28)}
+.show-body .addr dt{color:#8FA9BA}
+.show-body .tag{background:rgba(159,196,218,.16); color:#DCEAF2}
+.show-body .maplink{background:var(--violet); color:#FFFFFF}
+.show-body 
+/* ─── briefing ─────────────────────────────────────────────────── */
+.brief{padding:56px 0 12px}
+.brief-grid{display:grid; gap:12px; margin-top:20px}
+@media (min-width:760px){ .brief-grid{grid-template-columns:repeat(2,1fr)} }
+.tip{
+  padding:17px 18px; border-radius:14px; background:var(--surface);
+  border:1px solid var(--line); border-left:3px solid var(--k,var(--drone));
+}
+.tip h4{font-size:.95rem; font-weight:700; font-family:var(--f-body)}
+.tip h4 span{font-family:var(--f-mono); font-size:.7rem; font-weight:600; letter-spacing:.12em; color:var(--ink-3); display:block; margin-bottom:4px; text-transform:uppercase}
+.tip p{margin-top:7px; font-size:.9rem; color:var(--ink-2)}
+.tip p b{color:var(--ink); font-weight:600}
+footer{margin-top:48px; border-top:1px solid var(--line)}
+.foot{display:flex; flex-wrap:wrap; gap:12px 24px; align-items:baseline; padding:22px 0 44px; font-size:.82rem; color:var(--ink-3)}
+.foot strong{color:var(--ink-2); font-weight:600}
+.up{margin-left:auto; text-decoration:none; font-family:var(--f-mono); font-weight:600; color:var(--ink-2)}
+.up:hover{color:var(--tarp-ink)}
+
+
+/* day header actions */
+.day-acts{display:flex; flex-wrap:wrap; gap:8px; margin-top:16px}
+.dayroute,.dayjump{
+  display:inline-flex; align-items:center; gap:7px; text-decoration:none;
+  padding:7px 14px; border-radius:9px; font-size:.85rem; font-weight:600;
+  transition:transform .16s ease, background .16s ease, border-color .16s ease;
+}
+.dayroute{background:var(--dot); color:var(--dot-on)}
+.dayroute svg{width:13px; height:13px}
+.dayjump{border:1px solid var(--line-2); color:var(--ink-2)}
+.dayroute:hover,.dayjump:hover{transform:translateY(-1px)}
+.dayjump:hover{border-color:var(--dot); color:var(--dot-ink)}
+.stop{scroll-margin-top:84px}
+.stop:target .card{box-shadow:0 0 0 3px var(--dot), var(--shadow)}
+
+/* ─── schematic map ────────────────────────────────────────────── */
+.map-sec{padding:52px 0 8px; scroll-margin-top:70px}
+.map-tools{display:flex; flex-wrap:wrap; align-items:center; gap:10px 20px; margin:2px 0 16px}
+.filters{display:flex; gap:6px; flex-wrap:wrap}
+.fb{
+  cursor:pointer; padding:6px 14px; border-radius:999px; background:var(--surface);
+  border:1px solid var(--line); font-family:var(--f-mono); font-size:.78rem; font-weight:600; color:var(--ink-2);
+  transition:transform .16s ease, border-color .16s ease;
+}
+.fb:hover{transform:translateY(-1px); border-color:var(--line-2)}
+.fb[aria-pressed="true"]{background:var(--night); border-color:var(--night); color:#F2F7FA}
+.fb[data-day="1"][aria-pressed="true"]{background:var(--tarp); border-color:var(--tarp); color:var(--tarp-on)}
+.fb[data-day="2"][aria-pressed="true"]{background:var(--drone); border-color:var(--drone); color:var(--drone-on)}
+.fb[data-day="3"][aria-pressed="true"]{background:var(--bulb); border-color:var(--bulb); color:var(--bulb-on)}
+.fb[data-day="4"][aria-pressed="true"]{background:var(--violet); border-color:var(--violet); color:var(--violet-on)}
+.fb[data-day="5"][aria-pressed="true"]{background:var(--ink); border-color:var(--ink); color:var(--surface)}
+.map-hint{font-size:.82rem; color:var(--ink-3); margin-left:auto}
+.map-figure{margin:0}
+.map-hold{position:relative}
+.map-hold::after{
+  content:""; position:absolute; top:1px; right:1px; bottom:1px; width:52px; z-index:1;
+  pointer-events:none; border-radius:0 17px 17px 0; opacity:0; transition:opacity .3s ease;
+  background:linear-gradient(90deg, transparent, color-mix(in srgb, var(--surface) 90%, transparent));
+}
+.swipe-hint{
+  position:absolute; right:12px; top:12px; z-index:2; display:none;
+  padding:7px 13px; border-radius:999px; background:var(--night); color:#F2F7FA;
+  font-family:var(--f-mono); font-size:.72rem; font-weight:600; letter-spacing:.04em;
+  pointer-events:none; transition:opacity .35s ease;
+}
+@media (max-width:719px){
+  .map-hold::after{opacity:1}
+  .swipe-hint{display:block}
+}
+.map-scroll{overflow-x:auto; border:1px solid var(--line); border-radius:18px; background:var(--surface)}
+.map-scroll svg{display:block; width:100%; min-width:760px; height:auto}
+.map-figure figcaption{margin-top:11px; font-size:.79rem; color:var(--ink-3)}
+.sea{fill:var(--sea)}
+.land{fill:var(--land); stroke:var(--coast); stroke-width:1.6; stroke-linejoin:round}
+.riv{fill:none; stroke:var(--sea);   stroke-width:5; stroke-linecap:round}
+.wave{fill:none; stroke:var(--sea-line); stroke-width:2; stroke-linecap:round}
+.bridge{fill:none; stroke:var(--ink-3); stroke-width:2.6; stroke-linecap:round}
+.rlabel{font-family:var(--f-mono); font-size:17px; font-weight:600; fill:var(--ink-3); letter-spacing:.05em}
+.wlabel{font-family:var(--f-mono); font-size:15px; font-weight:500; fill:var(--coast); letter-spacing:.05em}
+.metro{fill:none; stroke:var(--metro); stroke-width:4; stroke-linecap:round; stroke-linejoin:round; opacity:.85}
+.mstop{fill:var(--surface); stroke:var(--metro); stroke-width:2.6}
+.mlab2{font-family:var(--f-mono); font-size:14px; font-weight:600; fill:var(--metro-ink); letter-spacing:.08em}
+.scale path{fill:none; stroke:var(--ink-3); stroke-width:1.6; stroke-linecap:round}
+.scale text{font-family:var(--f-mono); font-size:13px; font-weight:500; fill:var(--ink-3); text-anchor:middle}
+.routestrip{
+  display:flex; flex-wrap:wrap; gap:4px 12px; align-items:baseline;
+  margin:0 0 14px; font-size:.92rem; color:var(--ink-2); line-height:1.7;
+}
+.routestrip b{
+  flex:0 0 auto; font-family:var(--f-mono); font-size:.78rem; font-weight:600;
+  letter-spacing:.08em; color:var(--rc);
+}
+/* 路線只在選了某一天時出現，避免五天疊成一團 */
+.mroute{
+  fill:none; stroke-width:3.2; stroke-linecap:round; stroke-linejoin:round;
+  stroke-dasharray:11 9; opacity:0; transition:opacity .3s ease;
+}
+.mroute[data-day="1"]{stroke:var(--tarp)}
+.mroute[data-day="2"]{stroke:var(--drone)}
+.mroute[data-day="3"]{stroke:var(--bulb)}
+.mroute[data-day="4"]{stroke:var(--violet)}
+.mp{cursor:pointer; transition:opacity .3s ease}
+.mp circle{stroke:var(--surface); stroke-width:2.5; transition:stroke .18s ease}
+.mp .pnum{
+  font-family:var(--f-mono); font-size:15px; font-weight:600;
+  text-anchor:middle; dominant-baseline:central; pointer-events:none;
+}
+.mp .mlab{
+  font-family:var(--f-body); font-size:16px; font-weight:600; fill:var(--ink);
+  paint-order:stroke fill; stroke:var(--surface); stroke-width:4.5px; stroke-linejoin:round;
+  dominant-baseline:central; pointer-events:none;
+}
+.mp .mlab-s{text-anchor:start} .mp .mlab-e{text-anchor:end} .mp .mlab-m{text-anchor:middle}
+.mp:hover .mlab{fill:var(--ink)}
+.staymark rect{fill:var(--night)}
+.staymark path{fill:#F2F7FA}
+.staymark text{
+  font-family:var(--f-body); font-size:16px; font-weight:700; fill:var(--ink);
+  paint-order:stroke fill; stroke:var(--surface); stroke-width:4.5px; stroke-linejoin:round;
+  dominant-baseline:central; text-anchor:start; pointer-events:none;
+}
+.mp:hover circle{stroke:var(--ink)}
+.mlegend rect{fill:var(--surface); stroke:var(--line); stroke-width:1.5}
+.mlegend .lgh{font-family:var(--f-mono); font-size:13px; font-weight:600; fill:var(--ink-3); letter-spacing:.16em}
+.mlegend .lgsep{stroke:var(--line); stroke-width:1.2}
+.mlegend rect.key{fill:var(--night); stroke:none}
+.mlegend .lgt{font-family:var(--f-body); font-size:16px; font-weight:500; fill:var(--ink-2);
+  dominant-baseline:central; text-anchor:start}
+.mp.lg{cursor:default}
+.mp.lg circle{stroke-width:0}
+.mp[data-day="1"] circle{fill:var(--tarp)}  .mp[data-day="1"] .pnum{fill:var(--tarp-on)}
+.mp[data-day="2"] circle{fill:var(--drone)} .mp[data-day="2"] .pnum{fill:var(--drone-on)}
+.mp[data-day="3"] circle{fill:var(--bulb)}  .mp[data-day="3"] .pnum{fill:var(--bulb-on)}
+.mp[data-day="4"] circle{fill:var(--violet)}.mp[data-day="4"] .pnum{fill:var(--violet-on)}
+.mp[data-day="5"] circle{fill:var(--ink)}   .mp[data-day="5"] .pnum{fill:var(--surface)}
+.map-figure[data-filter="1"] .mp:not([data-day="1"]),
+.map-figure[data-filter="2"] .mp:not([data-day="2"]),
+.map-figure[data-filter="3"] .mp:not([data-day="3"]),
+.map-figure[data-filter="4"] .mp:not([data-day="4"]),
+.map-figure[data-filter="5"] .mp:not([data-day="5"]){opacity:.15}
+.map-figure[data-filter="1"] .mroute:not([data-day="1"]),
+.map-figure[data-filter="2"] .mroute:not([data-day="2"]),
+.map-figure[data-filter="3"] .mroute:not([data-day="3"]),
+.map-figure[data-filter="4"] .mroute:not([data-day="4"]),
+.map-figure[data-filter="5"] .mroute:not([data-day="5"]){opacity:0}
+.map-figure[data-filter="1"] .mroute[data-day="1"],
+.map-figure[data-filter="2"] .mroute[data-day="2"],
+.map-figure[data-filter="3"] .mroute[data-day="3"],
+.map-figure[data-filter="4"] .mroute[data-day="4"]{opacity:.95}
+
+/* ─── reveal on scroll ─────────────────────────────────────────── */
+.rv{opacity:0; transform:translateY(14px); transition:opacity .55s cubic-bezier(.22,.7,.3,1), transform .55s cubic-bezier(.22,.7,.3,1)}
+.rv.in{opacity:1; transform:none}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .rv{opacity:1; transform:none; transition:none}
+  .bulb-dot,.bulb-glow,.drones circle{animation:none}
+  .card:hover,.ov:hover,.daynav a:hover,.maplink:hover{transform:none}
+}
+/* ─── embedded Google map ──────────────────────────────────────── */
+.gmap-hold{position:relative; border-radius:18px; overflow:hidden; border:1px solid var(--line); background:var(--surface-2)}
+#gmap{display:block; width:100%; height:min(70vh,620px); border:0}
+@media (max-width:719px){ #gmap{height:min(60vh,420px)} }
+.gmap-veil{
+  position:absolute; inset:0; z-index:2; display:none; cursor:pointer;
+  align-items:flex-end; justify-content:center; padding:0 0 34px; background:transparent; border:0;
+}
+.gmap-veil span{
+  background:var(--night); color:#F2F7FA; padding:9px 16px; border-radius:999px;
+  font-family:var(--f-body); font-size:.82rem; font-weight:600; box-shadow:0 6px 18px -8px rgba(0,0,0,.6);
+}
+@media (hover:none){ .gmap-veil{display:flex} }
+.gmroute{
+  display:flex; flex-wrap:wrap; gap:4px 12px; align-items:baseline;
+  margin:0 0 12px; font-size:.92rem; color:var(--ink-2); line-height:1.7;
+}
+.gmroute b{flex:0 0 auto; font-family:var(--f-mono); font-size:.78rem; font-weight:600; letter-spacing:.06em; color:var(--dayc)}
+.stopchips{display:flex; flex-wrap:wrap; gap:7px; margin-bottom:14px}
+.sc{
+  display:inline-flex; align-items:center; gap:7px; cursor:pointer;
+  padding:6px 13px 6px 8px; border-radius:999px; background:var(--surface);
+  border:1px solid var(--line); font-size:.85rem; font-weight:600; color:var(--ink-2);
+  transition:transform .16s ease, border-color .16s ease, background .16s ease;
+}
+.sc i{
+  display:grid; place-items:center; width:19px; height:19px; border-radius:50%;
+  background:var(--surface-2); color:var(--ink-3);
+  font-family:var(--f-mono); font-size:.72rem; font-weight:600; font-style:normal;
+}
+.sc:hover{transform:translateY(-1px); border-color:var(--line-2)}
+.sc[aria-pressed="true"]{background:var(--dayc); border-color:var(--dayc); color:var(--dayon)}
+.sc[aria-pressed="true"] i{background:rgba(255,255,255,.3); color:inherit}
+.sc.stay[aria-pressed="true"]{background:var(--night); border-color:var(--night); color:#F2F7FA}
+.gmact{display:flex; flex-wrap:wrap; align-items:center; gap:10px 14px; margin-top:12px}
+.lmfoot{font-size:.79rem; color:var(--ink-3)}
+.fb[data-day="1"][aria-pressed="true"]{background:var(--tarp); border-color:var(--tarp); color:var(--tarp-on)}
+.fb[data-day="5"][aria-pressed="true"]{background:var(--ink); border-color:var(--ink); color:var(--surface)}
+</style>
+</head>
+<body>
+<div lang="zh-Hant">
+<header class="topbar" id="top">
+  <div class="wrap topbar-in">
+    <div class="brand">釜山五日手帖 <em>2026.11.25–29</em></div>
+    <nav class="daynav" aria-label="日期導覽">
+      <a href="#d1" aria-current="true" style="--dot:var(--tarp)">D1 <span>田浦・西面</span></a>
+      <a href="#d2" style="--dot:var(--drone)">D2 <span>海雲台</span></a>
+      <a href="#d3" style="--dot:var(--bulb)">D3 <span>札嘎其・南浦</span></a>
+      <a href="#d4" style="--dot:var(--violet)">D4 <span>機張・廣安里</span></a>
+      <a href="#d5" style="--dot:var(--ink)">D5 <span>釜田・返程</span></a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <svg class="bulbs" viewBox="0 0 1200 74" aria-hidden="true">
+    <path d="M0 10 Q600 80 1200 10" fill="none" stroke="var(--line-2)" stroke-width="1.6"/>
+    <g fill="var(--bulb)" style="filter:drop-shadow(0 0 5px var(--bulb))">
+      <circle class="bulb-dot" cx="60" cy="22" r="4.2" style="animation-delay:0s"/>
+      <circle class="bulb-dot" cx="120" cy="28" r="4.2" style="animation-delay:.18s"/>
+      <circle class="bulb-dot" cx="180" cy="33" r="4.2" style="animation-delay:.36s"/>
+      <circle class="bulb-dot" cx="240" cy="38" r="4.2" style="animation-delay:.54s"/>
+      <circle class="bulb-dot" cx="300" cy="42" r="4.2" style="animation-delay:.72s"/>
+      <circle class="bulb-dot" cx="360" cy="45" r="4.2" style="animation-delay:.9s"/>
+      <circle class="bulb-dot" cx="420" cy="47" r="4.2" style="animation-delay:1.08s"/>
+      <circle class="bulb-dot" cx="480" cy="49" r="4.2" style="animation-delay:1.26s"/>
+      <circle class="bulb-dot" cx="540" cy="50" r="4.2" style="animation-delay:1.44s"/>
+      <circle class="bulb-dot" cx="600" cy="51" r="4.2" style="animation-delay:1.62s"/>
+      <circle class="bulb-dot" cx="660" cy="50" r="4.2" style="animation-delay:1.8s"/>
+      <circle class="bulb-dot" cx="720" cy="49" r="4.2" style="animation-delay:1.98s"/>
+      <circle class="bulb-dot" cx="780" cy="47" r="4.2" style="animation-delay:2.16s"/>
+      <circle class="bulb-dot" cx="840" cy="45" r="4.2" style="animation-delay:2.34s"/>
+      <circle class="bulb-dot" cx="900" cy="42" r="4.2" style="animation-delay:2.52s"/>
+      <circle class="bulb-dot" cx="960" cy="38" r="4.2" style="animation-delay:2.7s"/>
+      <circle class="bulb-dot" cx="1020" cy="33" r="4.2" style="animation-delay:2.88s"/>
+      <circle class="bulb-dot" cx="1080" cy="28" r="4.2" style="animation-delay:3.06s"/>
+      <circle class="bulb-dot" cx="1140" cy="22" r="4.2" style="animation-delay:3.24s"/>
+    </g>
+  </svg>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">Busan, Korea · 5 days 4 nights</p>
+        <h1><span class="t">釜山</span><span class="t t2">5天4夜</span></h1>
+        <p class="hero-lead">從田浦的小店走到影島的布帳馬車，中間穿過六座市場、三片海灘、一座溫泉。<b>11/28 晚上九點</b>，我們會站在廣安里的沙灘上看無人機升空——那是這趟行程的最後一顆煙火。</p>
+        <div class="countdown">
+          <i></i><span>2026.11.25 週三</span><b>→</b><span>11.29 週日</span>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>6</b><small>座傳統市場</small></div>
+        <div class="stat"><b>3</b><small>片海灘</small></div>
+        <div class="stat"><b>2</b><small>晚布帳馬車</small></div>
+        <div class="stat"><b>1</b><small>場無人機秀</small></div>
+        <div class="stat"><b>1</b><small>次汗蒸幕</small></div>
+        <div class="stat"><b>22</b><small>個標記地點</small></div>
+      </div>
+    </div>
+  </div>
+  <div class="tarp"></div>
+</section>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="home" viewBox="0 0 24 24"><path d="M12 3 2.5 10.5V21h7v-6h5v6h7V10.5L12 3z"/></symbol><symbol id="pin" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.3 7 13 7 13s7-7.7 7-13a7 7 0 0 0-7-7zm0 9.6A2.6 2.6 0 1 1 12 6.4a2.6 2.6 0 0 1 0 5.2z"/></symbol></svg>
+
+<section class="overview wrap">
+  <div class="ov-head">
+    <h2 style="font-size:clamp(1.35rem,3.4vw,1.7rem); letter-spacing:-.02em">五天一覽</h2>
+    <p class="eyebrow">Nov 25 – Nov 29</p>
+  </div>
+  <div class="ov-grid">
+    <a class="ov rv" href="#d1" style="--dot:var(--tarp); --dot-ink:var(--tarp-ink)">
+      <div class="ov-top"><span class="ov-d">11.25 週三</span><span class="ov-n">D1</span></div>
+      <h3>田浦小店・西面夜攤</h3>
+      <ul><li>咖啡街</li><li>香水店</li><li>地下街</li><li>布帳馬車</li></ul>
+    </a>
+    <a class="ov rv" href="#d2" style="--dot:var(--drone); --dot-ink:var(--drone-ink)">
+      <div class="ov-top"><span class="ov-d">11.26 週四</span><span class="ov-n">D2</span></div>
+      <h3>海雲台・汗蒸幕</h3>
+      <ul><li>傳統市場</li><li>海灘</li><li>SPA LAND</li><li>炭火豬肉</li></ul>
+    </a>
+    <a class="ov rv" href="#d3" style="--dot:var(--bulb); --dot-ink:var(--bulb-ink)">
+      <div class="ov-top"><span class="ov-d">11.27 週五</span><span class="ov-n">D3</span></div>
+      <h3>札嘎其・南浦・光影</h3>
+      <ul><li>生魚片</li><li>舊書街</li><li>BIFF</li><li>Arte Museum</li></ul>
+    </a>
+    <a class="ov rv" href="#d4" style="--dot:var(--violet); --dot-ink:var(--violet-ink)">
+      <div class="ov-top"><span class="ov-d">11.28 週六</span><span class="ov-n">D4</span></div>
+      <h3>機張・廣安里之夜</h3>
+      <ul><li>湯飯</li><li>大蟹</li><li>海景</li><li>無人機秀</li></ul>
+    </a>
+    <a class="ov rv" href="#d5" style="--dot:var(--ink); --dot-ink:var(--ink)">
+      <div class="ov-top"><span class="ov-d">11.29 週日</span><span class="ov-n">D5</span></div>
+      <h3>釜田採買・返程</h3>
+      <ul><li>水果</li><li>泡菜</li><li>海苔</li><li>伴手禮</li></ul>
+    </a>
+  </div>
+</section>
+
+<!-- ─────────── 路線地圖 ─────────── -->
+<section class="map-sec wrap" id="map">
+  <div class="ov-head">
+    <h2 style="font-size:clamp(1.35rem,3.4vw,1.7rem); letter-spacing:-.02em">路線地圖</h2>
+    <p class="eyebrow">Where we actually go</p>
+  </div>
+  <div class="map-tools">
+    <div class="filters" id="filters" role="group" aria-label="選擇日期">
+      <button class="fb" type="button" data-day="1" aria-pressed="true">D1</button>
+      <button class="fb" type="button" data-day="2" aria-pressed="false">D2</button>
+      <button class="fb" type="button" data-day="3" aria-pressed="false">D3</button>
+      <button class="fb" type="button" data-day="4" aria-pressed="false">D4</button>
+      <button class="fb" type="button" data-day="5" aria-pressed="false">D5</button>
+    </div>
+    <p class="map-hint">Google 地圖一次顯示一個地點；整天路線請按下面的按鈕在 App 開啟。</p>
+  </div>
+  <p class="gmroute" id="gmroute" style="--dayc:var(--tarp-ink)"></p>
+  <div class="stopchips" id="stopchips" role="group" aria-label="選擇地點"></div>
+  <div class="gmap-hold">
+    <iframe id="gmap" title="行程地點地圖" loading="lazy" allowfullscreen
+      referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?hl=zh-TW&amp;z=16&amp;output=embed&amp;q=Jeonpo+Cafe+Street+Busan"></iframe>
+    <button type="button" class="gmap-veil" id="gmveil"><span>點一下開始操作地圖</span></button>
+  </div>
+  <div class="gmact">
+    <a class="maplink" id="gmopen" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;origin=Nampo+Station+Busan&amp;waypoints=Jeonpo+Cafe+Street+Busan%7CSCENTICA+Jeonpo+Busan%7CSeomyeon+Underground+Shopping+Center+Busan%7CSeomyeon+Pojangmacha+Street+Busan&amp;destination=Nampo+Station+Busan">
+      <svg fill="currentColor"><use href="#pin"/></svg>在 Google 地圖 App 開啟整天路線（住宿出發）</a>
+    <span class="lmfoot">地圖由 Google 地圖提供。</span>
+  </div>
+    <p class="map-hint">圓點數字＝當天順序，箭頭＝移動方向；點圓點會跳到行程卡片。</p>
+  </div>
+    <p class="map-hint">圓點數字＝當天順序，箭頭＝移動方向；點圓點會跳到行程卡片。</p>
+  </div>
+</section>
+
+<!-- ─────────── DAY 1 ─────────── -->
+<section class="day wrap" id="d1" style="--dot:var(--tarp); --dot-ink:var(--tarp-ink); --dot-on:var(--tarp-on)">
+  <div class="day-head rv">
+    <div class="day-mark">
+      <span class="day-badge">D1</span>
+      <span class="day-when"><strong>11.25</strong><small>WED 週三</small></span>
+    </div>
+    <div>
+      <h2>落地就先<mark>逛小店</mark>，晚上坐進橘色帳篷</h2>
+      <p>第一天不趕行程：把行李丟進飯店，走進田浦的老倉庫巷子挑咖啡和香水，再鑽進西面地下街。天黑後就是這趟的第一晚布帳馬車。</p>
+      <div class="day-acts"><a class="dayroute" href="https://www.google.com/maps/dir/?api=1&amp;origin=Nampo+Station+Busan&amp;waypoints=Jeonpo+Cafe+Street+Busan%7CSCENTICA+Jeonpo+Busan%7CSeomyeon+Underground+Shopping+Center+Busan%7CSeomyeon+Pojangmacha+Street+Busan&amp;destination=Nampo+Station+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖看整天路線（住宿出發）</a><a class="dayjump" href="#map" data-day="1">在地圖上看 D1</a></div>
+    </div>
+  </div>
+  <div class="staybar">
+    <svg aria-hidden="true"><use href="#home"/></svg>
+    <span><b>住宿 TRIP MADE 南浦</b> <em>今晚入住・自助入住</em></span>
+    <em>1號線 南浦站步行 3 分（約 150m）</em>
+    <a href="https://www.google.com/maps/search/?api=1&amp;query=Nampo+Station+Busan" target="_blank" rel="noopener">地圖</a>
+    <a href="https://www.airbnb.co.kr/rooms/1370152992803689250" target="_blank" rel="noopener">Airbnb 房源</a>
+  </div>
+  <div class="line">
+
+    <article class="stop rv" id="s-stay" data-kind="stay">
+      <div class="slot"><span class="slot-t">依航班</span><span class="slot-k">抵達・入住</span></div>
+      <div class="card">
+        <div class="card-top">
+          <h3>TRIP MADE 南浦 <em>Airbnb ／ #1 房</em></h3>
+          <span class="tag" style="--tag:var(--ink-3)">住宿</span>
+        </div>
+        <p class="note">除了大廳之外整層獨立使用的公寓式旅館，<b>2 房 2 衛、4 張 Queen、最多 8 人</b>，房間在 1 樓、進出沒有階梯。門口就是光復路時尚街，樂天百貨和樂天超市都在旁邊。放好行李再出發去田浦。</p>
+        <dl class="stayfacts">
+          <div><dt>位置</dt><dd>釜山中區光復洞一帶，1號線南浦站步行 3 分（約 150m）；確切門牌在 Airbnb 訂單裡</dd></div>
+          <div><dt>機場</dt><dd>金海機場 → 地鐵約 50 分／計程車約 30 分；可付費接送，需事先詢問</dd></div>
+          <div><dt>釜山站</dt><dd>地鐵 2 站約 5 分／計程車約 7 分</dd></div>
+          <div><dt>設施</dt><dd>自助入住、24 小時免費寄放行李、公用洗衣機與烘衣機、可開伙、大廳免費咖啡</dd></div>
+          <div><dt>注意</dt><dd>整棟沒有電梯，也沒有停車場</dd></div>
+        </dl>
+        <div class="acts">
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Nampo+Station+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>南浦站位置</a>
+          <a class="maplink ghost" href="https://www.airbnb.co.kr/rooms/1370152992803689250" target="_blank" rel="noopener">Airbnb 房源</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="stop rv" id="s-jeonpo" data-kind="sight">
+      <div class="slot"><span class="slot-t">下午</span><span class="slot-k">逛小店</span></div>
+      <div class="card">
+        <div class="card-top">
+          <h3>田浦咖啡街 <em>전포 카페거리</em></h3>
+          <span class="tag" style="--tag:var(--bulb)">逛街</span>
+        </div>
+        <p class="note">舊工廠與五金街改造成的咖啡與選物聚落，巷子窄、店面小、招牌各有個性。<b>沒有必逛清單</b>，看到喜歡的門面就推門進去是這條街的正確玩法。</p>
+        <dl class="addr"><dt>Addr</dt><dd>釜山鎮區田浦大路209番街一帶</dd><dt>Metro</dt><dd>2號線 田浦站 7 號出口，步行約 3 分</dd></dl>
+        <div class="acts">
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Jeonpo+Cafe+Street+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="stop rv" id="s-scentica" data-kind="sight">
+      <div class="slot"><span class="slot-t">下午</span><span class="slot-k">挑一支香</span></div>
+      <div class="card">
+        <div class="card-top">
+          <h3>SCENTICA Jeonpo <em>香水選物店</em></h3>
+          <span class="tag" style="--tag:var(--violet)">選物</span>
+        </div>
+        <p class="note">就在咖啡街的巷子裡。慢慢試、挑一支帶回台灣，之後每次噴都會想起這條巷子——這種伴手禮比零食耐用。</p>
+        <dl class="addr"><dt>Addr</dt><dd>釜山鎮區田浦大路199番街12號</dd><dt>Metro</dt><dd>2號線 田浦站 7 號出口，步行約 5 分（咖啡街巷內）</dd></dl>
+        <div class="acts">
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=SCENTICA+Jeonpo+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="stop rv" id="s-seomyeon-under" data-kind="sight">
+      <div class="slot"><span class="slot-t">傍晚</span><span class="slot-k">地下暖身</span></div>
+      <div class="card">
+        <div class="card-top">
+          <h3>西面地下街 <em>서면 지하상가</em></h3>
+          <span class="tag" style="--tag:var(--bulb)">逛街</span>
+        </div>
+        <p class="note">連著地鐵站的長條地下商場，衣服、襪子、飾品、美妝一路排開。十一月底地面上很冷，這裡剛好是<b>不用吹風的暖身區</b>。</p>
+        <dl class="addr"><dt>Addr</dt><dd>釜山鎮區中央大路地下737號</dd><dt>Metro</dt><dd>1、2 號線 西面站，與車站地下層直接相連</dd></dl>
+        <div class="acts">
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Seomyeon+Underground+Shopping+Center+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="stop rv" id="s-seomyeon-pojang" data-kind="meal">
+      <div class="slot"><span class="slot-t">晚餐</span><span class="slot-k">第 1 晚布帳馬車</span></div>
+      <div class="card">
+        <div class="card-top">
+          <h3>西面布帳馬車街 <em>서면 포장마차</em></h3>
+          <span class="tag" style="--tag:var(--tarp)">海鮮・熱湯</span>
+        </div>
+        <p class="note">樂天百貨後門一帶，天黑後橘色帳篷一間間撐開。<b>推薦：海鮮煎餅、蛤蜊湯、魚糕</b>。坐塑膠椅、湯冒白煙、旁邊桌在乾杯——這就是釜山的晚餐現場。</p>
+        <dl class="addr"><dt>Addr</dt><dd>釜山鎮區伽倻大路772號，樂天百貨後門一帶</dd><dt>Metro</dt><dd>1、2 號線 西面站，往樂天百貨後門方向步行約 5 分</dd></dl>
+        <div class="acts">
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Seomyeon+Pojangmacha+Street+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖</a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ─────────── DAY 2 ─────────── -->
+<section class="day wrap" id="d2" style="--dot:var(--drone); --dot-ink:var(--drone-ink); --dot-on:var(--drone-on)">
+  <div class="day-head rv">
+    <div class="day-mark">
+      <span class="day-badge">D2</span>
+      <span class="day-when"><strong>11.26</strong><small>THU 週四</small></span>
+    </div>
+    <div>
+      <h2>上午看海，下午<mark>泡到發紅</mark>，晚上吃炭火</h2>
+      <p>海雲台的市場和沙灘先走一輪，冷夠了就轉進新世界百貨樓下的 SPA LAND 泡湯烤汗蒸幕。這天的節奏是「冷—熱—吃肉」。</p>
+      <div class="day-acts"><a class="dayroute" href="https://www.google.com/maps/dir/?api=1&amp;origin=Nampo+Station+Busan&amp;waypoints=Haeundae+Traditional+Market+Busan%7CHaeundae+Beach+Busan%7CSPA+LAND+Centum+City+Busan%7CGilchon+Charcoal+Galbi+Seomyeon+Busan&amp;destination=Nampo+Station+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖看整天路線（住宿出發）</a><a class="dayjump" href="#map" data-day="2">在地圖上看 D2</a></div>
+    </div>
+  </div>
+  <div class="staybar">
+    <svg aria-hidden="true"><use href="#home"/></svg>
+    <span><b>住宿 TRIP MADE 南浦</b> <em>出發與回程都在這</em></span>
+    <em>1號線 南浦站步行 3 分（約 150m）</em>
+    <a href="https://www.google.com/maps/search/?api=1&amp;query=Nampo+Station+Busan" target="_blank" rel="noopener">地圖</a>
+    <a href="https://www.airbnb.co.kr/rooms/1370152992803689250" target="_blank" rel="noopener">Airbnb 房源</a>
+  </div>
+  <div class="line">
+
+    <article class="stop rv" id="s-haeundae-market" data-kind="sight">
+      <div class="slot"><span class="slot-t">上午</span><span class="slot-k">邊走邊吃</span></div>
+      <div class="card">
+        <div class="card-top">
+          <h3>海雲台傳統市場 <em>해운대전통시장</em></h3>
+          <span class="tag" style="--tag:var(--tarp)">市場</span>
+        </div>
+        <p class="note">從市場走到沙灘只要幾分鐘。攤子上有魚糕、糖餅、烤海鮮這類邊走邊吃的東西，<b>建議留點胃</b>，別在第一攤就吃飽。</p>
+        <dl class="addr"><dt>Addr</dt><dd>釜山海雲台區龜南路41番街22-1號</dd><dt>Metro</dt><dd>2號線 海雲台站 3 號出口，步行約 3 分</dd></dl>
+        <div class="acts">
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Haeundae+Traditional+Market+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="stop rv" id="s-haeundae-beach" data-kind="sight">
+      <div class="slot"><span class="slot-t">上午</span><span class="slot-k">吹風拍照</span></div>
+      <div class="card">
+        <div class="card-top">
+          <h3>海雲台海灘 <em>해운대해수욕장</em></h3>
+          <span class="tag" style="--tag:var(--drone)">海景</span>
+        </div>
+        <p class="note">釜山的招牌沙灘，冬天沒有人潮，反而是拍團體照最舒服的季節。海風很有誠意，<b>外套和帽子帶上</b>。</p>
+        <dl class="addr"><dt>Addr</dt><dd>釜山海雲台區海雲台海邊路264號</dd><dt>Metro</dt><dd>2號線 海雲台站 3、5 號出口，步行約 8 分</dd></dl>
+        <div class="acts">
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Haeundae+Beach+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="stop rv" id="s-spaland" data-kind="sight">
+      <div class="slot"><span class="slot-t">午後</span><span class="slot-k">留 3–4 小時</span></div>
+      <div class="card">
+        <div class="card-top">
+          <h3>SPA LAND Centum City <em>스파랜드</em></h3>
+          <span class="tag" style="--tag:var(--drone)">溫泉・汗蒸幕</span>
+        </div>
+        <p class="note">新世界百貨一樓的大型溫泉會館，多種溫泉池加上十幾間不同主題的汗蒸幕房。入場一般以<b>四小時為一時段</b>，泡完出來整個人是重開機狀態。泳衣不用帶，浴衣毛巾現場提供。</p>
+        <dl class="addr"><dt>Addr</dt><dd>釜山海雲台區Centum南大路35號，新世界百貨1樓</dd><dt>Metro</dt><dd>2號線 Centum City 站，與新世界百貨地下直通</dd></dl>
+        <div class="acts">
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=SPA+LAND+Centum+City+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="stop rv" id="s-gilchon" data-kind="meal">
+      <div class="slot"><span class="slot-t">晚餐</span><span class="slot-k">西面・炭火</span></div>
+      <div class="card">
+        <div class="card-top">
+          <h3>길촌숯불갈비 <em>吉村炭火烤肉</em></h3>
+          <span class="tag" style="--tag:var(--tarp)">豬肉・烤肉</span>
+        </div>
+        <p class="note">炭火直烤的豬排骨，肉一上桌整間店都是香味。泡完湯來吃這個順序非常正確，<b>記得加點一份冷麵或大醬湯收尾</b>。</p>
+        <dl class="addr"><dt>Addr</dt><dd>釜山鎮區東川路107番街24號</dd><dt>Metro</dt><dd>1、2 號線 西面站，往東川路方向步行約 7 分</dd></dl>
+        <div class="acts">
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Gilchon+Charcoal+Galbi+Seomyeon+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖</a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ─────────── DAY 3 ─────────── -->
+<section class="day wrap" id="d3" style="--dot:var(--bulb); --dot-ink:var(--bulb-ink); --dot-on:var(--bulb-on)">
+  <div class="day-head rv">
+    <div class="day-mark">
+      <span class="day-badge">D3</span>
+      <span class="day-when"><strong>11.27</strong><small>FRI 週五</small></span>
+    </div>
+    <div>
+      <h2>從魚市場一路逛到南浦，最後<mark>泡進光影裡</mark></h2>
+      <p>今天最滿：早上在札嘎其挑活魚當午餐，下午把舊書街、BIFF、罐頭市場串成一條散步路線，傍晚過橋到影島看沉浸式光影，晚上再坐一次布帳馬車。<b>住宿就在南浦，等於整天都在家門口。</b></p>
+      <div class="day-acts"><a class="dayroute" href="https://www.google.com/maps/dir/?api=1&amp;origin=Nampo+Station+Busan&amp;waypoints=Jagalchi+Market+Busan%7CShindonga+Fish+Market+Busan%7CBosu+Book+Street+Busan%7CBIFF+Square+Busan%7CBupyeong+Kkangtong+Market+Busan%7CArte+Museum+Busan%7CYeongdo+Pojangmacha+Street+Busan&amp;destination=Nampo+Station+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖看整天路線（住宿出發）</a><a class="dayjump" href="#map" data-day="3">在地圖上看 D3</a></div>
+    </div>
+  </div>
+  <div class="staybar">
+    <svg aria-hidden="true"><use href="#home"/></svg>
+    <span><b>住宿 TRIP MADE 南浦</b> <em>就在今天的南浦行程裡</em></span>
+    <em>1號線 南浦站步行 3 分（約 150m）</em>
+    <a href="https://www.google.com/maps/search/?api=1&amp;query=Nampo+Station+Busan" target="_blank" rel="noopener">地圖</a>
+    <a href="https://www.airbnb.co.kr/rooms/1370152992803689250" target="_blank" rel="noopener">Airbnb 房源</a>
+  </div>
+  <div class="line">
+
+    <article class="stop rv" id="s-jagalchi" data-kind="sight">
+      <div class="slot"><span class="slot-t">上午</span><span class="slot-k">釜山的胃</span></div>
+      <div class="card">
+        <div class="card-top">
+          <h3>札嘎其市場 <em>자갈치시장</em></h3>
+          <span class="tag" style="--tag:var(--tarp)">市場</span>
+        </div>
+        <p class="note">韓國規模最大的水產市場，一整排水箱裡都是還在動的東西。<b>看不懂就問、問完再比價</b>，這裡的阿珠嬤都很習慣觀光客。</p>
+        <dl class="addr"><dt>Addr</dt><dd>釜山中區札嘎其海岸路52號</dd><dt>Metro</dt><dd>1號線 札嘎其站 10 號出口，步行約 3 分</dd></dl>
+        <div class="acts">
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Jagalchi+Market+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="stop rv" id="s-shindonga" data-kind="sight">
+      <div class="slot"><span class="slot-t">上午</span><span class="slot-k">樓下挑樓上煮</span></div>
+      <div class="card">
+        <div class="card-top">
+          <h3>新東亞水產物綜合市場 <em>신동아수산물종합시장</em></h3>
+          <span class="tag" style="--tag:var(--tarp)">市場</span>
+        </div>
+        <p class="note">就在札嘎其旁邊。樓下挑貨、樓上代客料理是這裡的玩法，<b>下手前先把價錢和料理費一起講清楚</b>，吃起來才安心。</p>
+        <dl class="addr"><dt>Addr</dt><dd>釜山中區札嘎其路42號</dd><dt>Metro</dt><dd>1號線 札嘎其站 10 號出口，步行約 3 分</dd></dl>
+        <div class="acts">
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Shindonga+Fish+Market+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="stop rv" data-kind="meal">
+      <div class="slot"><span class="slot-t">午餐</span><span class="slot-k">現挑現吃</span></div>
+      <div class="card">
+        <div class="card-top">
+          <h3>市場裡吃海鮮</h3>
+          <span class="tag" style="--tag:var(--tarp)">生魚片・活魚</span>
+        </div>
+        <p class="note">不訂餐廳，直接在市場內挑海鮮、活魚或生魚片，請店家處理。<b>一群人一起分攤一大盤最划算</b>，配燒酒的話下午行程請自行斟酌。</p>
+      </div>
+    </article>
+
+    <article class="stop rv" id="s-bosu" data-kind="sight">
+      <div class="slot"><span class="slot-t">下午</span><span class="slot-k">散步路線 1／3</span></div>
+      <div class="card">
+        <div class="card-top">
+          <h3>寶水洞書街 <em>보수동 책방골목</em></h3>
+          <span class="tag" style="--tag:var(--bulb)">舊書街</span>
+        </div>
+        <p class="note">戰後擺攤至今的舊書巷，書從地板堆到天花板。就算看不懂韓文，<b>翻到一本封面很漂亮的舊書</b>也值得帶走。</p>
+        <dl class="addr"><dt>Addr</dt><dd>釜山中區大青路67-1號一帶</dd><dt>Metro</dt><dd>1號線 札嘎其站，往大廳路方向步行約 8 分</dd></dl>
+        <div class="acts">
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Bosu+Book+Street+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="stop rv" id="s-biff" data-kind="sight">
+      <div class="slot"><span class="slot-t">下午</span><span class="slot-k">散步路線 2／3</span></div>
+      <div class="card">
+        <div class="card-top">
+          <h3>BIFF廣場 <em>BIFF 광장</em></h3>
+          <span class="tag" style="--tag:var(--bulb)">小吃・逛街</span>
+        </div>
+        <p class="note">釜山影展的發源地，地上有影人手印，街邊全是小吃攤。<b>糖餅（씨앗호떡）就是這裡的名產</b>——包滿堅果的那種，咬下去請小心燙。</p>
+        <dl class="addr"><dt>Addr</dt><dd>釜山中區南浦街4號一帶</dd><dt>Metro</dt><dd>1號線 札嘎其站 7 號出口／南浦站，步行約 3 分</dd></dl>
+        <div class="acts">
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=BIFF+Square+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="stop rv" id="s-bupyeong" data-kind="sight">
+      <div class="slot"><span class="slot-t">下午</span><span class="slot-k">散步路線 3／3</span></div>
+      <div class="card">
+        <div class="card-top">
+          <h3>富平罐頭市場 <em>부평깡통시장</em></h3>
+          <span class="tag" style="--tag:var(--tarp)">市場・零食</span>
+        </div>
+        <p class="note">名字來自戰後流出的美軍罐頭。白天以乾貨、零食、泡菜為主，<b>傍晚才會擺出夜市攤</b>。伴手禮可以先在這裡探路，最後一天再回釜田市場補貨。</p>
+        <dl class="addr"><dt>Addr</dt><dd>釜山中區富平1街48號</dd><dt>Metro</dt><dd>1號線 札嘎其站 3 號出口，步行約 5 分</dd></dl>
+        <div class="acts">
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Bupyeong+Kkangtong+Market+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="stop rv" id="s-arte" data-kind="sight">
+      <div class="slot"><span class="slot-t">傍晚</span><span class="slot-k">留 1.5–2 小時</span></div>
+      <div class="card">
+        <div class="card-top">
+          <h3>Arte Museum Busan <em>아르떼뮤지엄</em></h3>
+          <span class="tag" style="--tag:var(--violet)">沉浸式光影</span>
+        </div>
+        <p class="note">影島的大型沉浸式光影展，一間一間主題房走過去，是這趟最好拍的地方。<b>每日 10:00–20:00，19:00 最後入場</b>；行程建議抓 1.5–2 小時，太趕會很可惜。</p>
+        <dl class="addr"><dt>Addr</dt><dd>釜山影島區海洋路247番街29號</dd><dt>Bus</dt><dd>影島沒有地鐵：1號線 南浦站轉公車往國立海洋博物館方向約 20 分；四人以上直接叫計程車最省事</dd></dl>
+        <div class="acts">
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Arte+Museum+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="stop rv" id="s-yeongdo-pojang" data-kind="meal">
+      <div class="slot"><span class="slot-t">晚餐</span><span class="slot-k">第 2 晚布帳馬車</span></div>
+      <div class="card">
+        <div class="card-top">
+          <h3>影島布帳馬車街 <em>영도 포장마차</em></h3>
+          <span class="tag" style="--tag:var(--tarp)">海鮮・重口味</span>
+        </div>
+        <p class="note">比西面更在地的一條。<b>推薦：蛤蜊湯、烤盲鰻、LA牛排、活章魚</b>。烤盲鰻和活章魚屬於「來了才敢點」的等級，不敢的人有蛤蜊湯和牛排保底。</p>
+        <dl class="addr"><dt>Addr</dt><dd>釜山影島區蓬萊南路42–79號一帶</dd><dt>Metro</dt><dd>1號線 南浦站 6 號出口，過影島大橋步行約 12 分，或搭一站公車</dd></dl>
+        <div class="acts">
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Yeongdo+Pojangmacha+Street+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖</a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ─────────── DAY 4 ─────────── -->
+<section class="day wrap" id="d4" style="--dot:var(--violet); --dot-ink:var(--violet-ink); --dot-on:var(--violet-on)">
+  <div class="day-head rv">
+    <div class="day-mark">
+      <span class="day-badge">D4</span>
+      <span class="day-when"><strong>11.28</strong><small>SAT 週六</small></span>
+    </div>
+    <div>
+      <h2>湯飯開場、海線往北，<mark>九點準時抬頭</mark></h2>
+      <p>用一碗豬肉湯飯醒過來，往北走機張市場和松亭海灘，傍晚繞回民樂看海。這天真正的重點在晚上——廣安里的無人機秀，是整趟行程的收尾大招。</p>
+      <div class="day-acts"><a class="dayroute" href="https://www.google.com/maps/dir/?api=1&amp;origin=Nampo+Station+Busan&amp;waypoints=Subyeon+Choeogo+Dwaeji+Gukbap+Busan%7CGijang+Market+Busan%7CSongjeong+Beach+Busan%7CMillac+the+Market+Busan%7CJobang+Nakji+Daeyeon+Busan%7CGwangalli+Beach+Busan&amp;destination=Nampo+Station+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖看整天路線（住宿出發）</a><a class="dayjump" href="#map" data-day="4">在地圖上看 D4</a></div>
+    </div>
+  </div>
+  <div class="staybar">
+    <svg aria-hidden="true"><use href="#home"/></svg>
+    <span><b>住宿 TRIP MADE 南浦</b> <em>出發與回程都在這</em></span>
+    <em>1號線 南浦站步行 3 分（約 150m）</em>
+    <a href="https://www.google.com/maps/search/?api=1&amp;query=Nampo+Station+Busan" target="_blank" rel="noopener">地圖</a>
+    <a href="https://www.airbnb.co.kr/rooms/1370152992803689250" target="_blank" rel="noopener">Airbnb 房源</a>
+  </div>
+  <div class="line">
+
+    <article class="stop rv" id="s-gukbap" data-kind="meal">
+      <div class="slot"><span class="slot-t">早午餐</span><span class="slot-k">釜山靈魂食物</span></div>
+      <div class="card">
+        <div class="card-top">
+          <h3>水邊最高手豬肉湯飯 <em>돼지국밥</em></h3>
+          <span class="tag" style="--tag:var(--tarp)">湯飯</span>
+        </div>
+        <p class="note">豬肉湯飯是釜山的代表早餐，白湯配蝦醬和韭菜自己調味。<b>先喝一口原味再加料</b>，這樣才知道店家的湯底。</p>
+        <dl class="addr"><dt>Addr</dt><dd>釜山水營區廣安海邊路370番街9-32號</dd><dt>Metro</dt><dd>2號線 廣安站 3 號出口，往海邊步行約 10 分</dd></dl>
+        <div class="acts">
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Subyeon+Choeogo+Dwaeji+Gukbap+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="stop rv" id="s-gijang" data-kind="sight">
+      <div class="slot"><span class="slot-t">上午</span><span class="slot-k">海鮮總複習</span></div>
+      <div class="card">
+        <div class="card-top">
+          <h3>機張市場 <em>기장시장</em></h3>
+          <span class="tag" style="--tag:var(--tarp)">市場・大蟹</span>
+        </div>
+        <p class="note">海鮮、乾貨、活魚一次收齊，<b>大蟹是這裡最有名的招牌</b>。想吃蟹的人可以直接在市場附近的店家秤重現煮，這頓會是整趟最豪華的一餐。</p>
+        <dl class="addr"><dt>Addr</dt><dd>釜山機張郡機張邑大羅里72-3號</dd><dt>Metro</dt><dd>東海線 機張站，步行約 5–8 分</dd></dl>
+        <div class="acts">
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Gijang+Market+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="stop rv" id="s-songjeong" data-kind="sight">
+      <div class="slot"><span class="slot-t">午後</span><span class="slot-k">安靜的海</span></div>
+      <div class="card">
+        <div class="card-top">
+          <h3>松亭海灘 <em>송정해수욕장</em></h3>
+          <span class="tag" style="--tag:var(--drone)">海景</span>
+        </div>
+        <p class="note">比海雲台小、也安靜得多，沙灘乾淨、海水偏透。冬天的松亭幾乎沒人，<b>適合放空和拍空景</b>。</p>
+        <dl class="addr"><dt>Addr</dt><dd>釜山海雲台區松亭海邊路62號</dd><dt>Metro</dt><dd>東海線 松亭站（신해운대→송정），往海邊步行約 10–15 分</dd></dl>
+        <div class="acts">
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Songjeong+Beach+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="stop rv" id="s-millac" data-kind="sight">
+      <div class="slot"><span class="slot-t">傍晚</span><span class="slot-k">看廣安大橋</span></div>
+      <div class="card">
+        <div class="card-top">
+          <h3>Millac the Market <em>밀락더마켓</em></h3>
+          <span class="tag" style="--tag:var(--drone)">選物・海景</span>
+        </div>
+        <p class="note">民樂水邊的複合空間，裡面是選物店和一整排餐飲攤。<b>買杯東西坐在面海的階梯上</b>，正對廣安大橋，天色轉暗的那半小時最漂亮。</p>
+        <dl class="addr"><dt>Addr</dt><dd>釜山水營區民樂水邊路17番街56號</dd><dt>Metro</dt><dd>2號線 民樂站 1 號出口，沿民樂水邊公園步行約 12 分</dd></dl>
+        <div class="acts">
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Millac+the+Market+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="stop rv" id="s-jobang" data-kind="meal">
+      <div class="slot"><span class="slot-t">晚餐</span><span class="slot-k">辣度警告</span></div>
+      <div class="card">
+        <div class="card-top">
+          <h3>조방낙지 大淵店 <em>낙곱새</em></h3>
+          <span class="tag" style="--tag:var(--tarp)">章魚・辣鍋</span>
+        </div>
+        <p class="note">釜山的招牌辣鍋名店，<b>推薦章魚蝦腸鍋（낙곱새）</b>——章魚、牛腸、蝦子一鍋紅通通。很下飯也很辣，記得點白飯和飲料，吃完剛好有力氣去海邊。</p>
+        <dl class="addr"><dt>Addr</dt><dd>釜山南區UN和平路7-1號</dd><dt>Metro</dt><dd>2號線 大淵站，步行約 10 分</dd></dl>
+        <div class="acts">
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Jobang+Nakji+Daeyeon+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="stop rv" data-kind="move">
+      <div class="slot"><span class="slot-t">20:00</span><span class="slot-k">移動・卡位</span></div>
+      <div class="card">
+        <div class="card-top"><h3>前往廣安里海邊，找位子</h3></div>
+        <p class="note">週末的廣安里在表演前會擠滿人。<b>提早一小時到沙灘卡位</b>，順便先看夜間點燈的廣安大橋。海邊風大，外套、暖暖包、熱飲三件組。</p>
+        <dl class="addr"><dt>Metro</dt><dd>2號線 廣安站 3、5 號出口；散場人潮很多，回程請預留時間</dd></dl>
+      </div>
+    </article>
+
+    <article class="stop rv" id="s-gwangalli" data-kind="show">
+      <div class="slot"><span class="slot-t">21:00</span><span class="slot-k">全程高潮</span></div>
+      <div class="card">
+        <div class="stage">
+          <svg viewBox="0 0 700 128" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <g class="drones">
+              <circle cx="250" cy="30" r="4" style="animation-delay:0s"/>
+              <circle cx="292" cy="20" r="4.6" style="animation-delay:.3s"/>
+              <circle cx="336" cy="14" r="4" style="animation-delay:.6s"/>
+              <circle cx="380" cy="20" r="4.6" style="animation-delay:.9s"/>
+              <circle cx="422" cy="30" r="4" style="animation-delay:1.2s"/>
+              <circle cx="212" cy="42" r="3.2" style="animation-delay:1.5s"/>
+              <circle cx="460" cy="42" r="3.2" style="animation-delay:1.8s"/>
+              <circle cx="172" cy="26" r="2.8" style="animation-delay:2.1s"/>
+              <circle cx="500" cy="26" r="2.8" style="animation-delay:2.4s"/>
+              <circle cx="336" cy="42" r="3.2" style="animation-delay:2.7s"/>
+              <circle cx="300" cy="52" r="2.6" style="animation-delay:3s"/>
+              <circle cx="372" cy="52" r="2.6" style="animation-delay:3.3s"/>
+              <circle cx="602" cy="22" r="2.6" style="animation-delay:3.6s"/>
+              <circle cx="96" cy="22" r="2.6" style="animation-delay:3.9s"/>
+            </g>
+            <path class="cable" d="M210 48 Q350 98 490 48"/>
+            <path class="cable" d="M0 78 Q105 94 210 48"/>
+            <path class="cable" d="M490 48 Q595 94 700 78"/>
+            <path class="tower" d="M210 100 V44"/>
+            <path class="tower" d="M490 100 V44"/>
+            <path class="deck" d="M0 100 H700"/>
+            <path class="ripple" d="M120 112 H262"/>
+            <path class="ripple" d="M330 120 H472"/>
+            <path class="ripple" d="M52 122 H152"/>
+            <path class="ripple" d="M508 114 H624"/>
+          </svg>
+          <div class="stage-cap">
+            <span>Gwangalli M Drone Show</span>
+            <b>21:00 抬頭</b>
+          </div>
+        </div>
+        <div class="show-body">
+          <div class="card-top">
+            <h3>廣安里 M 無人機燈光秀 ＋ 廣安大橋夜景</h3>
+            <span class="tag" style="--tag:var(--violet)">夜景・表演</span>
+          </div>
+          <p class="note">數百架無人機在海面上拼出圖案，背景就是點著燈的廣安大橋。<b>冬季場次通常是 19:00 與 21:00，本行程抓 21:00 場</b>；場次偶有調整，出發前一天再確認官方公告最保險。</p>
+          <dl class="addr"><dt>Addr</dt><dd>釜山水營區廣安海邊路219號（廣安里海水浴場）</dd><dt>Metro</dt><dd>2號線 廣安站 3、5 號出口或金蓮山站，步行約 10 分</dd></dl>
+          <div class="acts">
+            <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Gwangalli+Beach+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ─────────── DAY 5 ─────────── -->
+<section class="day wrap" id="d5" style="--dot:var(--ink); --dot-ink:var(--ink); --dot-on:var(--surface)">
+  <div class="day-head rv">
+    <div class="day-mark">
+      <span class="day-badge">D5</span>
+      <span class="day-when"><strong>11.29</strong><small>SUN 週日</small></span>
+    </div>
+    <div>
+      <h2>最後一輪<mark>把行李箱塞滿</mark>，然後回家</h2>
+      <p>留給採買。釜田市場是這趟最好買的地方，水果、泡菜、海苔、零食一次收完，回飯店拿行李直接去機場。</p>
+      <div class="day-acts"><a class="dayroute" href="https://www.google.com/maps/dir/?api=1&amp;origin=Nampo+Station+Busan&amp;waypoints=Bujeon+Market+Busan&amp;destination=Gimhae+International+Airport" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖看整天路線（住宿出發）</a><a class="dayjump" href="#map" data-day="5">在地圖上看 D5</a></div>
+    </div>
+  </div>
+  <div class="staybar">
+    <svg aria-hidden="true"><use href="#home"/></svg>
+    <span><b>住宿 TRIP MADE 南浦</b> <em>退房後可免費寄放行李</em></span>
+    <em>1號線 南浦站步行 3 分（約 150m）</em>
+    <a href="https://www.google.com/maps/search/?api=1&amp;query=Nampo+Station+Busan" target="_blank" rel="noopener">地圖</a>
+    <a href="https://www.airbnb.co.kr/rooms/1370152992803689250" target="_blank" rel="noopener">Airbnb 房源</a>
+  </div>
+  <div class="line">
+
+    <article class="stop rv" id="s-bujeon" data-kind="sight">
+      <div class="slot"><span class="slot-t">上午</span><span class="slot-k">伴手禮總攻</span></div>
+      <div class="card">
+        <div class="card-top">
+          <h3>釜田市場 <em>부전시장</em></h3>
+          <span class="tag" style="--tag:var(--tarp)">市場・採買</span>
+        </div>
+        <p class="note">西面旁邊的大型傳統市場，價格比觀光區實在。<b>水果、零食、泡菜、海苔</b>都在這裡解決。泡菜類記得請店家真空包，行李箱也留好空間。</p>
+        <dl class="addr"><dt>Addr</dt><dd>釜山鎮區中央大路783番街23號</dd><dt>Metro</dt><dd>1號線 釜田站／東海線 釜田站，步行約 3 分</dd></dl>
+        <div class="acts">
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Bujeon+Market+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="stop rv" data-kind="move">
+      <div class="slot"><span class="slot-t">依航班</span><span class="slot-k">返程</span></div>
+      <div class="card">
+        <div class="card-top"><h3>回住宿拿行李 → 前往機場</h3></div>
+        <p class="note">採買完先回南浦的住宿整理行李，再一起出發去金海機場。五天四夜，六座市場、三片海灘、兩晚布帳馬車和一場無人機秀，收工。</p>
+        <dl class="addr"><dt>Metro</dt><dd>南浦站搭 1 號線到沙上，轉釜山金海輕電鐵到金海機場，約 50 分；計程車約 30 分。住宿可免費寄放行李，也能事先詢問付費接送</dd></dl>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ─────────── 行前小抄 ─────────── -->
+<section class="brief wrap">
+  <div class="ov-head">
+    <h2 style="font-size:clamp(1.35rem,3.4vw,1.7rem); letter-spacing:-.02em">行前小抄</h2>
+    <p class="eyebrow">Before you fly</p>
+  </div>
+  <div class="brief-grid">
+    <div class="tip rv" style="--k:var(--violet)">
+      <h4><span>Showtime</span>無人機秀場次要再確認</h4>
+      <p>廣安里 M 無人機秀冬季場次通常為 <b>19:00 與 21:00</b>，本行程抓 21:00 場、20:00 到沙灘卡位。場次與是否演出偶有變動（天候也會影響），<b>11/27 晚上再確認一次官方公告</b>。</p>
+    </div>
+    <div class="tip rv" style="--k:var(--violet)">
+      <h4><span>Hours</span>Arte Museum 有最後入場時間</h4>
+      <p>每日 <b>10:00–20:00，19:00 最後入場</b>。建議留 <b>1.5–2 小時</b>，所以 D3 下午的南浦散步別逛過頭，太晚就白跑一趟。</p>
+    </div>
+    <div class="tip rv" style="--k:var(--drone)">
+      <h4><span>Weather</span>十一月底的釜山會冷</h4>
+      <p>這個時期日均大約 <b>6–14°C</b>，海邊風大、入夜更冷。洋蔥式穿搭加一件防風外套；廣安里那晚在戶外等表演，<b>暖暖包和熱飲很值得</b>。</p>
+    </div>
+    <div class="tip rv" style="--k:var(--tarp)">
+      <h4><span>Cash</span>布帳馬車和市場留點現金</h4>
+      <p>帳篷攤和市場小攤有些只收現金，身上<b>留一些韓元零錢</b>比較保險。市場點菜、代客料理前先問清價錢和料理費，吃得比較安心。</p>
+    </div>
+    <div class="tip rv" style="--k:var(--bulb)">
+      <h4><span>Timing</span>市場排白天，夜市排晚上</h4>
+      <p>傳統市場傍晚就會陸續收攤，所以市場都放在上午。反過來，富平罐頭市場的夜市攤和布帳馬車都要等天黑才熱鬧。</p>
+    </div>
+    <div class="tip rv" style="--k:var(--ink-3)">
+      <h4><span>Stay</span>住宿在南浦，五天都同一間</h4>
+      <p><b>TRIP MADE 南浦（Airbnb #1 房）</b>：2 房 2 衛、4 張 Queen、最多 8 人，整層單團獨用。<b>南浦站步行 3 分</b>，自助入住、24 小時免費寄放行李、有洗衣機與烘衣機、可開伙。<b>沒有電梯也沒有停車場</b>，行李多的人上下樓要留意。</p>
+    </div>
+    <div class="tip rv" style="--k:var(--drone)">
+      <h4><span>Transit</span>幾乎全程都在地鐵沿線</h4>
+      <p>西面／田浦、南浦／札嘎其、海雲台各自是一區，<b>機張和松亭要搭東海線</b>。每張卡片下面都標了最近的車站和步行時間（出口編號僅供參考，現場以指標為準）。<b>先買一張 T-money 或 Cashbee</b>，地鐵公車都能嗶。</p>
+    </div>
+    <div class="tip rv" style="--k:var(--ink-3)">
+      <h4><span>Pace</span>時間欄只是節奏參考</h4>
+      <p>除了 <b>D4 的 21:00</b> 和 <b>Arte Museum 的最後入場</b>，其他時間都可以彈性調整。走不完就砍掉中間的逛街段，不要犧牲吃飯和泡湯。</p>
+    </div>
+  </div>
+
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span><strong>釜山 5天4夜</strong>　2026/11/25（三）– 11/29（日）</span>
+    <span>所有地圖連結都會開啟 Google 地圖</span>
+    <a class="up" href="#top">回到頂端 ↑</a>
+  </div>
+</footer>
+</div>
+
+
+<script>
+(function(){
+  "use strict";
+
+
+  /* 進場動畫 */
+  var rv = document.querySelectorAll(".rv");
+  if ("IntersectionObserver" in window) {
+    var revealer = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { e.target.classList.add("in"); revealer.unobserve(e.target); }
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+    rv.forEach(function(el){ revealer.observe(el); });
+  } else {
+    rv.forEach(function(el){ el.classList.add("in"); });
+  }
+
+  /* 導覽列高亮 */
+  var links = Array.prototype.slice.call(document.querySelectorAll(".daynav a"));
+  var sections = Array.prototype.slice.call(document.querySelectorAll(".day"));
+  function setActive(id){
+    links.forEach(function(a){
+      a.setAttribute("aria-current", a.getAttribute("href") === "#" + id ? "true" : "false");
+    });
+  }
+  if ("IntersectionObserver" in window && sections.length) {
+    var spy = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting) setActive(e.target.id); });
+    }, { rootMargin: "-64px 0px -58% 0px" });
+    sections.forEach(function(s){ spy.observe(s); });
+  }
+
+
+
+  /* ── 嵌入的 Google 地圖：先選日期，再選地點 ──
+     Google 免金鑰的嵌入只支援單點搜尋，多點路線會算不出來而退回世界地圖，
+     所以整天路線改用下面的按鈕在 Google 地圖 App 開啟。 */
+  var EMB = "https://maps.google.com/maps?hl=zh-TW&z=16&output=embed&q=";
+  var GDAYS = {
+    "1": { t:"D1 · 11/25", c:"var(--tarp-ink)", bg:"var(--tarp)", on:"var(--tarp-on)", link:"https://www.google.com/maps/dir/?api=1&origin=Nampo+Station+Busan&waypoints=Jeonpo+Cafe+Street+Busan%7CSCENTICA+Jeonpo+Busan%7CSeomyeon+Underground+Shopping+Center+Busan%7CSeomyeon+Pojangmacha+Street+Busan&destination=Nampo+Station+Busan", s:[{"n": "住宿 TRIP MADE（南浦站）", "q": "Nampo+Station+Busan", "stay": true}, {"n": "田浦咖啡街", "q": "Jeonpo+Cafe+Street+Busan"}, {"n": "SCENTICA 香水店", "q": "SCENTICA+Jeonpo+Busan"}, {"n": "西面地下街", "q": "Seomyeon+Underground+Shopping+Center+Busan"}, {"n": "西面布帳馬車街", "q": "Seomyeon+Pojangmacha+Street+Busan"}] },
+    "2": { t:"D2 · 11/26", c:"var(--drone-ink)", bg:"var(--drone)", on:"var(--drone-on)", link:"https://www.google.com/maps/dir/?api=1&origin=Nampo+Station+Busan&waypoints=Haeundae+Traditional+Market+Busan%7CHaeundae+Beach+Busan%7CSPA+LAND+Centum+City+Busan%7CGilchon+Charcoal+Galbi+Seomyeon+Busan&destination=Nampo+Station+Busan", s:[{"n": "住宿 TRIP MADE（南浦站）", "q": "Nampo+Station+Busan", "stay": true}, {"n": "海雲台傳統市場", "q": "Haeundae+Traditional+Market+Busan"}, {"n": "海雲台海灘", "q": "Haeundae+Beach+Busan"}, {"n": "SPA LAND", "q": "SPA+LAND+Centum+City+Busan"}, {"n": "길촌숯불갈비", "q": "Gilchon+Charcoal+Galbi+Seomyeon+Busan"}] },
+    "3": { t:"D3 · 11/27", c:"var(--bulb-ink)", bg:"var(--bulb)", on:"var(--bulb-on)", link:"https://www.google.com/maps/dir/?api=1&origin=Nampo+Station+Busan&waypoints=Jagalchi+Market+Busan%7CShindonga+Fish+Market+Busan%7CBosu+Book+Street+Busan%7CBIFF+Square+Busan%7CBupyeong+Kkangtong+Market+Busan%7CArte+Museum+Busan%7CYeongdo+Pojangmacha+Street+Busan&destination=Nampo+Station+Busan", s:[{"n": "住宿 TRIP MADE（南浦站）", "q": "Nampo+Station+Busan", "stay": true}, {"n": "札嘎其市場", "q": "Jagalchi+Market+Busan"}, {"n": "新東亞水產", "q": "Shindonga+Fish+Market+Busan"}, {"n": "寶水洞書街", "q": "Bosu+Book+Street+Busan"}, {"n": "BIFF廣場", "q": "BIFF+Square+Busan"}, {"n": "富平罐頭市場", "q": "Bupyeong+Kkangtong+Market+Busan"}, {"n": "Arte Museum", "q": "Arte+Museum+Busan"}, {"n": "影島布帳馬車街", "q": "Yeongdo+Pojangmacha+Street+Busan"}] },
+    "4": { t:"D4 · 11/28", c:"var(--violet-ink)", bg:"var(--violet)", on:"var(--violet-on)", link:"https://www.google.com/maps/dir/?api=1&origin=Nampo+Station+Busan&waypoints=Subyeon+Choeogo+Dwaeji+Gukbap+Busan%7CGijang+Market+Busan%7CSongjeong+Beach+Busan%7CMillac+the+Market+Busan%7CJobang+Nakji+Daeyeon+Busan%7CGwangalli+Beach+Busan&destination=Nampo+Station+Busan", s:[{"n": "住宿 TRIP MADE（南浦站）", "q": "Nampo+Station+Busan", "stay": true}, {"n": "水邊最高手豬肉湯飯", "q": "Subyeon+Choeogo+Dwaeji+Gukbap+Busan"}, {"n": "機張市場", "q": "Gijang+Market+Busan"}, {"n": "松亭海灘", "q": "Songjeong+Beach+Busan"}, {"n": "Millac the Market", "q": "Millac+the+Market+Busan"}, {"n": "조방낙지 大淵店", "q": "Jobang+Nakji+Daeyeon+Busan"}, {"n": "廣安里海水浴場", "q": "Gwangalli+Beach+Busan"}] },
+    "5": { t:"D5 · 11/29", c:"var(--ink)", bg:"var(--ink)", on:"var(--surface)", link:"https://www.google.com/maps/dir/?api=1&origin=Nampo+Station+Busan&waypoints=Bujeon+Market+Busan&destination=Gimhae+International+Airport", s:[{"n": "住宿 TRIP MADE（南浦站）", "q": "Nampo+Station+Busan", "stay": true}, {"n": "釜田市場", "q": "Bujeon+Market+Busan"}, {"n": "金海機場", "q": "Gimhae+International+Airport"}] }
+  };
+  var gm = document.getElementById("gmap");
+  var groute = document.getElementById("gmroute");
+  var chips = document.getElementById("stopchips");
+  var gopen = document.getElementById("gmopen");
+  var fbs = Array.prototype.slice.call(document.querySelectorAll(".fb"));
+  var current = "1";
+
+  function showStop(d, i){
+    var o = GDAYS[d]; if (!o || !o.s[i]) { return; }
+    gm.src = EMB + o.s[i].q;
+    gm.title = o.s[i].n + " 地圖";
+    Array.prototype.slice.call(chips.children).forEach(function(c, n){
+      c.setAttribute("aria-pressed", n === i ? "true" : "false");
+    });
+  }
+  function showDay(d){
+    var o = GDAYS[d]; if (!o) { return; }
+    current = String(d);
+    groute.style.setProperty("--dayc", o.c);
+    groute.innerHTML = "<b>" + o.t + "</b><span>" +
+      o.s.filter(function(x){ return !x.stay; }).map(function(x){ return x.n; }).join(" → ") + "</span>";
+    gopen.href = o.link;
+    chips.style.setProperty("--dayc", o.bg);
+    chips.style.setProperty("--dayon", o.on);
+    chips.innerHTML = "";
+    var num = 0;
+    o.s.forEach(function(x, i){
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = x.stay ? "sc stay" : "sc";
+      b.innerHTML = "<i>" + (x.stay ? "住" : (++num)) + "</i>" + x.n;
+      b.addEventListener("click", function(){ showStop(current, i); });
+      chips.appendChild(b);
+    });
+    fbs.forEach(function(b){ b.setAttribute("aria-pressed", b.dataset.day === String(d) ? "true" : "false"); });
+    showStop(d, o.s.length > 1 ? 1 : 0);
+  }
+  fbs.forEach(function(b){ b.addEventListener("click", function(){ showDay(b.dataset.day); }); });
+  Array.prototype.slice.call(document.querySelectorAll(".dayjump")).forEach(function(a){
+    a.addEventListener("click", function(){ showDay(a.dataset.day); });
+  });
+  showDay("1");
+
+  var veil = document.getElementById("gmveil");
+  if (veil) { veil.addEventListener("click", function(){ veil.remove(); }); }
+
+})();
+</script>
+</body>
+</html>
