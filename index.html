@@ -17,6 +17,7 @@
   --bulb:#FFC02E; --bulb-ink:#8A6100; --bulb-on:#2B1E00;
   --violet:#6E63E8; --violet-ink:#4C3FD1; --violet-soft:#EEECFD; --violet-on:#FFFFFF;
   --rose:#E8457C; --rose-ink:#B8235A; --rose-soft:#FDECF2; --rose-on:#36000F;
+  --wx-sun:#E08A00;
   --ground:#F4F7F8; --surface:#FFFFFF; --surface-2:#EAF0F2; --night:#0B2036;
   --ink:#101C26; --ink-2:#3E5468; --ink-3:#566F80;
   --line:#D3DEE3; --line-2:#B4C4CC; --tarp-alt:#FFFFFF;
@@ -34,6 +35,7 @@
     --bulb:#FFCE5C; --bulb-ink:#FFD979; --bulb-on:#2B1E00;
     --violet:#8B82F5; --violet-ink:#B7B1FA; --violet-soft:#171640; --violet-on:#12103A;
     --rose:#F0709A; --rose-ink:#F7A3BF; --rose-soft:#2A0F1A; --rose-on:#36000F;
+    --wx-sun:#FFCE5C;
     --ground:#08151F; --surface:#0E2130; --surface-2:#13293A; --night:#040D15;
     --ink:#EAF2F5; --ink-2:#A8BECB; --ink-3:#8AA3B2;
     --line:#223C4E; --line-2:#345066; --tarp-alt:#F6E9DF;
@@ -48,6 +50,7 @@
   --bulb:#FFCE5C; --bulb-ink:#FFD979; --bulb-on:#2B1E00;
   --violet:#8B82F5; --violet-ink:#B7B1FA; --violet-soft:#171640; --violet-on:#12103A;
   --rose:#F0709A; --rose-ink:#F7A3BF; --rose-soft:#2A0F1A; --rose-on:#36000F;
+  --wx-sun:#FFCE5C;
   --ground:#08151F; --surface:#0E2130; --surface-2:#13293A; --night:#040D15;
   --ink:#EAF2F5; --ink-2:#A8BECB; --ink-3:#8AA3B2;
   --line:#223C4E; --line-2:#345066; --tarp-alt:#F6E9DF;
@@ -366,6 +369,42 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
 .fb[data-day="4"][aria-pressed="true"]{background:var(--violet); border-color:var(--violet); color:var(--violet-on)}
 .fb[data-day="5"][aria-pressed="true"]{background:var(--rose); border-color:var(--rose); color:var(--rose-on)}
 .fb[data-day="6"][aria-pressed="true"]{background:var(--ink); border-color:var(--ink); color:var(--surface)}
+/* ─── weather · Open-Meteo daily forecast ──────────────────────── */
+.wx{padding:44px 0 8px}
+.wx .ov-head{flex-wrap:wrap; row-gap:4px}
+.wx .ov-head h2{white-space:nowrap}
+.wx-meta{font-size:.78rem; color:var(--ink-3)}
+.wx-meta a{color:inherit}
+.wx-days{display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr))}
+.wxd{
+  display:grid; gap:5px; align-content:start; padding:13px 14px 14px; text-decoration:none;
+  background:var(--surface); border:1px solid var(--line); border-radius:14px; border-top:3px solid var(--dot);
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.wxd:hover{transform:translateY(-2px); box-shadow:var(--shadow)}
+.wxd-top{display:flex; justify-content:space-between; gap:6px; font-family:var(--f-mono); font-size:.72rem; font-weight:600}
+.wxd-top b{color:var(--dot-ink); letter-spacing:.06em}
+.wxd-top span{color:var(--ink-3)}
+.wxd-mid{display:flex; align-items:center; gap:8px; margin-top:2px}
+.wxd-t{font-family:var(--f-mono); font-size:.88rem; color:var(--ink-3); white-space:nowrap; font-variant-numeric:tabular-nums}
+.wxd-t b{font-size:1.45rem; font-weight:600; color:var(--ink)}
+.wxd-desc{font-size:.86rem; font-weight:700}
+.wxd-sub,.wxd-none{font-size:.76rem; color:var(--ink-3)}
+.wxd-none{padding:6px 0 2px}
+.wx-note{margin-top:12px; font-size:.79rem; color:var(--ink-3)}
+.is-wet{color:var(--drone-ink); font-weight:700}
+.wx-i{width:30px; height:30px; flex:0 0 auto; fill:none; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round}
+.wx-i .s{stroke:var(--wx-sun)}
+.wx-i circle.s{fill:var(--wx-sun); stroke:none}
+.wx-i .c{stroke:var(--ink-3); fill:var(--surface)}
+.wx-i .r{stroke:var(--drone); stroke-width:2}
+.wx-i .b{fill:var(--violet); stroke:none}
+.day-wx{display:flex; flex-wrap:wrap; align-items:center; gap:2px 10px; font-size:.86rem}
+.day-wx[hidden]{display:none}
+.day-wx .wx-i{width:22px; height:22px}
+.day-wx .wx-i .c{fill:var(--ground)}
+.day-wx b,.day-wx .mono{color:var(--ink)}
+@media (prefers-reduced-motion: reduce){ .wxd:hover{transform:none} }
 .map-hint{font-size:.82rem; color:var(--ink-3); margin-left:auto}
 .map-figure{margin:0}
 .map-hold{position:relative}
@@ -570,7 +609,7 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
         <div class="stat"><b>1</b><small>座主題樂園</small></div>
         <div class="stat"><b>1</b><small>場無人機秀</small></div>
         <div class="stat"><b>1</b><small>次汗蒸幕</small></div>
-        <div class="stat"><b>25</b><small>個標記地點</small></div>
+        <div class="stat"><b>26</b><small>個標記地點</small></div>
       </div>
     </div>
   </div>
@@ -593,7 +632,7 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
     <a class="ov rv" href="#d2" style="--dot:var(--drone); --dot-ink:var(--drone-ink)">
       <div class="ov-top"><span class="ov-d">11.26 週四</span><span class="ov-n">D2</span></div>
       <h3>膠囊列車・海雲台</h3>
-      <ul><li>膠囊列車</li><li>海灘</li><li>傳統市場</li><li>SPA LAND</li></ul>
+      <ul><li>膠囊列車</li><li>海灘</li><li>傳統市場</li><li>T1</li><li>SPA LAND</li></ul>
     </a>
     <a class="ov rv" href="#d3" style="--dot:var(--bulb); --dot-ink:var(--bulb-ink)">
       <div class="ov-top"><span class="ov-d">11.27 週五</span><span class="ov-n">D3</span></div>
@@ -616,6 +655,16 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
       <ul><li>湯飯</li><li>海景</li><li>伴手禮</li><li>22:00 起飛</li></ul>
     </a>
   </div>
+</section>
+
+<!-- ─────────── 天氣預報 ─────────── -->
+<section class="wx wrap" id="weather" aria-label="天氣預報">
+  <div class="ov-head">
+    <h2 style="font-size:clamp(1.35rem,3.4vw,1.7rem); letter-spacing:-.02em">天氣預報</h2>
+    <p class="wx-meta" id="wxMeta">天氣預報載入中…</p>
+  </div>
+  <div class="wx-days" id="wxDays"></div>
+  <p class="wx-note">每天取當天主要行程那一區的預報，降雨機率取當天最高值。預報最多只到 16 天後，太遠的日期會顯示「預報還沒出來」，越接近出發越準。D4 的無人機秀遇到大風或下雨可能取消，那天要特別看廣安里的風速。</p>
 </section>
 
 <!-- ─────────── 路線地圖 ─────────── -->
@@ -659,6 +708,7 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
     <div>
       <h2>紅眼落地先<mark>泡汗蒸幕</mark>，晚上過橋吃布帳馬車</h2>
       <p>早上六點落地、出關大概九點，住宿要 16:00 才能入住，所以出關後直接帶著行李去看得到海的汗蒸幕補眠，下午再到南浦入住。體力還夠就去影島看光影，晚上在影島的橘色帳篷吃第一頓。</p>
+      <p class="day-wx" id="wx-d1" hidden></p>
       <div class="day-acts"><a class="dayroute" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=transit&amp;origin=35.1728,128.9472&amp;destination=35.0824,129.0255" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>大眾運輸：機場 → 汗蒸幕</a><a class="dayjump" href="#map" data-day="1">在地圖上看 D1</a></div>
     </div>
   </div>
@@ -764,7 +814,8 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
     </div>
     <div>
       <h2>早上<mark>排膠囊列車</mark>，再沿著海雲台邊走邊吃</h2>
-      <p>膠囊列車網路上搶不到票，所以早上直接去現場排。坐完沿著海雲台海灘走回市場吃午餐；下午還有體力的話，備選是 Centum City 的 SPA LAND。</p>
+      <p>膠囊列車網路上搶不到票，所以早上直接去現場排。坐完沿著海雲台海灘走回市場吃午餐。下午分頭行動：T1 粉去市場旁的 T1 BASE CAMP，其他人可以去 Centum City 的 SPA LAND 泡湯。</p>
+      <p class="day-wx" id="wx-d2" hidden></p>
       <div class="day-acts"><a class="dayroute" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=transit&amp;origin=Nampo+Station+Busan&amp;destination=%ED%95%B4%EC%9A%B4%EB%8C%80%EB%B8%94%EB%A3%A8%EB%9D%BC%EC%9D%B8%ED%8C%8C%ED%81%AC+%EB%AF%B8%ED%8F%AC%EC%A0%95%EA%B1%B0%EC%9E%A5" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>大眾運輸：住宿 → 第一站</a><a class="dayjump" href="#map" data-day="2">在地圖上看 D2</a></div>
     </div>
   </div>
@@ -825,14 +876,28 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
       </div>
     </article>
 
+    <article class="stop rv" id="s-t1" data-kind="sight">
+      <div class="slot"><span class="slot-t">下午</span><span class="slot-k">T1 粉分頭行動</span></div>
+      <div class="card">
+        <div class="card-top">
+          <h3>T1 BASE CAMP BUSAN <em>T1 主題網咖</em></h3>
+          <span class="tag" style="--tag:var(--rose)">電競・週邊</span>
+        </div>
+        <p class="note">T1 戰隊的主題網咖，有咖啡廳、可以上網打電動，還有一整區週邊商品。<b>就在市場旁邊，想去的人吃完午餐直接走過去</b>，其他人可以去 SPA LAND，晚上再會合。Google 寫 24 小時營業，但評論說只有咖啡廳是 24 小時、<b>週邊區大約 22:00 關</b>（非官方資訊），想買週邊的人白天去比較保險。</p>
+        <dl class="addr"><dt>Addr</dt><dd>釜山海雲台區龜南路37號 2樓</dd><dt>Walk</dt><dd>海雲台傳統市場旁，步行約 2 分；2號線 海雲台站步行約 5 分</dd></dl>
+        <div class="acts">
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=T1+BASE+CAMP+BUSAN" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖</a></div>
+      </div>
+    </article>
+
     <article class="stop rv" id="s-spaland" data-kind="sight">
-      <div class="slot"><span class="slot-t">下午</span><span class="slot-k">備選・看體力</span></div>
+      <div class="slot"><span class="slot-t">下午</span><span class="slot-k">另一組・泡湯</span></div>
       <div class="card">
         <div class="card-top">
           <h3>SPA LAND Centum City <em>스파랜드</em></h3>
           <span class="tag" style="--tag:var(--drone)">備選・汗蒸幕</span>
         </div>
-        <p class="note"><b>備選行程。</b>新世界百貨一樓的大型溫泉會館，多種溫泉池加上十幾間不同主題的汗蒸幕房。入場一般以<b>四小時為一時段</b>，泳衣不用帶，浴衣毛巾現場提供。第一天已經泡過汗蒸幕，想再泡的人再去。</p>
+        <p class="note"><b>備選行程。</b>新世界百貨一樓的大型溫泉會館，多種溫泉池加上十幾間不同主題的汗蒸幕房。入場一般以<b>四小時為一時段</b>，泳衣不用帶，浴衣毛巾現場提供。不去 T1 的人可以來這裡；第一天已經泡過汗蒸幕，想再泡的人再去。</p>
         <dl class="addr"><dt>Addr</dt><dd>釜山海雲台區Centum南大路35號，新世界百貨1樓</dd><dt>Metro</dt><dd>2號線 Centum City 站，與新世界百貨地下直通</dd></dl>
         <div class="acts">
           <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=SPA+LAND+Centum+City+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>Google 地圖</a>
@@ -854,6 +919,7 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
     <div>
       <h2>早上<mark>衝樂天樂園</mark>，下午沿東海線吃大蟹看海</h2>
       <p>樂天世界冒險樂園和機張市場在東海線上只差一站：早上玩樂園、中午去機張吃大蟹，再往南到松亭海灘放空，晚上回市區吃辣鍋。想在樂園玩整天的話，就把機張和松亭砍掉。</p>
+      <p class="day-wx" id="wx-d3" hidden></p>
       <div class="day-acts"><a class="dayroute" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=transit&amp;origin=Nampo+Station+Busan&amp;destination=Lotte+World+Adventure+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>大眾運輸：住宿 → 第一站</a><a class="dayjump" href="#map" data-day="3">在地圖上看 D3</a></div>
     </div>
   </div>
@@ -943,6 +1009,7 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
     <div>
       <h2>白天在南浦吃海鮮，<mark>九點準時抬頭</mark></h2>
       <p>白天就在住宿附近：新東亞市場挑海鮮當午餐，下午把舊書街、BIFF、罐頭市場串成一條散步路線。傍晚搭地鐵到西面吃炭火豬肉，20:00 出發去廣安里，等 21:00 的無人機秀。</p>
+      <p class="day-wx" id="wx-d4" hidden></p>
       <div class="day-acts"><a class="dayroute" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=transit&amp;origin=Nampo+Station+Busan&amp;destination=Shindonga+Fish+Market+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>大眾運輸：住宿 → 第一站</a><a class="dayjump" href="#map" data-day="4">在地圖上看 D4</a></div>
     </div>
   </div>
@@ -1120,6 +1187,7 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
     <div>
       <h2>田浦逛小店、西面<mark>試試手氣</mark>，傍晚先送學恆</h2>
       <p>上午在田浦的老倉庫巷子挑咖啡和香水，中午鑽進西面地下街，下午到樂天飯店裡的七樂娛樂場。<b>學恆搭今晚 22:00 的飛機</b>，傍晚要先回南浦拿行李。</p>
+      <p class="day-wx" id="wx-d5" hidden></p>
       <div class="day-acts"><a class="dayroute" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=transit&amp;origin=Nampo+Station+Busan&amp;destination=Jeonpo+Cafe+Street+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>大眾運輸：住宿 → 第一站</a><a class="dayjump" href="#map" data-day="5">在地圖上看 D5</a></div>
     </div>
   </div>
@@ -1218,6 +1286,7 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
     <div>
       <h2>湯飯開場、<mark>把行李箱塞滿</mark>，晚上回家</h2>
       <p>最後一天：早上退房、行李寄放在住宿。去廣安吃豬肉湯飯、到民樂看海，下午在釜田市場把伴手禮買齊，回南浦拿行李去機場，22:00 起飛。</p>
+      <p class="day-wx" id="wx-d6" hidden></p>
       <div class="day-acts"><a class="dayroute" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=transit&amp;origin=Nampo+Station+Busan&amp;destination=Subyeon+Choeogo+Dwaeji+Gukbap+Busan" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#pin"/></svg>大眾運輸：住宿 → 第一站</a><a class="dayjump" href="#map" data-day="6">在地圖上看 D6</a></div>
     </div>
   </div>
@@ -1311,7 +1380,7 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
     </div>
     <div class="tip rv" style="--k:var(--drone)">
       <h4><span>Weather</span>十一月底的釜山會冷</h4>
-      <p>這個時期日均大約 <b>6–14°C</b>，海邊風大、入夜更冷。洋蔥式穿搭加一件防風外套；廣安里那晚在戶外等表演，<b>暖暖包和熱飲很值得</b>。</p>
+      <p>這個時期日均大約 <b>6–14°C</b>，海邊風大、入夜更冷。洋蔥式穿搭加一件防風外套；廣安里那晚在戶外等表演，<b>暖暖包和熱飲很值得</b>。頁面上方的<b>天氣預報</b>會自動更新，出發前一兩天最準。</p>
     </div>
     <div class="tip rv" style="--k:var(--tarp)">
       <h4><span>Cash</span>布帳馬車和市場留點現金</h4>
@@ -1327,7 +1396,7 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
     </div>
     <div class="tip rv" style="--k:var(--drone)">
       <h4><span>Maps</span>Google 在韓國只有大眾運輸路線</h4>
-      <p>韓國法規限制地圖資料輸出，<b>Google 地圖在韓國沒有汽車與步行導航</b>，多點路線也算不出來。所以路線連結都是<b>一段一段的大眾運輸</b>（卡片下方的「從上一站搭車」）。25 個地點的名稱都在路線模式實測過；<b>SCENTICA、影島布帳馬車街、조방낙지 大淵店</b>這三個 Google 會指到別家分店或別區，<b>金海機場 → 스파해수랑</b>這段在 Google 地圖 App 裡帶不出路線，這幾個的路線連結都改用座標。要開車導航請用韓國本地的 <b>Naver Map</b> 或 <b>KakaoMap</b>。</p>
+      <p>韓國法規限制地圖資料輸出，<b>Google 地圖在韓國沒有汽車與步行導航</b>，多點路線也算不出來。所以路線連結都是<b>一段一段的大眾運輸</b>（卡片下方的「從上一站搭車」）。26 個地點的名稱都在路線模式實測過；<b>SCENTICA、影島布帳馬車街、조방낙지 大淵店</b>這三個 Google 會指到別家分店或別區，<b>金海機場 → 스파해수랑</b>這段在 Google 地圖 App 裡帶不出路線，這幾個的路線連結都改用座標。要開車導航請用韓國本地的 <b>Naver Map</b> 或 <b>KakaoMap</b>。</p>
     </div>
     <div class="tip rv" style="--k:var(--drone)">
       <h4><span>Transit</span>幾乎全程都在地鐵沿線</h4>
@@ -1393,7 +1462,7 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
   var EMB = "https://maps.google.com/maps?hl=zh-TW&z=16&output=embed&q=";
   var GDAYS = {
     "1": { t:"D1 · 11/25", c:"var(--tarp-ink)", bg:"var(--tarp)", on:"var(--tarp-on)", lt:"大眾運輸：機場 → 汗蒸幕", link:"https://www.google.com/maps/dir/?api=1&travelmode=transit&origin=35.1728,128.9472&destination=35.0824,129.0255", s:[{"n": "住宿 TRIP MADE（南浦站）", "q": "Nampo+Station+Busan", "stay": true}, {"n": "金海機場", "q": "Gimhae+International+Airport"}, {"n": "스파해수랑 汗蒸幕", "q": "Spa+Haesurang+Busan"}, {"n": "Arte Museum", "q": "Arte+Museum+Busan"}, {"n": "影島布帳馬車街", "q": "35.0932,129.0398"}] },
-    "2": { t:"D2 · 11/26", c:"var(--drone-ink)", bg:"var(--drone)", on:"var(--drone-on)", link:"https://www.google.com/maps/dir/?api=1&travelmode=transit&origin=Nampo+Station+Busan&destination=%ED%95%B4%EC%9A%B4%EB%8C%80%EB%B8%94%EB%A3%A8%EB%9D%BC%EC%9D%B8%ED%8C%8C%ED%81%AC+%EB%AF%B8%ED%8F%AC%EC%A0%95%EA%B1%B0%EC%9E%A5", s:[{"n": "住宿 TRIP MADE（南浦站）", "q": "Nampo+Station+Busan", "stay": true}, {"n": "膠囊列車 尾浦站", "q": "%ED%95%B4%EC%9A%B4%EB%8C%80%EB%B8%94%EB%A3%A8%EB%9D%BC%EC%9D%B8%ED%8C%8C%ED%81%AC+%EB%AF%B8%ED%8F%AC%EC%A0%95%EA%B1%B0%EC%9E%A5"}, {"n": "膠囊列車 青沙浦站", "q": "%ED%95%B4%EC%9A%B4%EB%8C%80%EB%B8%94%EB%A3%A8%EB%9D%BC%EC%9D%B8%ED%8C%8C%ED%81%AC+%EC%B2%AD%EC%82%AC%ED%8F%AC%EC%A0%95%EA%B1%B0%EC%9E%A5"}, {"n": "海雲台海灘", "q": "Haeundae+Beach+Busan"}, {"n": "海雲台傳統市場", "q": "Haeundae+Traditional+Market+Busan"}, {"n": "SPA LAND（備選）", "q": "SPA+LAND+Centum+City+Busan"}] },
+    "2": { t:"D2 · 11/26", c:"var(--drone-ink)", bg:"var(--drone)", on:"var(--drone-on)", link:"https://www.google.com/maps/dir/?api=1&travelmode=transit&origin=Nampo+Station+Busan&destination=%ED%95%B4%EC%9A%B4%EB%8C%80%EB%B8%94%EB%A3%A8%EB%9D%BC%EC%9D%B8%ED%8C%8C%ED%81%AC+%EB%AF%B8%ED%8F%AC%EC%A0%95%EA%B1%B0%EC%9E%A5", s:[{"n": "住宿 TRIP MADE（南浦站）", "q": "Nampo+Station+Busan", "stay": true}, {"n": "膠囊列車 尾浦站", "q": "%ED%95%B4%EC%9A%B4%EB%8C%80%EB%B8%94%EB%A3%A8%EB%9D%BC%EC%9D%B8%ED%8C%8C%ED%81%AC+%EB%AF%B8%ED%8F%AC%EC%A0%95%EA%B1%B0%EC%9E%A5"}, {"n": "膠囊列車 青沙浦站", "q": "%ED%95%B4%EC%9A%B4%EB%8C%80%EB%B8%94%EB%A3%A8%EB%9D%BC%EC%9D%B8%ED%8C%8C%ED%81%AC+%EC%B2%AD%EC%82%AC%ED%8F%AC%EC%A0%95%EA%B1%B0%EC%9E%A5"}, {"n": "海雲台海灘", "q": "Haeundae+Beach+Busan"}, {"n": "海雲台傳統市場", "q": "Haeundae+Traditional+Market+Busan"}, {"n": "T1 BASE CAMP", "q": "T1+BASE+CAMP+BUSAN"}, {"n": "SPA LAND（備選）", "q": "SPA+LAND+Centum+City+Busan"}] },
     "3": { t:"D3 · 11/27", c:"var(--bulb-ink)", bg:"var(--bulb)", on:"var(--bulb-on)", link:"https://www.google.com/maps/dir/?api=1&travelmode=transit&origin=Nampo+Station+Busan&destination=Lotte+World+Adventure+Busan", s:[{"n": "住宿 TRIP MADE（南浦站）", "q": "Nampo+Station+Busan", "stay": true}, {"n": "樂天世界冒險樂園", "q": "Lotte+World+Adventure+Busan"}, {"n": "機張市場", "q": "Gijang+Market+Busan"}, {"n": "松亭海灘", "q": "Songjeong+Beach+Busan"}, {"n": "조방낙지 大淵店", "q": "35.1313,129.0928"}] },
     "4": { t:"D4 · 11/28", c:"var(--violet-ink)", bg:"var(--violet)", on:"var(--violet-on)", link:"https://www.google.com/maps/dir/?api=1&travelmode=transit&origin=Nampo+Station+Busan&destination=Shindonga+Fish+Market+Busan", s:[{"n": "住宿 TRIP MADE（南浦站）", "q": "Nampo+Station+Busan", "stay": true}, {"n": "新東亞水產", "q": "Shindonga+Fish+Market+Busan"}, {"n": "寶水洞書街", "q": "Bosu+Book+Street+Busan"}, {"n": "BIFF廣場", "q": "BIFF+Square+Busan"}, {"n": "富平罐頭市場", "q": "Bupyeong+Kkangtong+Market+Busan"}, {"n": "길촌숯불갈비", "q": "Gilchon+Charcoal+Galbi+Seomyeon+Busan"}, {"n": "廣安里海水浴場", "q": "Gwangalli+Beach+Busan"}] },
     "5": { t:"D5 · 11/29", c:"var(--rose-ink)", bg:"var(--rose)", on:"var(--rose-on)", link:"https://www.google.com/maps/dir/?api=1&travelmode=transit&origin=Nampo+Station+Busan&destination=Jeonpo+Cafe+Street+Busan", s:[{"n": "住宿 TRIP MADE（南浦站）", "q": "Nampo+Station+Busan", "stay": true}, {"n": "田浦咖啡街", "q": "Jeonpo+Cafe+Street+Busan"}, {"n": "SCENTICA 香水店", "q": "35.1524,129.0637"}, {"n": "西面地下街", "q": "Seomyeon+Underground+Shopping+Center+Busan"}, {"n": "七樂娛樂場", "q": "Seven+Luck+Casino+Busan+Lotte+Hotel"}] },
@@ -1443,6 +1512,137 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
     a.addEventListener("click", function(){ showDay(a.dataset.day); });
   });
   showDay("1");
+
+  /* ── 天氣預報：Open-Meteo 每日預報（免金鑰），每次開頁面時由瀏覽器抓。
+     上一次抓到的結果存在 localStorage，沒網路時卡片還有東西可看。 */
+  var WX_PLACES = {
+    nampo:     { name: "南浦",   lat: 35.0979, lng: 129.0346 },
+    haeundae:  { name: "海雲台", lat: 35.1587, lng: 129.1604 },
+    gijang:    { name: "機張",   lat: 35.1965, lng: 129.2147 },
+    gwangalli: { name: "廣安里", lat: 35.1532, lng: 129.1186 },
+    seomyeon:  { name: "西面",   lat: 35.1578, lng: 129.0600 }
+  };
+  var WX_KEYS = Object.keys(WX_PLACES);
+  var WX_URL = "https://api.open-meteo.com/v1/forecast" +
+    "?latitude=" + WX_KEYS.map(function(k){ return WX_PLACES[k].lat; }).join(",") +
+    "&longitude=" + WX_KEYS.map(function(k){ return WX_PLACES[k].lng; }).join(",") +
+    "&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,wind_speed_10m_max,sunset" +
+    "&wind_speed_unit=ms&timezone=Asia%2FSeoul&past_days=7&forecast_days=16";
+  var WX_STORE = "busan2026-weather";
+  var WX_EVERY = 30 * 60 * 1000;
+  /* D4 白天在南浦，但晚上的無人機秀在戶外，所以看廣安里 */
+  var WX_DAYS = [
+    { n: 1, date: "2026-11-25", md: "11/25", dow: "三", wx: "nampo",     dot: "var(--tarp)",   ink: "var(--tarp-ink)" },
+    { n: 2, date: "2026-11-26", md: "11/26", dow: "四", wx: "haeundae",  dot: "var(--drone)",  ink: "var(--drone-ink)" },
+    { n: 3, date: "2026-11-27", md: "11/27", dow: "五", wx: "gijang",    dot: "var(--bulb)",   ink: "var(--bulb-ink)" },
+    { n: 4, date: "2026-11-28", md: "11/28", dow: "六", wx: "gwangalli", dot: "var(--violet)", ink: "var(--violet-ink)" },
+    { n: 5, date: "2026-11-29", md: "11/29", dow: "日", wx: "seomyeon",  dot: "var(--rose)",   ink: "var(--rose-ink)" },
+    { n: 6, date: "2026-11-30", md: "11/30", dow: "一", wx: "seomyeon",  dot: "var(--ink)",    ink: "var(--ink)" }
+  ];
+
+  /* WMO 天氣代碼 → [中文, 圖示] */
+  function wxInfo(c){
+    if (c === 0) { return ["晴", "sun"]; }
+    if (c === 1) { return ["大致晴朗", "sun"]; }
+    if (c === 2) { return ["晴時多雲", "partly"]; }
+    if (c === 3) { return ["陰", "cloud"]; }
+    if (c === 45 || c === 48) { return ["霧", "fog"]; }
+    if (c >= 51 && c <= 57) { return ["毛毛雨", "rain"]; }
+    if (c === 61 || c === 66) { return ["小雨", "rain"]; }
+    if (c === 63) { return ["中雨", "rain"]; }
+    if (c === 65 || c === 67) { return ["大雨", "rain"]; }
+    if (c >= 71 && c <= 77) { return ["雪", "snow"]; }
+    if (c === 80) { return ["短暫陣雨", "rain"]; }
+    if (c === 81) { return ["陣雨", "rain"]; }
+    if (c === 82) { return ["強陣雨", "rain"]; }
+    if (c === 85 || c === 86) { return ["陣雪", "snow"]; }
+    if (c >= 95) { return ["雷雨", "storm"]; }
+    return ["多雲", "cloud"];
+  }
+  var CLOUD_HI = '<path class="c" d="M7 15.5h10.4a3.9 3.9 0 0 0 .5-7.77A5.5 5.5 0 0 0 7.3 6.9 4.3 4.3 0 0 0 7 15.5Z"/>';
+  var WX_ICON = {
+    sun: '<circle class="s" cx="12" cy="12" r="4.2"/><path class="s" d="M12 2.6v2.3M12 19.1v2.3M2.6 12h2.3M19.1 12h2.3M5.4 5.4l1.6 1.6M17 17l1.6 1.6M5.4 18.6 7 17M17 7l1.6-1.6"/>',
+    partly: '<circle class="s" cx="8.6" cy="8.4" r="3.3"/><path class="s" d="M8.6 2.3v1.5M2.5 8.4H4M4.3 4.1l1 1M12.9 4.1l-1 1M4.3 12.7l1-1"/><path class="c" d="M9.3 20h8.4a3.5 3.5 0 0 0 .5-6.96 4.9 4.9 0 0 0-9.4-.9A3.95 3.95 0 0 0 9.3 20Z"/>',
+    cloud: '<path class="c" d="M7 18.5h10.4a3.9 3.9 0 0 0 .5-7.77A5.5 5.5 0 0 0 7.3 9.9 4.3 4.3 0 0 0 7 18.5Z"/>',
+    rain: CLOUD_HI + '<path class="r" d="M8.6 18.4l-1 2.6M12.6 18.4l-1 2.6M16.6 18.4l-1 2.6"/>',
+    storm: CLOUD_HI + '<path class="b" d="M12.8 16.2 10 20.6h2.5l-1 3 3.7-4.8h-2.5l1.4-2.6Z"/>',
+    fog: '<path class="c" d="M4.5 9h15M6.5 13h11M4.5 17h15"/>',
+    snow: CLOUD_HI + '<path class="r" d="M8.5 19.2h.01M12.5 19.2h.01M16.5 19.2h.01M10.5 22h.01M14.5 22h.01"/>'
+  };
+  function wxSvg(k){ return '<svg class="wx-i" viewBox="0 0 24 24" aria-hidden="true">' + WX_ICON[k] + "</svg>"; }
+  function pad2(n){ return (n < 10 ? "0" : "") + n; }
+  function fmtTime(ms){
+    var t = new Date(ms);
+    return (t.getMonth() + 1) + "/" + t.getDate() + " " + pad2(t.getHours()) + ":" + pad2(t.getMinutes());
+  }
+  function wxDay(data, d){
+    var loc = data && data[WX_KEYS.indexOf(d.wx)];
+    var dl = loc && loc.daily;
+    var i = dl && dl.time ? dl.time.indexOf(d.date) : -1;
+    if (i < 0 || dl.weather_code[i] == null) { return null; }
+    function r(v){ return v == null ? "—" : Math.round(v); }
+    return { code: dl.weather_code[i], max: r(dl.temperature_2m_max[i]), min: r(dl.temperature_2m_min[i]),
+      rain: r(dl.precipitation_probability_max[i]), wind: r(dl.wind_speed_10m_max[i]), sunset: (dl.sunset[i] || "").slice(11, 16) };
+  }
+  function rainHTML(w){
+    return '<span class="' + (w.rain !== "—" && w.rain >= 50 ? "is-wet" : "") + '">降雨 ' + w.rain + "%</span>";
+  }
+  function renderWx(data, meta){
+    document.getElementById("wxDays").innerHTML = WX_DAYS.map(function(d){
+      var w = wxDay(data, d), place = WX_PLACES[d.wx].name;
+      var head = '<a class="wxd" href="#d' + d.n + '" style="--dot:' + d.dot + "; --dot-ink:" + d.ink + '">' +
+        '<span class="wxd-top"><b>D' + d.n + "</b><span>" + d.md + " " + d.dow + "</span></span>";
+      if (!w) {
+        return head + '<span class="wxd-none">' + (data ? "預報還沒出來" : "—") + '</span><span class="wxd-sub">' + place + "</span></a>";
+      }
+      var info = wxInfo(w.code);
+      return head +
+        '<span class="wxd-mid">' + wxSvg(info[1]) + '<span class="wxd-t"><b>' + w.max + "°</b> / " + w.min + "°</span></span>" +
+        '<span class="wxd-desc">' + info[0] + "・" + place + "</span>" +
+        '<span class="wxd-sub">' + rainHTML(w) + "・風 " + w.wind + " m/s</span></a>";
+    }).join("");
+    WX_DAYS.forEach(function(d){
+      var el = document.getElementById("wx-d" + d.n), w = wxDay(data, d);
+      if (!el) { return; }
+      el.hidden = !w;
+      if (!w) { return; }
+      var info = wxInfo(w.code);
+      el.innerHTML = wxSvg(info[1]) + "<b>" + info[0] + '</b><span class="mono">' + w.max + "° / " + w.min + "°</span>" + rainHTML(w) +
+        "<span>風 " + w.wind + " m/s</span>" + (w.sunset ? "<span>日落 " + w.sunset + "</span>" : "") +
+        "<span>（" + WX_PLACES[d.wx].name + "）</span>";
+    });
+    document.getElementById("wxMeta").innerHTML = meta;
+  }
+
+  var wxData = null, wxAt = 0;
+  function loadWeather(){
+    var ctrl = "AbortController" in window ? new AbortController() : null;
+    var timer = setTimeout(function(){ if (ctrl) { ctrl.abort(); } }, 12000);
+    fetch(WX_URL, ctrl ? { cache: "no-store", signal: ctrl.signal } : { cache: "no-store" })
+      .then(function(r){ if (!r.ok) { throw new Error("HTTP " + r.status); } return r.json(); })
+      .then(function(data){
+        clearTimeout(timer);
+        wxData = Array.isArray(data) ? data : [data];
+        wxAt = Date.now();
+        try { localStorage.setItem(WX_STORE, JSON.stringify({ at: wxAt, data: wxData })); } catch (e) {}
+        renderWx(wxData, '<a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a> 最新預報・' + fmtTime(wxAt) + " 更新・每 30 分鐘自動更新");
+      })
+      .catch(function(){
+        clearTimeout(timer);
+        renderWx(wxData, wxData ? "目前連不上，顯示 " + fmtTime(wxAt) + " 的預報" : "目前無法取得天氣預報，可能是沒有網路。");
+      });
+  }
+  try {
+    var cached = JSON.parse(localStorage.getItem(WX_STORE) || "null");
+    if (cached && cached.data) { wxData = cached.data; wxAt = cached.at; }
+  } catch (e) {}
+  renderWx(wxData, wxData ? "顯示 " + fmtTime(wxAt) + " 的預報，更新中…" : "天氣預報載入中…");
+  if ("fetch" in window) { loadWeather(); }
+  /* 頁面開著時每 30 分鐘更新；切回這個分頁時，資料超過 30 分鐘就馬上更新 */
+  setInterval(function(){ if (document.visibilityState === "visible") { loadWeather(); } }, WX_EVERY);
+  document.addEventListener("visibilitychange", function(){
+    if (document.visibilityState === "visible" && Date.now() - wxAt > WX_EVERY) { loadWeather(); }
+  });
 
   var veil = document.getElementById("gmveil");
   if (veil) { veil.addEventListener("click", function(){ veil.remove(); }); }
