@@ -8,7 +8,7 @@
 <title>釜山六日手帖｜2026.11.25–11.30</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Sans+TC:wght@400;700;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Sans+TC:wght@400;700;900&display=swap">
 <style>*{margin:0;padding:0}img,svg{max-width:100%}
 /* ─── tokens · light (also the un-stamped default) ─────────────── */
 :root{
@@ -21,8 +21,6 @@
   --ground:#F4F7F8; --surface:#FFFFFF; --surface-2:#EAF0F2; --night:#0B2036;
   --ink:#101C26; --ink-2:#3E5468; --ink-3:#566F80;
   --line:#D3DEE3; --line-2:#B4C4CC; --tarp-alt:#FFFFFF;
-  --sea:#D9E9F0; --land:#FCFDFD; --coast:#93AFBD; --sea-line:#B2CFDC;
-  --metro:#A9C2D0; --metro-ink:#56788D;
   --shadow:0 1px 2px rgba(16,28,38,.05), 0 10px 26px -14px rgba(16,28,38,.22);
   --f-display:"Bricolage Grotesque","Noto Sans TC",system-ui,sans-serif;
   --f-body:"IBM Plex Sans","Noto Sans TC",system-ui,sans-serif;
@@ -39,8 +37,6 @@
     --ground:#08151F; --surface:#0E2130; --surface-2:#13293A; --night:#040D15;
     --ink:#EAF2F5; --ink-2:#A8BECB; --ink-3:#8AA3B2;
     --line:#223C4E; --line-2:#345066; --tarp-alt:#F6E9DF;
-    --sea:#06202E; --land:#122B3D; --coast:#33607C; --sea-line:#12405A;
-    --metro:#2F5670; --metro-ink:#7FA6BE;
     --shadow:0 1px 2px rgba(0,0,0,.4), 0 14px 34px -16px rgba(0,0,0,.75);
   }
 }
@@ -54,8 +50,6 @@
   --ground:#08151F; --surface:#0E2130; --surface-2:#13293A; --night:#040D15;
   --ink:#EAF2F5; --ink-2:#A8BECB; --ink-3:#8AA3B2;
   --line:#223C4E; --line-2:#345066; --tarp-alt:#F6E9DF;
-    --sea:#06202E; --land:#122B3D; --coast:#33607C; --sea-line:#12405A;
-    --metro:#2F5670; --metro-ink:#7FA6BE;
   --shadow:0 1px 2px rgba(0,0,0,.4), 0 14px 34px -16px rgba(0,0,0,.75);
 }
 
@@ -73,7 +67,7 @@ p{margin:0}
 a{color:inherit}
 ul,ol,dl,dd{margin:0; padding:0; list-style:none}
 button{font:inherit; color:inherit}
-:focus-visible{outline:2.5px solid var(--drone); outline-offset:3px; border-radius:4px}
+:focus-visible{outline:2.5px solid var(--drone-ink); outline-offset:3px; border-radius:4px}
 .wrap{width:min(1120px,91vw); margin-inline:auto}
 .mono{font-family:var(--f-mono); font-variant-numeric:tabular-nums}
 .eyebrow{
@@ -116,9 +110,7 @@ button{font:inherit; color:inherit}
 .hero{position:relative; padding:22px 0 0; overflow:hidden}
 .bulbs{display:block; width:100%; height:auto; margin-bottom:-14px}
 .bulb-dot{transform-box:fill-box; transform-origin:center; animation:twinkle 3.4s ease-in-out infinite}
-.bulb-glow{animation:glow 3.4s ease-in-out infinite}
 @keyframes twinkle{0%,100%{opacity:.55}50%{opacity:1}}
-@keyframes glow{0%,100%{opacity:.10}50%{opacity:.34}}
 .hero-grid{display:grid; gap:34px; padding:26px 0 40px}
 @media (min-width:940px){ .hero-grid{grid-template-columns:1.35fr .95fr; align-items:end; gap:56px} }
 h1{font-size:clamp(2.9rem,10vw,5.6rem); letter-spacing:-.03em; font-weight:800}
@@ -223,7 +215,7 @@ h1 .t2{color:var(--tarp-ink)}
     background:linear-gradient(var(--line) 0 86%, transparent);
   }
 }
-.stop{display:grid; gap:10px}
+.stop{display:grid; gap:10px; scroll-margin-top:84px}
 @media (min-width:720px){
   .stop{grid-template-columns:104px 1fr; gap:22px; align-items:start}
 }
@@ -276,12 +268,11 @@ h1 .t2{color:var(--tarp-ink)}
 .maplink svg{width:13px; height:13px; flex:0 0 auto}
 
 /* meal cards wear a pojangmacha awning */
-.stop[data-kind="meal"] .card{background:var(--tarp-soft); border-color:color-mix(in srgb, var(--tarp) 34%, var(--line))}
+.stop[data-kind="meal"] .card{background:var(--tarp-soft); border-color:color-mix(in srgb, var(--tarp) 34%, var(--line)); padding-top:24px}
 .stop[data-kind="meal"] .card::before{
   content:""; position:absolute; inset:0 0 auto; height:9px;
   background:repeating-linear-gradient(112deg, var(--tarp) 0 13px, var(--tarp-alt) 13px 26px);
 }
-.stop[data-kind="meal"] .card{padding-top:24px}
 .stop[data-kind="move"] .card{background:transparent; border-style:dashed; box-shadow:none}
 .stop[data-kind="move"] .card:hover{transform:none}
 
@@ -310,14 +301,14 @@ h1 .t2{color:var(--tarp-ink)}
 .stage-cap b{display:block; font-family:var(--f-display); font-size:1.5rem; font-weight:800; color:#F4F8FB; letter-spacing:-.02em; line-height:1.1}
 .stage-cap span{font-family:var(--f-mono); font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; color:#8FD9E6}
 .show-body{padding:16px 18px 17px}
-.show-body h3,.show-body .card-top h3{color:#F4F8FB}
+.show-body h3{color:#F4F8FB}
 .show-body p.note{color:#BFD6E2}
 .show-body p.note b{color:#FFFFFF}
 .show-body .addr{color:#BFD6E2; border-top-color:rgba(159,196,218,.28)}
 .show-body .addr dt{color:#8FA9BA}
 .show-body .tag{background:rgba(159,196,218,.16); color:#DCEAF2}
 .show-body .maplink{background:var(--violet); color:#FFFFFF}
-.show-body 
+.show-body :focus-visible{outline-color:var(--drone)}
 /* ─── briefing ─────────────────────────────────────────────────── */
 .brief{padding:56px 0 12px}
 .brief-grid{display:grid; gap:12px; margin-top:20px}
@@ -326,8 +317,8 @@ h1 .t2{color:var(--tarp-ink)}
   padding:17px 18px; border-radius:14px; background:var(--surface);
   border:1px solid var(--line); border-left:3px solid var(--k,var(--drone));
 }
-.tip h4{font-size:.95rem; font-weight:700; font-family:var(--f-body)}
-.tip h4 span{font-family:var(--f-mono); font-size:.7rem; font-weight:600; letter-spacing:.12em; color:var(--ink-3); display:block; margin-bottom:4px; text-transform:uppercase}
+.tip h3{font-size:.95rem; font-weight:700; font-family:var(--f-body)}
+.tip h3 span{font-family:var(--f-mono); font-size:.7rem; font-weight:600; letter-spacing:.12em; color:var(--ink-3); display:block; margin-bottom:4px; text-transform:uppercase}
 .tip p{margin-top:7px; font-size:.9rem; color:var(--ink-2)}
 .tip p b{color:var(--ink); font-weight:600}
 footer{margin-top:48px; border-top:1px solid var(--line)}
@@ -349,10 +340,9 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
 .dayjump{border:1px solid var(--line-2); color:var(--ink-2)}
 .dayroute:hover,.dayjump:hover{transform:translateY(-1px)}
 .dayjump:hover{border-color:var(--dot); color:var(--dot-ink)}
-.stop{scroll-margin-top:84px}
 .stop:target .card{box-shadow:0 0 0 3px var(--dot), var(--shadow)}
 
-/* ─── schematic map ────────────────────────────────────────────── */
+/* ─── route map ────────────────────────────────────────────────── */
 .map-sec{padding:52px 0 8px; scroll-margin-top:70px}
 .map-tools{display:flex; flex-wrap:wrap; align-items:center; gap:10px 20px; margin:2px 0 16px}
 .filters{display:flex; gap:6px; flex-wrap:wrap}
@@ -369,6 +359,7 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
 .fb[data-day="4"][aria-pressed="true"]{background:var(--violet); border-color:var(--violet); color:var(--violet-on)}
 .fb[data-day="5"][aria-pressed="true"]{background:var(--rose); border-color:var(--rose); color:var(--rose-on)}
 .fb[data-day="6"][aria-pressed="true"]{background:var(--ink); border-color:var(--ink); color:var(--surface)}
+.map-hint{font-size:.82rem; color:var(--ink-3); margin-left:auto}
 /* ─── weather · Open-Meteo daily forecast ──────────────────────── */
 .wx{padding:44px 0 8px}
 .wx .ov-head{flex-wrap:wrap; row-gap:4px}
@@ -404,105 +395,6 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
 .day-wx .wx-i{width:22px; height:22px}
 .day-wx .wx-i .c{fill:var(--ground)}
 .day-wx b,.day-wx .mono{color:var(--ink)}
-@media (prefers-reduced-motion: reduce){ .wxd:hover{transform:none} }
-.map-hint{font-size:.82rem; color:var(--ink-3); margin-left:auto}
-.map-figure{margin:0}
-.map-hold{position:relative}
-.map-hold::after{
-  content:""; position:absolute; top:1px; right:1px; bottom:1px; width:52px; z-index:1;
-  pointer-events:none; border-radius:0 17px 17px 0; opacity:0; transition:opacity .3s ease;
-  background:linear-gradient(90deg, transparent, color-mix(in srgb, var(--surface) 90%, transparent));
-}
-.swipe-hint{
-  position:absolute; right:12px; top:12px; z-index:2; display:none;
-  padding:7px 13px; border-radius:999px; background:var(--night); color:#F2F7FA;
-  font-family:var(--f-mono); font-size:.72rem; font-weight:600; letter-spacing:.04em;
-  pointer-events:none; transition:opacity .35s ease;
-}
-@media (max-width:719px){
-  .map-hold::after{opacity:1}
-  .swipe-hint{display:block}
-}
-.map-scroll{overflow-x:auto; border:1px solid var(--line); border-radius:18px; background:var(--surface)}
-.map-scroll svg{display:block; width:100%; min-width:760px; height:auto}
-.map-figure figcaption{margin-top:11px; font-size:.79rem; color:var(--ink-3)}
-.sea{fill:var(--sea)}
-.land{fill:var(--land); stroke:var(--coast); stroke-width:1.6; stroke-linejoin:round}
-.riv{fill:none; stroke:var(--sea);   stroke-width:5; stroke-linecap:round}
-.wave{fill:none; stroke:var(--sea-line); stroke-width:2; stroke-linecap:round}
-.bridge{fill:none; stroke:var(--ink-3); stroke-width:2.6; stroke-linecap:round}
-.rlabel{font-family:var(--f-mono); font-size:17px; font-weight:600; fill:var(--ink-3); letter-spacing:.05em}
-.wlabel{font-family:var(--f-mono); font-size:15px; font-weight:500; fill:var(--coast); letter-spacing:.05em}
-.metro{fill:none; stroke:var(--metro); stroke-width:4; stroke-linecap:round; stroke-linejoin:round; opacity:.85}
-.mstop{fill:var(--surface); stroke:var(--metro); stroke-width:2.6}
-.mlab2{font-family:var(--f-mono); font-size:14px; font-weight:600; fill:var(--metro-ink); letter-spacing:.08em}
-.scale path{fill:none; stroke:var(--ink-3); stroke-width:1.6; stroke-linecap:round}
-.scale text{font-family:var(--f-mono); font-size:13px; font-weight:500; fill:var(--ink-3); text-anchor:middle}
-.routestrip{
-  display:flex; flex-wrap:wrap; gap:4px 12px; align-items:baseline;
-  margin:0 0 14px; font-size:.92rem; color:var(--ink-2); line-height:1.7;
-}
-.routestrip b{
-  flex:0 0 auto; font-family:var(--f-mono); font-size:.78rem; font-weight:600;
-  letter-spacing:.08em; color:var(--rc);
-}
-/* 路線只在選了某一天時出現，避免五天疊成一團 */
-.mroute{
-  fill:none; stroke-width:3.2; stroke-linecap:round; stroke-linejoin:round;
-  stroke-dasharray:11 9; opacity:0; transition:opacity .3s ease;
-}
-.mroute[data-day="1"]{stroke:var(--tarp)}
-.mroute[data-day="2"]{stroke:var(--drone)}
-.mroute[data-day="3"]{stroke:var(--bulb)}
-.mroute[data-day="4"]{stroke:var(--violet)}
-.mp{cursor:pointer; transition:opacity .3s ease}
-.mp circle{stroke:var(--surface); stroke-width:2.5; transition:stroke .18s ease}
-.mp .pnum{
-  font-family:var(--f-mono); font-size:15px; font-weight:600;
-  text-anchor:middle; dominant-baseline:central; pointer-events:none;
-}
-.mp .mlab{
-  font-family:var(--f-body); font-size:16px; font-weight:600; fill:var(--ink);
-  paint-order:stroke fill; stroke:var(--surface); stroke-width:4.5px; stroke-linejoin:round;
-  dominant-baseline:central; pointer-events:none;
-}
-.mp .mlab-s{text-anchor:start} .mp .mlab-e{text-anchor:end} .mp .mlab-m{text-anchor:middle}
-.mp:hover .mlab{fill:var(--ink)}
-.staymark rect{fill:var(--night)}
-.staymark path{fill:#F2F7FA}
-.staymark text{
-  font-family:var(--f-body); font-size:16px; font-weight:700; fill:var(--ink);
-  paint-order:stroke fill; stroke:var(--surface); stroke-width:4.5px; stroke-linejoin:round;
-  dominant-baseline:central; text-anchor:start; pointer-events:none;
-}
-.mp:hover circle{stroke:var(--ink)}
-.mlegend rect{fill:var(--surface); stroke:var(--line); stroke-width:1.5}
-.mlegend .lgh{font-family:var(--f-mono); font-size:13px; font-weight:600; fill:var(--ink-3); letter-spacing:.16em}
-.mlegend .lgsep{stroke:var(--line); stroke-width:1.2}
-.mlegend rect.key{fill:var(--night); stroke:none}
-.mlegend .lgt{font-family:var(--f-body); font-size:16px; font-weight:500; fill:var(--ink-2);
-  dominant-baseline:central; text-anchor:start}
-.mp.lg{cursor:default}
-.mp.lg circle{stroke-width:0}
-.mp[data-day="1"] circle{fill:var(--tarp)}  .mp[data-day="1"] .pnum{fill:var(--tarp-on)}
-.mp[data-day="2"] circle{fill:var(--drone)} .mp[data-day="2"] .pnum{fill:var(--drone-on)}
-.mp[data-day="3"] circle{fill:var(--bulb)}  .mp[data-day="3"] .pnum{fill:var(--bulb-on)}
-.mp[data-day="4"] circle{fill:var(--violet)}.mp[data-day="4"] .pnum{fill:var(--violet-on)}
-.mp[data-day="5"] circle{fill:var(--ink)}   .mp[data-day="5"] .pnum{fill:var(--surface)}
-.map-figure[data-filter="1"] .mp:not([data-day="1"]),
-.map-figure[data-filter="2"] .mp:not([data-day="2"]),
-.map-figure[data-filter="3"] .mp:not([data-day="3"]),
-.map-figure[data-filter="4"] .mp:not([data-day="4"]),
-.map-figure[data-filter="5"] .mp:not([data-day="5"]){opacity:.15}
-.map-figure[data-filter="1"] .mroute:not([data-day="1"]),
-.map-figure[data-filter="2"] .mroute:not([data-day="2"]),
-.map-figure[data-filter="3"] .mroute:not([data-day="3"]),
-.map-figure[data-filter="4"] .mroute:not([data-day="4"]),
-.map-figure[data-filter="5"] .mroute:not([data-day="5"]){opacity:0}
-.map-figure[data-filter="1"] .mroute[data-day="1"],
-.map-figure[data-filter="2"] .mroute[data-day="2"],
-.map-figure[data-filter="3"] .mroute[data-day="3"],
-.map-figure[data-filter="4"] .mroute[data-day="4"]{opacity:.95}
 
 /* ─── reveal on scroll ─────────────────────────────────────────── */
 .rv{opacity:0; transform:translateY(14px); transition:opacity .55s cubic-bezier(.22,.7,.3,1), transform .55s cubic-bezier(.22,.7,.3,1)}
@@ -510,9 +402,11 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
 @media (prefers-reduced-motion: reduce){
   html{scroll-behavior:auto}
   .rv{opacity:1; transform:none; transition:none}
-  .bulb-dot,.bulb-glow,.drones circle{animation:none}
-  .card:hover,.ov:hover,.daynav a:hover,.maplink:hover{transform:none}
+  .bulb-dot,.drones circle{animation:none}
+  .card:hover,.ov:hover,.daynav a:hover,.maplink:hover,.wxd:hover{transform:none}
 }
+/* printing / Save as PDF: cards never scrolled into view would otherwise stay invisible */
+@media print{ .rv{opacity:1; transform:none} }
 /* ─── embedded Google map ──────────────────────────────────────── */
 .gmap-hold{position:relative; border-radius:18px; overflow:hidden; border:1px solid var(--line); background:var(--surface-2)}
 #gmap{display:block; width:100%; height:min(70vh,620px); border:0}
@@ -526,6 +420,7 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
   font-family:var(--f-body); font-size:.82rem; font-weight:600; box-shadow:0 6px 18px -8px rgba(0,0,0,.6);
 }
 @media (hover:none){ .gmap-veil{display:flex} }
+.gmap-veil:focus-visible{outline-offset:-4px}
 .gmroute{
   display:flex; flex-wrap:wrap; gap:4px 12px; align-items:baseline;
   margin:0 0 12px; font-size:.92rem; color:var(--ink-2); line-height:1.7;
@@ -1351,43 +1246,43 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
   </div>
   <div class="brief-grid">
     <div class="tip rv" style="--k:var(--ink-3)">
-      <h4><span>Flights</span>兩個返程時間</h4>
+      <h3><span>Flights</span>兩個返程時間</h3>
       <p><b>學恆 11/29（日）22:00</b>、其他人 <b>11/30（一）22:00</b> 起飛。排托運的人多，都抓 <b>19:00–20:00 到機場</b>；南浦到機場地鐵約 1 小時，住宿可以免費寄放行李。</p>
     </div>
     <div class="tip rv" style="--k:var(--violet)">
-      <h4><span>Showtime</span>無人機秀場次要再確認</h4>
+      <h3><span>Showtime</span>無人機秀場次要再確認</h3>
       <p>廣安里 M 無人機秀冬季場次通常為 <b>19:00 與 21:00</b>，我們看 19:00 場：16:30 左右從南浦出發、<b>五點多到沙灘卡位</b>。場次與是否演出偶有變動（天候也會影響），<b>11/27 晚上再確認一次官方公告</b>。</p>
     </div>
     <div class="tip rv" style="--k:var(--drone)">
-      <h4><span>Tickets</span>排隊、買票、最後入場</h4>
+      <h3><span>Tickets</span>排隊、買票、最後入場</h3>
       <p><b>膠囊列車</b>網路沒搶到票，D2 早上直接去現場排，越早越好。<b>樂天樂園</b>門票可以先在官網或 Klook 買好。<b>Arte Museum</b> 每日 10:00–20:00、19:00 最後入場，要留 1.5–2 小時。</p>
     </div>
     <div class="tip rv" style="--k:var(--drone)">
-      <h4><span>Weather</span>十一月底的釜山會冷</h4>
+      <h3><span>Weather</span>十一月底的釜山會冷</h3>
       <p>這個時期日均大約 <b>6–14°C</b>，海邊風大、入夜更冷。洋蔥式穿搭加一件防風外套；廣安里那晚在戶外等表演，<b>暖暖包和熱飲很值得</b>。頁面上方的<b>天氣預報</b>會自動更新，出發前一兩天最準。</p>
     </div>
     <div class="tip rv" style="--k:var(--tarp)">
-      <h4><span>Cash</span>布帳馬車和市場留點現金</h4>
+      <h3><span>Cash</span>布帳馬車和市場留點現金</h3>
       <p>帳篷攤和市場小攤有些只收現金，身上<b>留一些韓元零錢</b>比較保險。市場點菜、代客料理前先問清價錢和料理費，吃得比較安心。</p>
     </div>
     <div class="tip rv" style="--k:var(--bulb)">
-      <h4><span>Timing</span>市場排白天，夜市排晚上</h4>
+      <h3><span>Timing</span>市場排白天，夜市排晚上</h3>
       <p>傳統市場傍晚就會陸續收攤，所以市場都放在白天。反過來，富平罐頭市場的夜市攤和布帳馬車都要等天黑才熱鬧。</p>
     </div>
     <div class="tip rv" style="--k:var(--ink-3)">
-      <h4><span>Stay</span>住宿在南浦，六天都同一間</h4>
+      <h3><span>Stay</span>住宿在南浦，六天都同一間</h3>
       <p><b>TRIP MADE 南浦（Airbnb #1 房）</b>：11/25 16:00 入住、11/30 退房，共 5 晚。2 房 2 衛、4 張 Queen、最多 8 人，整層單團獨用。<b>南浦站步行 3 分</b>，自助入住、24 小時免費寄放行李、有洗衣機與烘衣機、可開伙。<b>沒有電梯也沒有停車場</b>，行李多的人上下樓要留意。</p>
     </div>
     <div class="tip rv" style="--k:var(--drone)">
-      <h4><span>Maps</span>Google 在韓國只有大眾運輸路線</h4>
+      <h3><span>Maps</span>Google 在韓國只有大眾運輸路線</h3>
       <p>韓國法規限制地圖資料輸出，<b>Google 地圖在韓國沒有汽車與步行導航</b>，多點路線也算不出來。所以路線連結都是<b>一段一段的大眾運輸</b>（卡片下方的「從上一站搭車」）。25 個地點的名稱都在路線模式實測過；<b>SCENTICA、影島布帳馬車街、조방낙지 大淵店</b>這三個 Google 會指到別家分店或別區，<b>金海機場 → 스파해수랑</b>這段在 Google 地圖 App 裡帶不出路線，這幾個的路線連結都改用座標。要開車導航請用韓國本地的 <b>Naver Map</b> 或 <b>KakaoMap</b>。</p>
     </div>
     <div class="tip rv" style="--k:var(--drone)">
-      <h4><span>Transit</span>幾乎全程都在地鐵沿線</h4>
+      <h3><span>Transit</span>幾乎全程都在地鐵沿線</h3>
       <p>西面／田浦、南浦／札嘎其、海雲台各自是一區，<b>樂天樂園、機張和松亭要搭東海線</b>，影島沒有地鐵。每張卡片下面都標了最近的車站和步行時間（出口編號僅供參考，現場以指標為準）。<b>先買一張 T-money 或 Cashbee</b>，地鐵公車都能嗶。</p>
     </div>
     <div class="tip rv" style="--k:var(--ink-3)">
-      <h4><span>Pace</span>時間欄只是節奏參考</h4>
+      <h3><span>Pace</span>時間欄只是節奏參考</h3>
       <p>除了<b>兩班飛機</b>、<b>D4 的 19:00（五點多卡位）</b> 和 <b>Arte Museum 的最後入場</b>，其他時間都可以彈性調整。走不完就砍掉中間的逛街段，不要犧牲吃飯和泡湯。</p>
     </div>
   </div>
