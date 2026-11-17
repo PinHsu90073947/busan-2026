@@ -211,17 +211,18 @@ h1 .t2{color:var(--tarp-ink)}
 .line{display:grid; gap:14px; position:relative}
 @media (min-width:720px){
   .line::before{
-    content:""; position:absolute; left:107px; top:30px; bottom:26px; width:1.5px;
+    content:""; position:absolute; left:119px; top:30px; bottom:26px; width:1.5px;
     background:linear-gradient(var(--line) 0 86%, transparent);
   }
 }
 .stop{display:grid; gap:10px; scroll-margin-top:84px}
 @media (min-width:720px){
-  .stop{grid-template-columns:104px 1fr; gap:22px; align-items:start}
+  .stop{grid-template-columns:116px 1fr; gap:22px; align-items:start}
 }
 .slot{display:flex; align-items:center; gap:9px; padding-top:14px}
 @media (min-width:720px){
-  .slot{flex-direction:column; align-items:flex-end; gap:6px; padding-top:20px; position:relative}
+  /* 文字右邊留空，避免壓到時間軸上的圓點 */
+  .slot{flex-direction:column; align-items:flex-end; gap:6px; padding-top:20px; padding-right:18px; text-align:right; position:relative}
   .slot::after{
     content:""; position:absolute; right:-11.5px; top:26px; z-index:1; width:9px; height:9px;
     border-radius:50%; background:var(--surface); border:2.5px solid var(--dot);
