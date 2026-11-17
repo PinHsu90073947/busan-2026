@@ -366,6 +366,12 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
 .wx .ov-head h2{white-space:nowrap}
 .wx-meta{font-size:.78rem; color:var(--ink-3)}
 .wx-meta a{color:inherit}
+.wx-retry{
+  margin-left:4px; padding:3px 12px; border-radius:999px; cursor:pointer;
+  border:1px solid var(--line-2); background:var(--surface);
+  font-size:.78rem; font-weight:600; color:var(--ink);
+}
+.wx-retry:hover{border-color:var(--ink-3)}
 .wx-days{display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr))}
 .wxd{
   display:grid; gap:5px; align-content:start; padding:13px 14px 14px; text-decoration:none;
@@ -1494,13 +1500,22 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
   }
 
   var wxData = null, wxAt = 0;
-  function loadWeather(){
+  /* 天氣服務偶爾會卡住不回應：失敗後 3 秒、10 秒、30 秒各再試一次，全失敗才顯示「重試」按鈕 */
+  var WX_RETRY = [3000, 10000, 30000];
+  var wxBusy = false, wxRetryTimer = null;
+  var WX_RETRY_BTN = ' <button type="button" class="wx-retry" id="wxRetry">重試</button>';
+  function loadWeather(attempt){
+    attempt = attempt || 0;
+    if (wxBusy) { return; }
+    wxBusy = true;
+    clearTimeout(wxRetryTimer);
     var ctrl = "AbortController" in window ? new AbortController() : null;
     var timer = setTimeout(function(){ if (ctrl) { ctrl.abort(); } }, 12000);
     fetch(WX_URL, ctrl ? { cache: "no-store", signal: ctrl.signal } : { cache: "no-store" })
       .then(function(r){ if (!r.ok) { throw new Error("HTTP " + r.status); } return r.json(); })
       .then(function(data){
         clearTimeout(timer);
+        wxBusy = false;
         wxData = Array.isArray(data) ? data : [data];
         wxAt = Date.now();
         try { localStorage.setItem(WX_STORE, JSON.stringify({ at: wxAt, data: wxData })); } catch (e) {}
@@ -1508,9 +1523,20 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
       })
       .catch(function(){
         clearTimeout(timer);
-        renderWx(wxData, wxData ? "目前連不上，顯示 " + fmtTime(wxAt) + " 的預報" : "目前無法取得天氣預報，可能是沒有網路。");
+        wxBusy = false;
+        var shown = wxData ? "目前連不上，先顯示 " + fmtTime(wxAt) + " 的預報" : "天氣服務暫時沒回應";
+        if (attempt < WX_RETRY.length) {
+          renderWx(wxData, shown + "，" + (attempt + 1) + " 次重試中…");
+          wxRetryTimer = setTimeout(function(){ loadWeather(attempt + 1); }, WX_RETRY[attempt]);
+        } else {
+          renderWx(wxData, shown + "。" + WX_RETRY_BTN);
+        }
       });
   }
+  document.getElementById("wxMeta").addEventListener("click", function(e){
+    if (e.target && e.target.id === "wxRetry") { loadWeather(); }
+  });
+  window.addEventListener("online", function(){ loadWeather(); });
   try {
     var cached = JSON.parse(localStorage.getItem(WX_STORE) || "null");
     if (cached && cached.data) { wxData = cached.data; wxAt = cached.at; }
