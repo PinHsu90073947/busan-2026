@@ -361,10 +361,31 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
 .fb[data-day="5"][aria-pressed="true"]{background:var(--rose); border-color:var(--rose); color:var(--rose-on)}
 .fb[data-day="6"][aria-pressed="true"]{background:var(--ink); border-color:var(--ink); color:var(--surface)}
 .map-hint{font-size:.82rem; color:var(--ink-3); margin-left:auto}
+/* ─── flights & arrival card ───────────────────────────────────── */
+.flights{padding:44px 0 8px}
+.fl-grid{display:grid; gap:12px}
+@media (min-width:860px){ .fl-grid{grid-template-columns:repeat(3,1fr)} }
+.fl{
+  display:grid; gap:10px; align-content:start; padding:16px 18px 18px;
+  background:var(--surface); border:1px solid var(--line); border-radius:14px; border-top:3px solid var(--dot);
+}
+.fl-head{display:flex; justify-content:space-between; align-items:baseline; gap:8px; font-family:var(--f-mono); font-size:.74rem; font-weight:600; letter-spacing:.06em}
+.fl-head b{color:var(--dot-ink)}
+.fl-head span{color:var(--ink-3)}
+.fl-route{display:grid; grid-template-columns:auto minmax(24px,1fr) auto; align-items:center; gap:12px}
+.fl-pt b{display:block; font-family:var(--f-mono); font-size:1.6rem; font-weight:600; letter-spacing:-.02em; line-height:1.1; color:var(--ink)}
+.fl-pt small{display:block; margin-top:3px; font-size:.8rem; color:var(--ink-2)}
+.fl-pt:last-child{text-align:right}
+.fl-line{border-top:1.5px dashed var(--line-2)}
+.fl h3{font-family:var(--f-body); font-size:1.02rem; font-weight:700}
+.fl p{font-size:.88rem; color:var(--ink-2)}
+.fl p b{color:var(--ink); font-weight:600}
+.fl .fl-no b{font-family:var(--f-mono)}
+.fl .maplink{justify-self:start; margin-top:2px}
 /* ─── weather · Open-Meteo daily forecast ──────────────────────── */
 .wx{padding:44px 0 8px}
-.wx .ov-head{flex-wrap:wrap; row-gap:4px}
-.wx .ov-head h2{white-space:nowrap}
+.wx .ov-head,.flights .ov-head{flex-wrap:wrap; row-gap:4px}
+.wx .ov-head h2,.flights .ov-head h2{white-space:nowrap}
 .wx-meta{font-size:.78rem; color:var(--ink-3)}
 .wx-meta a{color:inherit}
 .wx-retry{
@@ -520,6 +541,43 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="home" viewBox="0 0 24 24"><path d="M12 3 2.5 10.5V21h7v-6h5v6h7V10.5L12 3z"/></symbol><symbol id="pin" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.3 7 13 7 13s7-7.7 7-13a7 7 0 0 0-7-7zm0 9.6A2.6 2.6 0 1 1 12 6.4a2.6 2.6 0 0 1 0 5.2z"/></symbol></svg>
 
+<!-- ─────────── 航班與入境 ─────────── -->
+<section class="flights wrap" id="flights">
+  <div class="ov-head">
+    <h2 style="font-size:clamp(1.35rem,3.4vw,1.7rem); letter-spacing:-.02em">航班與入境</h2>
+    <p class="eyebrow">Eastar Jet · e-Arrival Card</p>
+  </div>
+  <div class="fl-grid">
+    <article class="fl rv" style="--dot:var(--tarp); --dot-ink:var(--tarp-ink)">
+      <div class="fl-head"><b>去程</b><span>11/25 週三</span></div>
+      <div class="fl-route">
+        <div class="fl-pt"><b>02:50</b><small>台北 TPE</small></div>
+        <div class="fl-line" aria-hidden="true"></div>
+        <div class="fl-pt"><b>06:05</b><small>釜山 PUS</small></div>
+      </div>
+      <p class="fl-no">易斯達航空 <b>ZE984</b></p>
+      <p>凌晨 02:50 起飛，<b>11/24（二）晚上 23:30 前就要到桃園機場</b>報到。落地時同時段有好幾班飛機，出關大概要到 09:00。</p>
+    </article>
+    <article class="fl rv" style="--dot:var(--ink); --dot-ink:var(--ink)">
+      <div class="fl-head"><b>回程</b><span>11/30 週一</span></div>
+      <div class="fl-route">
+        <div class="fl-pt"><b>22:00</b><small>釜山 PUS</small></div>
+        <div class="fl-line" aria-hidden="true"></div>
+        <div class="fl-pt"><b>00:15</b><small>台北 TPE・12/1</small></div>
+      </div>
+      <p class="fl-no">易斯達航空 <b>ZE983</b></p>
+      <p>回到桃園是 <b>12/1（二）凌晨 00:15</b>，機場捷運已經收班（末班約 23:35）。回家要安排接送或計程車，或搭國光客運 1819（24 小時行駛，深夜班次比較少）。學恆搭的是 11/29 22:00 的另一班。</p>
+    </article>
+    <article class="fl rv" style="--dot:var(--violet); --dot-ink:var(--violet-ink)">
+      <div class="fl-head"><b>入境卡</b><span>免費・線上填</span></div>
+      <h3>韓國電子入境申報單（e-Arrival Card）</h3>
+      <p>台灣護照的 K-ETA 暫時免除延長到 2026/12/31，所以<b>沒辦 K-ETA 的人都要填入境卡</b>。<b>落地前 3 天內</b>才能填（11/25 06:05 落地 → 11/22 06:05 之後），太早填會失效。手機一次最多幫 9 人填，填完申報編號會寄到信箱。</p>
+      <p><b>準備：</b>護照、Email、入境航班 ZE984（11/25）、住宿地址（Airbnb 訂單裡的韓文地址）、出境航班 ZE983（選填）。</p>
+      <a class="maplink" href="https://www.e-arrivalcard.go.kr/portal/main/index.do?locale=CH" target="_blank" rel="noopener">前往入境卡官網</a>
+    </article>
+  </div>
+</section>
+
 <section class="overview wrap">
   <div class="ov-head">
     <h2 style="font-size:clamp(1.35rem,3.4vw,1.7rem); letter-spacing:-.02em">六天一覽</h2>
@@ -624,9 +682,9 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
   <div class="line">
 
     <article class="stop rv" data-kind="move">
-      <div class="slot"><span class="slot-t">06:00</span><span class="slot-k">落地・出關</span></div>
+      <div class="slot"><span class="slot-t">06:05</span><span class="slot-k">落地・出關</span></div>
       <div class="card">
-        <div class="card-top"><h3>抵達金海機場 → 汗蒸幕</h3></div>
+        <div class="card-top"><h3>ZE984 抵達金海機場 → 汗蒸幕</h3></div>
         <p class="note">同一個時段有好幾班飛機落地，<b>出關大概要到 09:00</b>。住宿 16:00 才能入住，出來後<b>全體搭計程車</b>帶著行李直接去汗蒸幕。一般計程車最多坐 4 人、後車廂大概只放得下 2 個大行李箱，行李多就排機場的<b>大型計程車（廂型車）</b>。</p>
         <dl class="addr"><dt>Taxi</dt><dd>約 30 分，每台約 ₩20,000 上下（依跳表估算，實際看路況）</dd><dt>給司機</dt><dd>부산 서구 충무대로 134 스파해수랑</dd></dl>
       </div>
@@ -1251,7 +1309,7 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
       <div class="slot"><span class="slot-t">17:30</span><span class="slot-k">返程</span></div>
       <div class="card">
         <div class="card-top"><h3>回住宿拿行李 → 金海機場</h3></div>
-        <p class="note">買完先回南浦拿行李，<b>19:00–20:00 到機場</b>，排托運的人很多，寧可早到。22:00 起飛，六天五夜、五座市場、三片海灘、一場無人機秀，收工。全員帶著行李，<b>建議搭計程車直達機場</b>，跟第一天一樣：一般計程車最多 4 人、後車廂約放 2 個大行李箱，行李多就分車或叫大型計程車。</p>
+        <p class="note">買完先回南浦拿行李，<b>19:00–20:00 到機場</b>，排托運的人很多，寧可早到。<b>ZE983 22:00 起飛</b>，12/1 凌晨 00:15 回到桃園；六天五夜、五座市場、三片海灘、一場無人機秀，收工。全員帶著行李，<b>建議搭計程車直達機場</b>，跟第一天一樣：一般計程車最多 4 人、後車廂約放 2 個大行李箱，行李多就分車或叫大型計程車。</p>
         <dl class="addr"><dt>Taxi</dt><dd><b>建議</b>：南浦 → 機場約 30 分，每台約 ₩20,000–25,000（依跳表估算）；可以請住宿幫忙叫車</dd><dt>給司機</dt><dd>김해국제공항 국제선</dd><dt>Metro</dt><dd>備用：南浦站搭 1 號線到西面轉 2 號線，沙上再轉釜山金海輕電鐵到機場，約 1 小時</dd></dl>
       </div>
     </article>
@@ -1267,8 +1325,8 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
   </div>
   <div class="brief-grid">
     <div class="tip rv" style="--k:var(--ink-3)">
-      <h3><span>Flights</span>兩個返程時間</h3>
-      <p><b>學恆 11/29（日）22:00</b>、其他人 <b>11/30（一）22:00</b> 起飛。排托運的人多，都抓 <b>19:00–20:00 到機場</b>。帶行李建議<b>搭計程車直達</b>，南浦到機場約 30 分、每台約 ₩20,000–25,000（地鐵要轉三次約 1 小時）；住宿可以免費寄放行李。</p>
+      <h3><span>Flights</span>航班和入境卡</h3>
+      <p>去程 <b>ZE984</b> 11/25 02:50 從桃園起飛，<b>11/24 晚上就要出門</b>；出發前 3 天內記得填好<a href="#flights">入境卡</a>。回程<b>學恆 11/29（日）22:00</b>、其他人 <b>ZE983 11/30（一）22:00</b> 起飛。排托運的人多，都抓 <b>19:00–20:00 到機場</b>。帶行李建議<b>搭計程車直達</b>，南浦到機場約 30 分、每台約 ₩20,000–25,000（地鐵要轉三次約 1 小時）；住宿可以免費寄放行李。</p>
     </div>
     <div class="tip rv" style="--k:var(--violet)">
       <h3><span>Showtime</span>無人機秀場次要再確認</h3>
