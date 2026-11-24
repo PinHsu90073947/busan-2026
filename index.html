@@ -198,6 +198,13 @@ h1 .t2{color:var(--tarp-ink)}
 .staybar em{font-style:normal; color:var(--ink-3)}
 .staybar a{color:var(--ink-2); font-weight:600; text-decoration:underline; text-underline-offset:3px}
 .staybar a:hover{color:var(--tarp-ink)}
+.staybar .ko-addr{color:var(--ink); font-weight:600}
+/* 複製韓文地址的小按鈕，貼到叫車 App 用 */
+.copy{
+  cursor:pointer; margin-left:4px; padding:2px 10px; border-radius:999px; white-space:nowrap;
+  border:1px solid var(--line-2); background:var(--surface); font-size:.76rem; font-weight:600; color:var(--ink-2);
+}
+.copy:hover{border-color:var(--ink-3); color:var(--ink)}
 .stop[data-kind="stay"] .card{background:var(--surface-2); border-color:var(--line-2)}
 .stayfacts{display:grid; gap:6px 14px; margin-top:12px; font-size:.86rem; color:var(--ink-2)}
 @media (min-width:620px){ .stayfacts{grid-template-columns:1fr 1fr} }
@@ -676,6 +683,7 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
     <svg aria-hidden="true"><use href="#home"/></svg>
     <span><b>住宿 TRIP MADE 南浦</b> <em>16:00 入住・從汗蒸幕過來</em></span>
     <em>1號線 南浦站步行 3 分（約 150m）</em>
+    <span class="ko-addr">叫車：트립메이드・부산 중구 광복로85번길 5-5 <button type="button" class="copy" data-copy="부산 중구 광복로85번길 5-5">複製地址</button></span>
     <a href="https://www.google.com/maps/search/?api=1&amp;query=%ED%8A%B8%EB%A6%BD%EB%A9%94%EC%9D%B4%EB%93%9C+tripmade" target="_blank" rel="noopener">地圖</a>
     <a href="https://www.airbnb.co.kr/rooms/1370152992803689250" target="_blank" rel="noopener">Airbnb 房源</a>
   </div>
@@ -716,6 +724,7 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
         <p class="note">除了大廳之外整層獨立使用的公寓式旅館，<b>2 房 2 衛、4 張 Queen、最多 8 人</b>，房間在 1 樓、進出沒有階梯。門口就是光復路時尚街，樂天百貨和樂天超市都在旁邊。<b>16:00 才能入住</b>，從汗蒸幕帶著行李搭計程車過來、自助入住；想休息的人就留在房間，晚餐再一起出發去影島。</p>
         <dl class="stayfacts">
           <div><dt>位置</dt><dd>釜山中區光復路85番街5-5（부산 중구 광복로85번길 5-5），1號線南浦站步行 3 分</dd></div>
+          <div><dt>給司機</dt><dd>트립메이드<br>부산 중구 광복로85번길 5-5 <button type="button" class="copy" data-copy="부산 중구 광복로85번길 5-5">複製地址</button></dd></div>
           <div><dt>入住</dt><dd>11/25 16:00 入住 → 11/30 11:00 前退房，共 5 晚</dd></div>
           <div><dt>機場</dt><dd>金海機場 → 地鐵約 1 小時／計程車約 30 分；可付費接送，需事先詢問</dd></div>
           <div><dt>釜山站</dt><dd>地鐵 2 站約 5 分／計程車約 7 分</dd></div>
@@ -783,6 +792,7 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
     <svg aria-hidden="true"><use href="#home"/></svg>
     <span><b>住宿 TRIP MADE 南浦</b> <em>出發與回程都在這</em></span>
     <em>1號線 南浦站步行 3 分（約 150m）</em>
+    <span class="ko-addr">叫車：트립메이드・부산 중구 광복로85번길 5-5 <button type="button" class="copy" data-copy="부산 중구 광복로85번길 5-5">複製地址</button></span>
     <a href="https://www.google.com/maps/search/?api=1&amp;query=%ED%8A%B8%EB%A6%BD%EB%A9%94%EC%9D%B4%EB%93%9C+tripmade" target="_blank" rel="noopener">地圖</a>
     <a href="https://www.airbnb.co.kr/rooms/1370152992803689250" target="_blank" rel="noopener">Airbnb 房源</a>
   </div>
@@ -885,6 +895,7 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
     <svg aria-hidden="true"><use href="#home"/></svg>
     <span><b>住宿 TRIP MADE 南浦</b> <em>出發與回程都在這</em></span>
     <em>1號線 南浦站步行 3 分（約 150m）</em>
+    <span class="ko-addr">叫車：트립메이드・부산 중구 광복로85번길 5-5 <button type="button" class="copy" data-copy="부산 중구 광복로85번길 5-5">複製地址</button></span>
     <a href="https://www.google.com/maps/search/?api=1&amp;query=%ED%8A%B8%EB%A6%BD%EB%A9%94%EC%9D%B4%EB%93%9C+tripmade" target="_blank" rel="noopener">地圖</a>
     <a href="https://www.airbnb.co.kr/rooms/1370152992803689250" target="_blank" rel="noopener">Airbnb 房源</a>
   </div>
@@ -991,6 +1002,7 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
     <svg aria-hidden="true"><use href="#home"/></svg>
     <span><b>住宿 TRIP MADE 南浦</b> <em>白天行程就在家門口</em></span>
     <em>1號線 南浦站步行 3 分（約 150m）</em>
+    <span class="ko-addr">叫車：트립메이드・부산 중구 광복로85번길 5-5 <button type="button" class="copy" data-copy="부산 중구 광복로85번길 5-5">複製地址</button></span>
     <a href="https://www.google.com/maps/search/?api=1&amp;query=%ED%8A%B8%EB%A6%BD%EB%A9%94%EC%9D%B4%EB%93%9C+tripmade" target="_blank" rel="noopener">地圖</a>
     <a href="https://www.airbnb.co.kr/rooms/1370152992803689250" target="_blank" rel="noopener">Airbnb 房源</a>
   </div>
@@ -1153,6 +1165,7 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
     <svg aria-hidden="true"><use href="#home"/></svg>
     <span><b>住宿 TRIP MADE 南浦</b> <em>學恆傍晚回來拿行李</em></span>
     <em>1號線 南浦站步行 3 分（約 150m）</em>
+    <span class="ko-addr">叫車：트립메이드・부산 중구 광복로85번길 5-5 <button type="button" class="copy" data-copy="부산 중구 광복로85번길 5-5">複製地址</button></span>
     <a href="https://www.google.com/maps/search/?api=1&amp;query=%ED%8A%B8%EB%A6%BD%EB%A9%94%EC%9D%B4%EB%93%9C+tripmade" target="_blank" rel="noopener">地圖</a>
     <a href="https://www.airbnb.co.kr/rooms/1370152992803689250" target="_blank" rel="noopener">Airbnb 房源</a>
   </div>
@@ -1266,6 +1279,7 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
     <svg aria-hidden="true"><use href="#home"/></svg>
     <span><b>住宿 TRIP MADE 南浦</b> <em>11:00 前退房・行李可免費寄放</em></span>
     <em>1號線 南浦站步行 3 分（約 150m）</em>
+    <span class="ko-addr">叫車：트립메이드・부산 중구 광복로85번길 5-5 <button type="button" class="copy" data-copy="부산 중구 광복로85번길 5-5">複製地址</button></span>
     <a href="https://www.google.com/maps/search/?api=1&amp;query=%ED%8A%B8%EB%A6%BD%EB%A9%94%EC%9D%B4%EB%93%9C+tripmade" target="_blank" rel="noopener">地圖</a>
     <a href="https://www.airbnb.co.kr/rooms/1370152992803689250" target="_blank" rel="noopener">Airbnb 房源</a>
   </div>
@@ -1364,7 +1378,7 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
     </div>
     <div class="tip rv" style="--k:var(--ink-3)">
       <h3><span>Stay</span>住宿在南浦，六天都同一間</h3>
-      <p><b>TRIP MADE 南浦（Airbnb #1 房）</b>：釜山中區光復路85番街5-5，11/25 16:00 入住、11/30 11:00 前退房，共 5 晚。2 房 2 衛、4 張 Queen、最多 8 人，整層單團獨用。<b>南浦站步行 3 分</b>，自助入住、24 小時免費寄放行李、有洗衣機與烘衣機、可開伙。<b>沒有電梯也沒有停車場</b>，行李多的人上下樓要留意。</p>
+      <p><b>TRIP MADE 南浦（Airbnb #1 房）</b>：釜山中區光復路85番街5-5（叫車給司機看「트립메이드 부산 중구 광복로85번길 5-5」，每天的住宿欄都有複製按鈕），11/25 16:00 入住、11/30 11:00 前退房，共 5 晚。2 房 2 衛、4 張 Queen、最多 8 人，整層單團獨用。<b>南浦站步行 3 分</b>，自助入住、24 小時免費寄放行李、有洗衣機與烘衣機、可開伙。<b>沒有電梯也沒有停車場</b>，行李多的人上下樓要留意。</p>
     </div>
     <div class="tip rv" style="--k:var(--drone)">
       <h3><span>Maps</span>Google 在韓國只有大眾運輸路線</h3>
@@ -1634,6 +1648,31 @@ footer{margin-top:48px; border-top:1px solid var(--line)}
   setInterval(function(){ if (document.visibilityState === "visible") { loadWeather(); } }, WX_EVERY);
   document.addEventListener("visibilitychange", function(){
     if (document.visibilityState === "visible" && Date.now() - wxAt > WX_EVERY) { loadWeather(); }
+  });
+
+  /* 複製韓文地址，方便貼到叫車 App */
+  Array.prototype.slice.call(document.querySelectorAll(".copy")).forEach(function(b){
+    var label = b.textContent;
+    b.addEventListener("click", function(){
+      var text = b.getAttribute("data-copy");
+      function done(ok){
+        b.textContent = ok ? "已複製" : "複製失敗，請長按地址";
+        setTimeout(function(){ b.textContent = label; }, 1800);
+      }
+      function legacy(){
+        var t = document.createElement("textarea");
+        t.value = text; document.body.appendChild(t); t.select();
+        var ok = false;
+        try { ok = document.execCommand("copy"); } catch (e) {}
+        document.body.removeChild(t);
+        done(ok);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function(){ done(true); }, legacy);
+      } else {
+        legacy();
+      }
+    });
   });
 
   var veil = document.getElementById("gmveil");
